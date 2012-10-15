@@ -1,0 +1,22 @@
+" Some sensible defaults
+syntax on
+set nocompatible	" get with the times
+set nu				" line numbers
+set hls				" highlighting
+set tabstop=4		" 4 spaces
+set shiftwidth=4	" 4 spaces
+
+" Colour me
+colorscheme tomorrownight
+
+" Setup for Vundle package manager
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" Vundle bundles
+	" Vundle itself!
+	Bundle 'gmarik/vundle'
+
+" More setup for Vundle
+filetype plugin indent on

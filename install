@@ -12,16 +12,25 @@ if [ ! -f $home_dir/.vimrc ]; then
 	ln -s $dotfiles_dir/vim/vimrc $home_dir/.vimrc
 fi
 
-echo "Linking vim folders"
-mkdir $home_dir/.vim/
-ln -s $dotfiles_dir/vim/colors $home_dir/.vim/colors
+if [ ! -d "$home_dir/.vim" ]; then
+	echo "Linking vim folders"
+	mkdir $home_dir/.vim/
+fi
 
-echo "Installing vundle"
+
+if [ ! -d $home_dir/.vim/colors ]; then
+	ln -s $dotfiles_dir/vim/colors $home_dir/.vim/colors
+fi
+
 if [ ! -d "$home_dir/.vim/bundle/vundle" ]; then
+	echo "Installing vundle"
 	git clone https://github.com/gmarik/vundle.git $home_dir/.vim/bundle/vundle
 fi
 
+echo "Updating Vundle bundles"
 vim +BundleInstall +qall
 
-echo "Linking .tmux.conf"
-ln -s $dotfiles_dir/tmux/tmux.conf $home_dir/.tmux.conf
+if [ ! -f $home_dir/.tmux.conf ]; then
+	echo "Linking .tmux.conf"
+	ln -s $dotfiles_dir/tmux/tmux.conf $home_dir/.tmux.conf
+fi

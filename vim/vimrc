@@ -17,6 +17,17 @@ call vundle#rc()
 " Vundle bundles
 	" Vundle itself!
 	Bundle 'gmarik/vundle'
+	" neocomplcache
+	Bundle 'Shougo/neocomplcache'
+	" Ctrl+P fuzzy search
+	Bundle 'kien/ctrlp.vim'
+
+" Bundle configurations
+	" neocomplcache
+	let g:neocomplcache_enable_at_startup = 1
+	" Ctrl+P
+	set wildignore+=*/tmp/*,*.so,*.swp,*.zip,f/*
+	let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 " More setup for Vundle
 filetype plugin indent on

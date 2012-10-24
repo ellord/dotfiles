@@ -12,6 +12,11 @@ if [ ! -f $home_dir/.vimrc ]; then
 	ln -s $dotfiles_dir/vim/vimrc $home_dir/.vimrc
 fi
 
+if [ ! -f $home_dir/.gvimrc ]; then
+	echo "Linking .gvimrc"
+	ln -s $dotfiles_dir/vim/gvimrc $home_dir/.gvimrc
+fi
+
 if [ ! -d "$home_dir/.vim" ]; then
 	echo "Linking vim folders"
 	mkdir $home_dir/.vim/

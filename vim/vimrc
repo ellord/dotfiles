@@ -21,6 +21,8 @@ call vundle#rc()
 	Bundle 'Shougo/neocomplcache'
 	" Ctrl+P fuzzy search
 	Bundle 'kien/ctrlp.vim'
+	" scss syntax
+	Bundle 'cakebaker/scss-syntax.vim'
 
 " Bundle configurations
 	" neocomplcache

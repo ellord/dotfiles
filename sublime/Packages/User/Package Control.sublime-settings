@@ -1,6 +1,11 @@
 {
 	"installed_packages":
 	[
+		"jQuery",
+		"SCSS",
+		"SublimeLinter",
+		"SublimeLinter-jshint",
+		"SublimeLinter-php",
 		"Tomorrow Color Schemes"
 	]
 }

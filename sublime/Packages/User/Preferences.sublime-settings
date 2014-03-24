@@ -1,8 +1,7 @@
 {
-	"theme": "Spacegray.sublime-theme",
-	"color_scheme": "Packages/User/Tomorrow-Night (SL).tmTheme",
+	"color_scheme": "Packages/User/base16-ocean.dark (SL).tmTheme",
 	"ignored_packages":
 	[
-		// "Vintage"
-	]
+	],
+	"theme": "Spacegray.sublime-theme"
 }

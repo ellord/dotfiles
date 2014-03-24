@@ -1,0 +1,1611 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"app",
+				"append	.append"
+			],
+			[
+				"iso",
+				"isotopeInstance"
+			],
+			[
+				"appen",
+				"appended"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/ellord/Code/php/genero.tv/genero.tv/js/profile/profile.js",
+			"settings":
+			{
+				"buffer_size": 9373,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ellord/Code/php/genero.tv/genero.tv/js/my-genero/my-genero.js",
+			"settings":
+			{
+				"buffer_size": 19746,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ellord/Code/php/genero.tv/genero.tv/members/templates/public/my-genero/briefs.html",
+			"settings":
+			{
+				"buffer_size": 6936,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ellord/Code/php/genero.tv/genero.tv/members/templates/public/my-genero/index.html",
+			"settings":
+			{
+				"buffer_size": 1670,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ellord/Code/php/genero.tv/genero.tv/members/controller/public/MyGeneroPageController.php",
+			"settings":
+			{
+				"buffer_size": 27694,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ellord/Code/php/genero.tv/genero.tv/js/videos/videos.js",
+			"settings":
+			{
+				"buffer_size": 35518,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ellord/Code/php/genero.tv/genero.tv/members/templates/public/my-genero/account.html",
+			"settings":
+			{
+				"buffer_size": 13082,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ellord/Code/php/genero.tv/genero.tv/members/templates/public/profile/home.html",
+			"settings":
+			{
+				"buffer_size": 2795,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ellord/Code/php/genero.tv/genero.tv/members/templates/public/profile/activity.html",
+			"settings":
+			{
+				"buffer_size": 801,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ellord/Code/php/genero.tv/genero.tv/css/scss/pages/_viewprofile.scss",
+			"settings":
+			{
+				"buffer_size": 10867,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ellord/Code/php/genero.tv/genero.tv/css/scss/pages/_videos.scss",
+			"settings":
+			{
+				"buffer_size": 4236,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ellord/Code/php/genero.tv/genero.tv/css/scss/pages/my-genero/_home.scss",
+			"settings":
+			{
+				"buffer_size": 9357,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"selected_items":
+		[
+			[
+				":w",
+				":w - Save"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"save ",
+				"Project: Save As"
+			],
+			[
+				"synjq",
+				"Set Syntax: jQuery (JavaScript)"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 583.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/ellord/Code/php/genero.tv/genero.tv/members/templates/public/my-genero/cards/openBriefs.html",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/members/templates/public/my-genero/briefs.html",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/blog/wp-content/plugins/w3-total-cache/lib/Minify/Minify/Build.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/members/templates/public/my-genero/account.html",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/js/my-genero/isotope.js",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/members/templates/public/profile/index.html",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/custom/DBO/ActivityLog.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/ayudacms/core/DBO/_DBO.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/core/rbac/RBACMember.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/custom/DBO/VideoSubmission.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/members/controller/public/MembersMyGeneroAjaxController.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/members/controller/public/MembersPageController.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/members/controller/admin/MembersPageController.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/members/DBO/MembersPage.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/admin/css/members.css",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/admin/css/memberactivities.css",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/memcache.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/blog/wp-admin/ms-edit.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/js/my-genero/my-genero.js",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/Marketplace.sql",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/css/scss/pages/profile/_activity.scss",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/members/controller/public/ProfilePageController.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/members/controller/public/ProfileAjaxController.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/.sass-cache/02938a1a0c08f9e88d951de3dc2fc71d4c47eec1/_prism.scssc",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/members/templates/public/profile/activity.html",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/custom/DBO/VideoPlaylist.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/css/print.css",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/lib/htmlpurifier/library/HTMLPurifier/PropertyListIterator.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/custom/DBO/Payout.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/js/profile/profile.js",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/trident/proxyRemoveVote.html",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/audioPlayer.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/blog/wp-content/advanced-cache.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/.sass-cache/c9ae6eed57fed0aa125b7ae8b0bf159fc37493d2/_videos.scssc",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/.sass-cache/7bfd6e6d912cdfaa80c4537063b004756f93a7cb/_videos.scssc",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/.sass-cache/6501a4a70331e01909cf471d52c6ac266269690a/_videos.scssc",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/.sass-cache/39a9ef41a4f42d068bd4cf633c13ed4dc875397e/_videos.scssc",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/.sass-cache/6501a4a70331e01909cf471d52c6ac266269690a/_video.scssc",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/css/scss/pages/profile/_about.scss",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/lib/gdata/library/Zend/Gdata/Health/ProfileListEntry.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/css/scss/pages/my-genero/_account.scss",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/members/templates/public/my-genero/videos.html",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/css/scss/pages/my-genero/_home.scss",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/getVideos.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/lib/php-opencloud/lib/OpenCloud/Base/Exceptions/MisMatchedChecksumError.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/ayudacms/core/controller/admin/EmailsModuleController.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/export_member_competition_info.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/Emails.sql",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/members/templates/public/profile/about.html",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/lib/google-api-php-client/examples/youtube/my_uploads.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/ayudacms/ayugle/controller/admin/_AyugleSearchPageController.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/css/scss/pages/my-genero/_videos.scss",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/.sass-cache/7bfd6e6d912cdfaa80c4537063b004756f93a7cb/_viewprofile.scssc",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/.sass-cache/1ffd9e6bd367cc3e58ee644896a04d8b865d1046/_variables.scssc",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/members/controller/public/MyGeneroPageController.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/admin/js/videouploads/jqueryanimateshadow.js",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/custom/DBO/Video.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/ayudacms/core/DBO/_DBConnection.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/css/profile.css",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/members/templates/public/profile/components/userIcon.html",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/lib/gdata/tests/Zend/Gdata/Health/_files/TestDataHealthProfileEntrySample_results0.xml",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/lib/google-api-php-client/test/general/ApiClientTest.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/custom/DBO/ProfileSettings.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/js/profile/history.js",
+		"/Users/ellord/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/custom/controller/public/AjaxPageController.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/migrations/2014-03-20-video-playlists.sql",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/blog/wp-content/themes/standard/lib/google-custom-search/views/Icon_",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/blog/wp-content/themes/standard/lib/google-custom-search/lib/Standard_Google_Custom_Search.template.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/blog/wp-admin/customize.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/checkUsername.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/core/config.ini",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/members/controller/public/MembersProfileAjaxController.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/custom/controller/admin/AjaxPageController.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/custom/DBO/AjaxPage.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/blog/wp-admin/includes/ajax-actions.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/core/css/public/alt-j.css",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/custom/DBO/VideoThumbnail.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/members/templates/public/fbConnectConfirm.html",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/css/scss/pages/my-genero/_viewsubmission.scss",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/getBack.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/edm/Genero-EDM-101224.html",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/.gitignore",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/migrations/2014-03-19-added-profile-settings.sql",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/compiledTemplates/wrtR5BKqn",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/scripts/rsync_ignore",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/.var/htmlpurifier/HTML/4.5.0,c0c1557f5ccdc68f7eff295f72664bd07868716b,1.ser",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/core/templates/public/layout.html",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/custom/templates/public/competitions/viewSubmission.html",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/core/templates/admin/layout.html",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/Facebook/linkin-park/layout.html",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/Facebook/james-brown/layout-HTML",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/blog/wp-admin/link-add.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/ayudacms/LICENCE.txt",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/.sass-cache/6501a4a70331e01909cf471d52c6ac266269690a/_song-register.scssc",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/.sass-cache/7bfd6e6d912cdfaa80c4537063b004756f93a7cb/_song-register.scssc",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/css/scss/pages/_song-register.scss",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/css/scss/pages/_register.scss",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/.sass-cache/7bfd6e6d912cdfaa80c4537063b004756f93a7cb/_register.scssc",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/.sass-cache/6501a4a70331e01909cf471d52c6ac266269690a/_register.scssc",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/custom/templates/public/song/register.html",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/members/templates/public/registered.html",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/blog/wp-includes/registration.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/compiledTemplates/wrtRrE0GN",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/compiledTemplates/wrtRor4E9",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/resize_avatars_utility_script.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/robots.txt",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/ayudacms/core/common_index.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/ayudacms/core/controller/admin/PackageInstallerModuleController.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/core/.htaccess",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/blog/wp-includes/SimplePie/Core.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/blog/wp-includes/js/comment-reply.js",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/blog/wp-includes/class-oembed.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/Changelog-201209",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/custom/DBO/VideoTag.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/videoOnly.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/compiledTemplates/wrtVeIDJH",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/blog/wp-content/plugins/w3-total-cache/lib/Minify/Minify/YUICompressor.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/custom/DBO/Payment.php",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/lib/PHPMailer-master/docs/pop3_article.txt",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/js/profile/imagesloaded.js",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/js/profile/bigvideo.js",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/css/my-genero.css",
+		"/Users/ellord/Code/php/genero.tv/genero.tv/compiledTemplates/wrtMqYaj6",
+		"/Users/ellord/dotfiles/install"
+	],
+	"find":
+	{
+		"height": 38.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"state",
+			"$user",
+			"countries",
+			"countries.js",
+			"importFace",
+			"importFAce",
+			"preventDef",
+			"blurj",
+			"profile-lockup-blur",
+			"images/profile/testbg2.jpg",
+			"menuSwitchHandler",
+			"currentPageFunctions",
+			"loadActivity",
+			"loadActivity()",
+			"console",
+			"currentActivityPage",
+			"load-more",
+			"loadmore()",
+			"videosGrid",
+			"activityFirstLoad",
+			"isotopeInstance",
+			"activityContainer",
+			"activity-container",
+			"activity-container\n",
+			"activityContainer",
+			"profile-activity-container",
+			"activityContainer",
+			"isotopeInstance",
+			"upload-photo-link",
+			"upload-from-pc",
+			"import-facebook-profile-picture",
+			"import fr",
+			"activityItems",
+			"append",
+			"activityItems",
+			"activityContainer",
+			"activityFirstLoad",
+			"activityContainer",
+			"videosGrid",
+			"activityLoaded",
+			"videosGrid",
+			"isotope",
+			"container",
+			"profile",
+			"\\$activityContainer",
+			"$activityContainer",
+			"activityItems",
+			"page",
+			"\\$offset",
+			"$offset",
+			"gradient",
+			"small-about-box",
+			"playlist-section-header",
+			"videos-playlists",
+			"new-playlist",
+			"\\$al",
+			"$al",
+			"ActivityLog",
+			"todo",
+			"[gener",
+			"michael",
+			"[micha",
+			"videosIterator",
+			"past-versions",
+			"tomorr"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"david"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/ellord/Code/php/genero.tv/genero.tv/js/profile/profile.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9373,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close"
+							],
+							"history_list_is_closing": true,
+							"syntax": "Packages/jQuery/Syntaxes/jQueryJavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/ellord/Code/php/genero.tv/genero.tv/js/my-genero/my-genero.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 19746,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close"
+							],
+							"history_list_is_closing": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1665.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/ellord/Code/php/genero.tv/genero.tv/members/templates/public/my-genero/briefs.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6936,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close"
+							],
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1133.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/ellord/Code/php/genero.tv/genero.tv/members/templates/public/my-genero/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1670,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close"
+							],
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Users/ellord/Code/php/genero.tv/genero.tv/members/controller/public/MyGeneroPageController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 27694,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 9531.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Users/ellord/Code/php/genero.tv/genero.tv/js/videos/videos.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 35518,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8794,
+								8794
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close"
+							],
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 1.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 6,
+					"file": "/Users/ellord/Code/php/genero.tv/genero.tv/members/templates/public/my-genero/account.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13082,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close"
+							],
+							"history_list_is_closing": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1763.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/Users/ellord/Code/php/genero.tv/genero.tv/members/templates/public/profile/home.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2795,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close"
+							],
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/Users/ellord/Code/php/genero.tv/genero.tv/members/templates/public/profile/activity.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 801,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close"
+							],
+							"history_list_is_closing": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 9,
+					"file": "/Users/ellord/Code/php/genero.tv/genero.tv/css/scss/pages/_viewprofile.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10867,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close"
+							],
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4553.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "/Users/ellord/Code/php/genero.tv/genero.tv/css/scss/pages/_videos.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4236,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2964,
+								4234
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close"
+							],
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3193.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "/Users/ellord/Code/php/genero.tv/genero.tv/css/scss/pages/my-genero/_home.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9357,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7127,
+								6876
+							]
+						],
+						"settings":
+						{
+							"history_list_is_closing": true,
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/Users/ellord/Code/php/genero.tv/genero.tv/css/scss/pages/_viewprofile.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10867,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 38.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				2
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			],
+			[
+				1,
+				1,
+				2,
+				2
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			0.5,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "generotv.sublime-project",
+	"replace":
+	{
+		"height": 72.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"my/briefs.ht",
+				"members/templates/public/my-genero/briefs.html"
+			],
+			[
+				"my-genero/index",
+				"members/templates/public/my-genero/index.html"
+			],
+			[
+				"mygeneropage",
+				"members/controller/public/MyGeneroPageController.php"
+			],
+			[
+				"my/account",
+				"members/templates/public/my-genero/account.html"
+			],
+			[
+				"my-ge",
+				"js/my-genero/my-genero.js"
+			],
+			[
+				"_dbo",
+				"ayudacms/core/DBO/_DBO.php"
+			],
+			[
+				"videosub",
+				"custom/DBO/VideoSubmission.php"
+			],
+			[
+				"rbacm",
+				"core/rbac/RBACMember.php"
+			],
+			[
+				"profilep",
+				"members/controller/public/ProfilePageController.php"
+			],
+			[
+				"profile/index",
+				"members/templates/public/profile/index.html"
+			],
+			[
+				"profile/ac",
+				"members/templates/public/profile/activity.html"
+			],
+			[
+				"_videos.scss",
+				"css/scss/pages/_videos.scss"
+			],
+			[
+				"profile/_act",
+				"css/scss/pages/profile/_activity.scss"
+			],
+			[
+				"my_account",
+				"css/scss/pages/my-genero/_account.scss"
+			],
+			[
+				"videos.js",
+				"js/videos/videos.js"
+			],
+			[
+				"activityl",
+				"custom/DBO/ActivityLog.php"
+			],
+			[
+				"profileajaxc",
+				"members/controller/public/ProfileAjaxController.php"
+			],
+			[
+				"profile.js",
+				"js/profile/profile.js"
+			],
+			[
+				"my_home.",
+				"css/scss/pages/my-genero/_home.scss"
+			],
+			[
+				"_viewpr",
+				"css/scss/pages/_viewprofile.scss"
+			],
+			[
+				"my_videos",
+				"css/scss/pages/my-genero/_videos.scss"
+			],
+			[
+				"mygenero",
+				"members/controller/public/MembersMyGeneroAjaxController.php"
+			],
+			[
+				"videopla",
+				"custom/DBO/VideoPlaylist.php"
+			],
+			[
+				"my/videos.html",
+				"members/templates/public/my-genero/videos.html"
+			],
+			[
+				"profile/ab",
+				"members/templates/public/profile/about.html"
+			],
+			[
+				"members/controller/public/mygeneropagecontroller.php",
+				"members/controller/public/MyGeneroPageController.php"
+			],
+			[
+				"activitylog",
+				"custom/DBO/ActivityLog.php"
+			],
+			[
+				"profileajax",
+				"members/controller/public/ProfileAjaxController.php"
+			],
+			[
+				"profile/home",
+				"members/templates/public/profile/home.html"
+			],
+			[
+				"profilesettin",
+				"custom/DBO/ProfileSettings.php"
+			],
+			[
+				"migrations/2014-03-20-video-playlists.sql",
+				"migrations/2014-03-20-video-playlists.sql"
+			],
+			[
+				"videoplay",
+				"custom/DBO/VideoPlaylist.php"
+			],
+			[
+				"ajaxpagecontr",
+				"custom/controller/public/AjaxPageController.php"
+			],
+			[
+				"profilepagecontr",
+				"members/controller/public/ProfilePageController.php"
+			],
+			[
+				"profile/about",
+				"members/templates/public/profile/about.html"
+			],
+			[
+				"members/templates/public/fbconnectconfirm.html",
+				"members/templates/public/fbConnectConfirm.html"
+			],
+			[
+				"mygeneroajax",
+				"members/controller/public/MembersMyGeneroAjaxController.php"
+			],
+			[
+				"my-genero.js",
+				"js/my-genero/my-genero.js"
+			],
+			[
+				"profilesettings",
+				"custom/DBO/ProfileSettings.php"
+			],
+			[
+				"core/rbac/rbacmember.php",
+				"core/rbac/RBACMember.php"
+			],
+			[
+				"",
+				".gitignore"
+			],
+			[
+				"my/acco",
+				"members/templates/public/my-genero/account.html"
+			],
+			[
+				"layout.html",
+				"core/templates/public/layout.html"
+			],
+			[
+				"rsync",
+				"scripts/rsync_ignore"
+			],
+			[
+				"core/conf",
+				"core/config.ini"
+			],
+			[
+				"mypageco",
+				"members/controller/public/MyGeneroPageController.php"
+			],
+			[
+				"videothumbnail",
+				"custom/DBO/VideoThumbnail.php"
+			],
+			[
+				"video.php",
+				"custom/DBO/Video.php"
+			],
+			[
+				"videothumb",
+				"custom/DBO/VideoThumbnail.php"
+			],
+			[
+				"my/_view",
+				"css/scss/pages/my-genero/_viewsubmission.scss"
+			],
+			[
+				"my/_videos",
+				"css/scss/pages/my-genero/_videos.scss"
+			],
+			[
+				"custom/templates/public/competitions/viewsubmission.html",
+				"custom/templates/public/competitions/viewSubmission.html"
+			],
+			[
+				"payout.",
+				"custom/DBO/Payout.php"
+			],
+			[
+				"my-genero",
+				"js/my-genero/my-genero.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/dotfiles/sublime/generotv.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+		"last_automatic_layout":
+		[
+			[
+				0,
+				0,
+				1,
+				2
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			],
+			[
+				1,
+				1,
+				2,
+				2
+			]
+		]
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 201.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

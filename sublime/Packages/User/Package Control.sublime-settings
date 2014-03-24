@@ -1,6 +1,10 @@
 {
 	"installed_packages":
 	[
+		"BracketHighlighter",
+		"DocBlockr",
+		"Emmet",
+		"GitGutter",
 		"jQuery",
 		"SCSS",
 		"SublimeLinter",

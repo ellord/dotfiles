@@ -19,6 +19,118 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/Users/ellord/Code/php/zelicious.com.au/zelicious/app/config/mail.php",
+			"settings":
+			{
+				"buffer_size": 3985,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ellord/Code/php/zelicious.com.au/zelicious/bootstrap/start.php",
+			"settings":
+			{
+				"buffer_size": 2359,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ellord/Code/php/zelicious.com.au/zelicious/app/config/local/database.php",
+			"settings":
+			{
+				"buffer_size": 3336,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ellord/Code/php/zelicious.com.au/zelicious/bootstrap/environment.php",
+			"settings":
+			{
+				"buffer_size": 63,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ellord/Code/php/zelicious.com.au/zelicious/.rsyncignore",
+			"settings":
+			{
+				"buffer_size": 277,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ellord/Code/php/zelicious.com.au/zelicious/app/database/seeds/PartiesTableSeeder.php",
+			"settings":
+			{
+				"buffer_size": 304,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ellord/Code/php/zelicious.com.au/zelicious/artisan",
+			"settings":
+			{
+				"buffer_size": 2451,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ellord/Code/php/zelicious.com.au/zelicious/app/config/app.php",
+			"settings":
+			{
+				"buffer_size": 7509,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ellord/Code/php/zelicious.com.au/zelicious/app/config/session.php",
+			"settings":
+			{
+				"buffer_size": 4053,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ellord/Code/php/zelicious.com.au/zelicious/app/config/queue.php",
+			"settings":
+			{
+				"buffer_size": 1908,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ellord/Code/php/zelicious.com.au/zelicious/app/controllers/BaseController.php",
+			"settings":
+			{
+				"buffer_size": 255,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ellord/Code/php/zelicious.com.au/zelicious/app/lang/en/reminders.php",
+			"settings":
+			{
+				"buffer_size": 687,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "		'Image'           => 'Intervention\\Image\\Facades\\Image',\n",
+			"settings":
+			{
+				"buffer_size": 59,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ellord/Code/php/zelicious.com.au/zelicious/public/index.php",
+			"settings":
+			{
+				"buffer_size": 1585,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -72,6 +184,39 @@
 	},
 	"file_history":
 	[
+		"/Users/ellord/Code/php/zelicious.com.au/zelicious/vendor/laravel/framework/src/Illuminate/Cache/RedisStore.php",
+		"/Users/ellord/Code/php/zelicious.com.au/zelicious/readme.md",
+		"/Users/ellord/Code/php/zelicious.com.au/zelicious/vendor/symfony/css-selector/Symfony/Component/CssSelector/Node/ElementNode.php",
+		"/Users/ellord/Code/php/zelicious.com.au/zelicious/bootstrap/environment.php",
+		"/Users/ellord/Code/php/zelicious.com.au/zelicious/.gitignore",
+		"/Users/ellord/Code/php/zelicious.com.au/zelicious/.gitattributes",
+		"/Users/ellord/Code/php/zelicious.com.au/zelicious/public/.sass-cache/8128b3a84f2d86c6322834832a2f1ce11b099bcd/ie.scssc",
+		"/Users/ellord/Code/php/zelicious.com.au/zelicious/vendor/nesbot/carbon/tests/SubTest.php",
+		"/Users/ellord/Code/php/zelicious.com.au/zelicious/server.php",
+		"/Users/ellord/Code/php/zelicious.com.au/zelicious/app/start/local.php",
+		"/Users/ellord/Code/php/zelicious.com.au/zelicious/app/start/global.php",
+		"/Users/ellord/Code/php/zelicious.com.au/zelicious/app/start/artisan.php",
+		"/Users/ellord/Code/php/zelicious.com.au/zelicious/app/config/database.php",
+		"/Users/ellord/Code/php/zelicious.com.au/zelicious/app/config/app.php",
+		"/Users/ellord/Code/php/zelicious.com.au/zelicious/app/database/production.sqlite",
+		"/Users/ellord/Code/php/zelicious.com.au/zelicious/app/database/seeds/UserTableSeeder.php",
+		"/Users/ellord/Code/php/zelicious.com.au/zelicious/artisan",
+		"/Users/ellord/Code/php/zelicious.com.au/zelicious/app/lang/en/pagination.php",
+		"/Users/ellord/Code/php/zelicious.com.au/zelicious/app/config/mail.php",
+		"/Users/ellord/Code/php/zelicious.com.au/zelicious/vendor/composer/autoload_psr4.php",
+		"/Users/ellord/Code/php/zelicious.com.au/zelicious/public/css/app.css",
+		"/Users/ellord/Code/php/zelicious.com.au/zelicious/app/storage/cache/.gitignore",
+		"/Users/ellord/Code/php/zelicious.com.au/zelicious/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/application_1.json",
+		"/Users/ellord/Code/php/zelicious.com.au/zelicious/vendor/laravel/framework/src/Illuminate/Foundation/AliasLoader.php",
+		"/Users/ellord/Code/php/zelicious.com.au/zelicious/public/.htaccess",
+		"/Users/ellord/Code/php/zelicious.com.au/zelicious/vendor/way/generators/src/Way/Generators/Commands/PublishTemplatesCommand.php",
+		"/Users/ellord/Code/php/zelicious.com.au/zelicious/vendor/laravel/framework/src/Illuminate/Foundation/Providers/PublisherServiceProvider.php",
+		"/Users/ellord/Code/php/zelicious.com.au/zelicious/vendor/predis/predis/lib/Predis/Command/PubSubUnsubscribeByPattern.php",
+		"/Users/ellord/Code/php/zelicious.com.au/zelicious/vendor/symfony/process/Symfony/Component/Process/ProcessUtils.php",
+		"/Users/ellord/Code/php/zelicious.com.au/zelicious/phpunit.xml",
+		"/Users/ellord/Code/php/zelicious.com.au/zelicious/vendor/composer/autoload_real.php",
+		"/Users/ellord/Code/php/zelicious.com.au/zelicious/app/commands/.gitkeep",
+		"/Users/ellord/Code/php/zelicious.com.au/zelicious/app/filters.php",
 		"/Users/ellord/Code/php/genero.tv/genero.tv/members/templates/public/my-genero/cards/openBriefs.html",
 		"/Users/ellord/Code/php/genero.tv/genero.tv/members/templates/public/my-genero/briefs.html",
 		"/Users/ellord/Code/php/genero.tv/genero.tv/blog/wp-content/plugins/w3-total-cache/lib/Minify/Minify/Build.php",
@@ -166,41 +311,11 @@
 		"/Users/ellord/Code/php/genero.tv/genero.tv/Facebook/james-brown/layout-HTML",
 		"/Users/ellord/Code/php/genero.tv/genero.tv/blog/wp-admin/link-add.php",
 		"/Users/ellord/Code/php/genero.tv/genero.tv/ayudacms/LICENCE.txt",
-		"/Users/ellord/Code/php/genero.tv/genero.tv/.sass-cache/6501a4a70331e01909cf471d52c6ac266269690a/_song-register.scssc",
-		"/Users/ellord/Code/php/genero.tv/genero.tv/.sass-cache/7bfd6e6d912cdfaa80c4537063b004756f93a7cb/_song-register.scssc",
-		"/Users/ellord/Code/php/genero.tv/genero.tv/css/scss/pages/_song-register.scss",
-		"/Users/ellord/Code/php/genero.tv/genero.tv/css/scss/pages/_register.scss",
-		"/Users/ellord/Code/php/genero.tv/genero.tv/.sass-cache/7bfd6e6d912cdfaa80c4537063b004756f93a7cb/_register.scssc",
-		"/Users/ellord/Code/php/genero.tv/genero.tv/.sass-cache/6501a4a70331e01909cf471d52c6ac266269690a/_register.scssc",
-		"/Users/ellord/Code/php/genero.tv/genero.tv/custom/templates/public/song/register.html",
-		"/Users/ellord/Code/php/genero.tv/genero.tv/members/templates/public/registered.html",
-		"/Users/ellord/Code/php/genero.tv/genero.tv/blog/wp-includes/registration.php",
-		"/Users/ellord/Code/php/genero.tv/genero.tv/compiledTemplates/wrtRrE0GN",
-		"/Users/ellord/Code/php/genero.tv/genero.tv/compiledTemplates/wrtRor4E9",
-		"/Users/ellord/Code/php/genero.tv/genero.tv/resize_avatars_utility_script.php",
-		"/Users/ellord/Code/php/genero.tv/genero.tv/robots.txt",
-		"/Users/ellord/Code/php/genero.tv/genero.tv/ayudacms/core/common_index.php",
-		"/Users/ellord/Code/php/genero.tv/genero.tv/ayudacms/core/controller/admin/PackageInstallerModuleController.php",
-		"/Users/ellord/Code/php/genero.tv/genero.tv/core/.htaccess",
-		"/Users/ellord/Code/php/genero.tv/genero.tv/blog/wp-includes/SimplePie/Core.php",
-		"/Users/ellord/Code/php/genero.tv/genero.tv/blog/wp-includes/js/comment-reply.js",
-		"/Users/ellord/Code/php/genero.tv/genero.tv/blog/wp-includes/class-oembed.php",
-		"/Users/ellord/Code/php/genero.tv/genero.tv/Changelog-201209",
-		"/Users/ellord/Code/php/genero.tv/genero.tv/custom/DBO/VideoTag.php",
-		"/Users/ellord/Code/php/genero.tv/genero.tv/videoOnly.php",
-		"/Users/ellord/Code/php/genero.tv/genero.tv/compiledTemplates/wrtVeIDJH",
-		"/Users/ellord/Code/php/genero.tv/genero.tv/blog/wp-content/plugins/w3-total-cache/lib/Minify/Minify/YUICompressor.php",
-		"/Users/ellord/Code/php/genero.tv/genero.tv/custom/DBO/Payment.php",
-		"/Users/ellord/Code/php/genero.tv/genero.tv/lib/PHPMailer-master/docs/pop3_article.txt",
-		"/Users/ellord/Code/php/genero.tv/genero.tv/js/profile/imagesloaded.js",
-		"/Users/ellord/Code/php/genero.tv/genero.tv/js/profile/bigvideo.js",
-		"/Users/ellord/Code/php/genero.tv/genero.tv/css/my-genero.css",
-		"/Users/ellord/Code/php/genero.tv/genero.tv/compiledTemplates/wrtMqYaj6",
-		"/Users/ellord/dotfiles/install"
+		"/Users/ellord/Code/php/genero.tv/genero.tv/.sass-cache/6501a4a70331e01909cf471d52c6ac266269690a/_song-register.scssc"
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 38.0
 	},
 	"find_in_files":
 	{
@@ -214,6 +329,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"expire_on_close",
 			"state",
 			"$user",
 			"countries",
@@ -297,8 +413,1104 @@
 	"groups":
 	[
 		{
+			"selected": 4,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/Users/ellord/Code/php/zelicious.com.au/zelicious/app/config/mail.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3985,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2539,
+								2539
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close"
+							],
+							"history_list_is_closing": true,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 875.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/ellord/Code/php/zelicious.com.au/zelicious/bootstrap/start.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2359,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								408,
+								408
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/ellord/Code/php/zelicious.com.au/zelicious/app/config/local/database.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3336,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1634,
+								1634
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 283.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/ellord/Code/php/zelicious.com.au/zelicious/bootstrap/environment.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 63,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								63,
+								63
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close"
+							],
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Users/ellord/Code/php/zelicious.com.au/zelicious/.rsyncignore",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 277,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								98,
+								98
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close"
+							],
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 7,
+			"sheets":
+			[
+				{
+					"buffer": 5,
+					"file": "/Users/ellord/Code/php/zelicious.com.au/zelicious/app/database/seeds/PartiesTableSeeder.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 304,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/Users/ellord/Code/php/zelicious.com.au/zelicious/artisan",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2451,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1140,
+								1140
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close"
+							],
+							"history_list_is_closing": true,
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 304.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/Users/ellord/Code/php/zelicious.com.au/zelicious/app/config/app.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7509,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5831,
+								5831
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close"
+							],
+							"history_list_is_closing": true,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1999.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/Users/ellord/Code/php/zelicious.com.au/zelicious/app/config/session.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4053,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								655,
+								655
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/Users/ellord/Code/php/zelicious.com.au/zelicious/app/config/queue.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1908,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1251,
+								1251
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 402.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "/Users/ellord/Code/php/zelicious.com.au/zelicious/app/controllers/BaseController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 255,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								180,
+								180
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "/Users/ellord/Code/php/zelicious.com.au/zelicious/app/lang/en/reminders.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 687,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								687,
+								687
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/ellord/Code/php/zelicious.com.au/zelicious/bootstrap/start.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2359,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1060,
+								1060
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 59,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								58,
+								2
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "/Users/ellord/Code/php/zelicious.com.au/zelicious/public/index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1585,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1585,
+								1585
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -319,11 +1531,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.5,
 			1.0
 		],
 		"rows":
@@ -348,6 +1567,70 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"rsync",
+				".rsyncignore"
+			],
+			[
+				"envir",
+				"bootstrap/environment.php"
+			],
+			[
+				".gitigo",
+				".gitignore"
+			],
+			[
+				"start",
+				"bootstrap/start.php"
+			],
+			[
+				"app/start",
+				"app/start/local.php"
+			],
+			[
+				"app/config/local",
+				"app/config/local/database.php"
+			],
+			[
+				"bootstrap/start.php",
+				"bootstrap/start.php"
+			],
+			[
+				"app/lang/en/re",
+				"app/lang/en/reminders.php"
+			],
+			[
+				"app/controllers/basecontroller.php",
+				"app/controllers/BaseController.php"
+			],
+			[
+				"app/config/queue.php",
+				"app/config/queue.php"
+			],
+			[
+				"app/config/session.php",
+				"app/config/session.php"
+			],
+			[
+				"app/conf",
+				"app/config/app.php"
+			],
+			[
+				"public/index",
+				"public/index.php"
+			],
+			[
+				"artisa",
+				"artisan"
+			],
+			[
+				"artist",
+				"app/database/seeds/PartiesTableSeeder.php"
+			],
+			[
+				"app/config/mail",
+				"app/config/mail.php"
+			],
 			[
 				"my/briefs.ht",
 				"members/templates/public/my-genero/briefs.html"
@@ -521,10 +1804,6 @@
 				"core/templates/public/layout.html"
 			],
 			[
-				"rsync",
-				"scripts/rsync_ignore"
-			],
-			[
 				"core/conf",
 				"core/config.ini"
 			],
@@ -573,6 +1852,14 @@
 		"selected_items":
 		[
 			[
+				"ge",
+				"~/dotfiles/sublime/generotv.sublime-project"
+			],
+			[
+				"gen",
+				"~/dotfiles/sublime/generotv.sublime-project"
+			],
+			[
 				"",
 				"~/dotfiles/sublime/generotv.sublime-project"
 			]
@@ -593,7 +1880,7 @@
 	"show_minimap": false,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 201.0,
 	"status_bar_visible": true,
 	"template_settings":

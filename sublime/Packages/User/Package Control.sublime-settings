@@ -2,12 +2,14 @@
 	"installed_packages":
 	[
 		"BracketHighlighter",
+		"DashDoc",
 		"DocBlockr",
 		"Emmet",
 		"Function Name Display",
 		"GitGutter",
 		"jQuery",
 		"jQuery Snippets pack",
+		"MarkdownEditing",
 		"SCSS",
 		"Smarty",
 		"SublimeLinter",

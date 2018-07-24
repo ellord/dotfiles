@@ -5,6 +5,8 @@ set nu				" line numbers
 set hls				" highlighting
 set tabstop=4		" 4 spaces
 set shiftwidth=4	" 4 spaces
+inoremap jj <esc>   " remap `jj` to Esc key
+inoremap jk <esc>   " remap `jk` to Esc key
 
 " Colour me
 colorscheme tomorrownight

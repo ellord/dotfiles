@@ -8,8 +8,6 @@ set shiftwidth=4	" 4 spaces
 inoremap jj <esc>   " remap `jj` to Esc key
 inoremap jk <esc>   " remap `jk` to Esc key
 
-" Colour me
-colorscheme tomorrownight
 
 " Setup for Vundle package manager
 filetype off
@@ -19,12 +17,17 @@ call vundle#rc()
 " Vundle bundles
 	" Vundle itself!
 	Bundle 'gmarik/vundle'
+	" Colorscheme pack
+	Plugin 'flazz/vim-colorschemes'
 	" neocomplcache
 	Bundle 'Shougo/neocomplcache'
 	" Ctrl+P fuzzy search
 	Bundle 'kien/ctrlp.vim'
 	" scss syntax
 	Bundle 'cakebaker/scss-syntax.vim'
+	" jsx syntax
+	Plugin 'pangloss/vim-javascript'
+	Plugin 'mxw/vim-jsx'
 
 " Bundle configurations
 	" neocomplcache
@@ -32,6 +35,9 @@ call vundle#rc()
 	" Ctrl+P
 	set wildignore+=*/tmp/*,*.so,*.swp,*.zip,f/*,compiledTemplates/*
 	let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+
+" Colour me (this needs to happen after colorschemes are installed via vundle
+colorscheme Tomorrow-Night-Eighties
 
 " More setup for Vundle
 filetype plugin indent on

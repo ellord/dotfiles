@@ -1,0 +1,21 @@
+[core]
+	editor = vim
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s'
+	sf = show --pretty=format: --name-only
+	pp = !sh -c 'git pull && git push'
+	ll = log --pretty=format:%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn] --decora$
+	br = branch -avv
+	s = status
+	ac = !git add . -A && git commit
+	p = pull
+	pu = push
+	d = diff
+	co = checkout
+[push]
+	default = matching
+
+[user]
+	# TODO
+[gc]
+	autoDetach = false

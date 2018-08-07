@@ -45,7 +45,7 @@ if [ ! -f $home_dir/.tmux.conf ]; then
 	ln -s $dotfiles_dir/tmux/tmux.conf $home_dir/.tmux.conf
 fi
 
-if [ ! -d $home_dir/Library/Application\ Support/Sublime\ Text\ 3/Packages/User ]; then
-	echo "Linking Sublime Text 3 preferences"
-	ln -s $dotfiles_dir/sublime/Packages/User $home_dir/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
-fi
+#if [ ! -d $home_dir/Library/Application\ Support/Sublime\ Text\ 3/Packages/User ]; then
+#	echo "Linking Sublime Text 3 preferences"
+#	ln -s $dotfiles_dir/sublime/Packages/User $home_dir/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+#fi

@@ -15,8 +15,13 @@ if [ ! -f $home_dir/.vimrc ]; then
 fi
 
 if [ ! -f $home_dir/.tmux.conf ]; then
-	echo "Linking tmuxf"
+	echo "Linking tmux"
 	stow tmux
+fi
+
+if [ ! -f $home_dir/.gitconfig ]; then
+	echo "Linking git"
+	stow git
 fi
 
 cd ~

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/local/bin/zsh
 
 cd ~
 home_dir=`pwd`
@@ -7,45 +7,24 @@ echo "Using $home_dir as home directory"
 
 dotfiles_dir="$home_dir/dotfiles"
 
+cd $dotfiles_dir
+
 if [ ! -f $home_dir/.vimrc ]; then
-	echo "Linking .vimrc"
-	ln -s $dotfiles_dir/vim/vimrc $home_dir/.vimrc
+	echo "Linking vim"
+	stow vim
 fi
-
-if [ ! -f $home_dir/.gvimrc ]; then
-	echo "Linking .gvimrc"
-	ln -s $dotfiles_dir/vim/gvimrc $home_dir/.gvimrc
-fi
-
-if [ ! -d "$home_dir/.vim" ]; then
-	echo "Linking vim folders"
-	mkdir $home_dir/.vim/
-fi
-
-if [ ! -d "$home_dir/.atom" ]; then
-	echo "Linking atom folders"
-	ln -s $dotfiles_dir/atom $home_dir/.atom
-fi
-
-
-if [ ! -d $home_dir/.vim/colors ]; then
-	ln -s $dotfiles_dir/vim/colors $home_dir/.vim/colors
-fi
-
-if [ ! -d "$home_dir/.vim/bundle/vundle" ]; then
-	echo "Installing vundle"
-	git clone https://github.com/gmarik/vundle.git $home_dir/.vim/bundle/vundle
-fi
-
-echo "Updating Vundle bundles"
-vim +BundleInstall +qall
 
 if [ ! -f $home_dir/.tmux.conf ]; then
-	echo "Linking .tmux.conf"
-	ln -s $dotfiles_dir/tmux/tmux.conf $home_dir/.tmux.conf
+	echo "Linking tmuxf"
+	stow tmux
 fi
 
-#if [ ! -d $home_dir/Library/Application\ Support/Sublime\ Text\ 3/Packages/User ]; then
-#	echo "Linking Sublime Text 3 preferences"
-#	ln -s $dotfiles_dir/sublime/Packages/User $home_dir/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
-#fi
+cd ~
+
+echo "Set up prezto for zsh"
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+setopt EXTENDED_GLOB
+for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+done
+

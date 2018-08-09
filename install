@@ -20,8 +20,8 @@ if [ ! -f $home_dir/.tmux.conf ]; then
 fi
 
 if [ ! -f $home_dir/.gitconfig ]; then
-	echo "Linking git"
-	stow git
+	echo "Copying gitconfig"
+ 	cp $dotfiles_dir/git/.gitconfig ~/
 fi
 
 cd ~

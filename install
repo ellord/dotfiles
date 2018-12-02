@@ -14,6 +14,11 @@ if [ ! -f $home_dir/.vimrc ]; then
 	stow vim
 fi
 
+if [ ! -f $home_dir/.ideavimrc ]; then
+	echo "Linking ideavim"
+	stow ideavim
+fi
+
 if [ ! -f $home_dir/.tmux.conf ]; then
 	echo "Linking tmux"
 	stow tmux

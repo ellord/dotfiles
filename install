@@ -9,7 +9,7 @@ dotfiles_dir="$home_dir/dotfiles"
 
 cd $dotfiles_dir
 
-if [ ! -f $home_dir/.vimrc ]; then
+if [ ! -f $home_dir/.vimrc ] || [ ! -f $home_dir/.vimrc.local ]; then
 	echo "Linking vim"
 	stow vim
 fi

@@ -1,4 +1,4 @@
-#!/usr/local/bin/zsh
+#!/bin/bash
 
 cd ~
 home_dir=`pwd`

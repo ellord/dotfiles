@@ -8,5 +8,6 @@
     "editor.minimap.enabled": false,
     "editor.lineNumbers": "relative",
     "workbench.activityBar.visible": false,
-    "editor.fontFamily": "'JetBrains Mono', 'Dank Mono', Menlo, Monaco, 'Courier New', monospace"
+    "editor.fontFamily": "'JetBrains Mono', 'Dank Mono', Menlo, Monaco, 'Courier New', monospace",
+    "go.formatTool": "goimports"
 }

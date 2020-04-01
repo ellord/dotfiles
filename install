@@ -29,6 +29,16 @@ if [ ! -f $home_dir/.gitconfig ]; then
  	cp $dotfiles_dir/git/.gitconfig ~/
 fi
 
+if [ ! -f $home_dir/Library/Application\ Support/Code/User/settings.json ]; then
+  echo "Linking VSCode config - settings.json"
+  ln -s $dotfiles_dir/vscode/settings.json $home_dir/Library/Application\ Support/Code/User/settings.json
+fi
+
+if [ ! -d $home_dir/Library/Application\ Support/Code/User/snippets ]; then
+  echo "Linking VSCode config - snippets"
+  ln -s $dotfiles_dir/vscode/snippets $home_dir/Library/Application\ Support/Code/User/snippets
+fi
+
 cd ~
 
 echo "Set up prezto for zsh"

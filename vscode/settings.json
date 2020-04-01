@@ -1,0 +1,12 @@
+{
+    "workbench.colorTheme": "Material Theme Ocean",
+    "workbench.iconTheme": "eq-material-theme-icons-darker",
+    "editor.fontSize": 14,
+    "editor.fontLigatures": true,
+    "editor.tabSize": 2,
+    "editor.lineHeight": 28,
+    "editor.minimap.enabled": false,
+    "editor.lineNumbers": "relative",
+    "workbench.activityBar.visible": false,
+    "editor.fontFamily": "'JetBrains Mono', 'Dank Mono', Menlo, Monaco, 'Courier New', monospace"
+}

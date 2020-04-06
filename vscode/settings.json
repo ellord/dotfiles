@@ -9,5 +9,6 @@
     "editor.lineNumbers": "relative",
     "workbench.activityBar.visible": false,
     "editor.fontFamily": "'JetBrains Mono', 'Dank Mono', Menlo, Monaco, 'Courier New', monospace",
-    "go.formatTool": "goimports"
+    "go.formatTool": "goimports",
+    "workbench.startupEditor": "newUntitledFile"
 }

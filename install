@@ -49,6 +49,11 @@ if [ ! -f $home_dir/Library/Application\ Support/Code/User/settings.json ]; then
   ln -s $dotfiles_dir/vscode/settings.json $home_dir/Library/Application\ Support/Code/User/settings.json
 fi
 
+if [ ! -f $home_dir/Library/Application\ Support/Code/User/keybindings.json ]; then
+  echo "Linking VSCode config - keybindings.json"
+  ln -s $dotfiles_dir/vscode/keybindings.json $home_dir/Library/Application\ Support/Code/User/keybindings.json
+fi
+
 if [ ! -d $home_dir/Library/Application\ Support/Code/User/snippets ]; then
   echo "Linking VSCode config - snippets"
   ln -s $dotfiles_dir/vscode/snippets $home_dir/Library/Application\ Support/Code/User/snippets

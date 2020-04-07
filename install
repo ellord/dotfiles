@@ -9,6 +9,11 @@ dotfiles_dir="$home_dir/dotfiles"
 
 cd $dotfiles_dir
 
+if [ -d $home_dir/.oh-my-zsh/themes ]; then
+  rm -rf $home_dir/.oh-my-zsh/themes
+  ln -s $dotfiles_dir/zsh/themes $home_dir/.oh-my-zsh/themes
+fi
+
 if [ ! -f $home_dir/.vimrc ] || [ ! -f $home_dir/.vimrc.local ]; then
 	echo "Linking vim"
 	stow vim
@@ -60,13 +65,3 @@ if [ ! -d $home_dir/Library/Application\ Support/Code/User/snippets ]; then
 fi
 
 cd ~
-
-if [ ! -d $home_dir/.zprezto ]; then
-  echo "Set up prezto for zsh"
-  git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-  setopt EXTENDED_GLOB
-  for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-    ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-  done
-fi
-

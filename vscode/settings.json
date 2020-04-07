@@ -7,7 +7,7 @@
     "editor.lineHeight": 28,
     "editor.minimap.enabled": false,
     "editor.lineNumbers": "relative",
-    "workbench.activityBar.visible": false,
+    "workbench.activityBar.visible": true,
     "editor.fontFamily": "'JetBrains Mono', 'Dank Mono', Menlo, Monaco, 'Courier New', monospace",
     "go.formatTool": "goimports",
     "workbench.startupEditor": "newUntitledFile"

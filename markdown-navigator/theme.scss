@@ -1,0 +1,72 @@
+$primary-font: "SF Pro Text Light", sans-serif;
+$monospace-font: "Input Mono Extra Light", "JetBrains Mono", monospace;
+$text-colour: #c3d3de;
+$background-colour: #151726 !important;
+
+html {
+  background: $background-colour;
+}
+
+body {
+  background: $background-colour;
+}
+
+.markdown-body {
+  background: $background-colour;
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    &, a {
+      font-family: $primary-font;
+      color: $text-colour;
+    }
+  }
+
+  p, span, a {
+    font-family: $primary-font;
+    font-size: 14px;
+    line-height: 22px;
+    color: $text-colour;
+  }
+
+  p, span {
+    a {
+        text-decoration: none;
+        border-bottom: 2px solid $text-colour;
+        color: #fff;
+
+        &:hover {
+          border-color: #fff;
+          color: #fff;
+        }
+    }
+  }
+
+  pre,
+  code {
+    background-color: $background-colour;
+
+    &, span {
+      font-family: $monospace-font;
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    .line-numbers-rows {
+      span {
+          height: 22px;
+      }
+    }
+  }
+
+
+  code {
+    font-family: $monospace-font;
+    color: $text-colour;
+  }
+}

@@ -14,7 +14,7 @@ if [ -d $home_dir/.oh-my-zsh/themes ]; then
   ln -s $dotfiles_dir/zsh/themes $home_dir/.oh-my-zsh/themes
 fi
 
-if [ ! -f $home_dir/.vimrc ] || [ ! -f $home_dir/.vimrc.local ]; then
+if [ ! -f $home_dir/.vimrc ] || [ ! -f $home_dir/.vimrc.local ] || [ ! -d $home_dir/.vim/colors ]; then
 	echo "Linking vim"
 	stow vim
 fi

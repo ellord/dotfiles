@@ -44,7 +44,6 @@ else
   code --install-extension Equinusocio.vsc-community-material-theme
   code --install-extension Equinusocio.vsc-material-theme
   code --install-extension equinusocio.vsc-material-theme-icons
-  code --install-extension extr0py.vscode-relative-line-numbers
   code --install-extension sleistner.vscode-fileutils
   code --install-extension vscodevim.vim
 fi

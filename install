@@ -48,6 +48,11 @@ else
   code --install-extension vscodevim.vim
 fi
 
+if [ ! -d $home_dir/.vscode/extensions/theme-themer-vscode ]; then
+  echo "Linking VSCode config - theme (via extensions)"
+  ln -s $dotfiles_dir/vscode/extensions/theme-themer-vscode $home_dir/.vscode/extensions/theme-themer-vscode
+fi
+
 if [ ! -f $home_dir/Library/Application\ Support/Code/User/settings.json ]; then
   echo "Linking VSCode config - settings.json"
   ln -s $dotfiles_dir/vscode/settings.json $home_dir/Library/Application\ Support/Code/User/settings.json

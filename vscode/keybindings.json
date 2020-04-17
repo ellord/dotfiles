@@ -12,6 +12,10 @@
     "command": "workbench.action.splitEditor"
   },
   {
+    "key": "ctrl+,",
+    "command": "workbench.panel.terminal.focus"
+  },
+  {
     "key": "ctrl+g",
     "command": "extension.selectSameText"
   }

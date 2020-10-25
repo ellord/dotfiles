@@ -180,18 +180,62 @@ if &term =~# '^screen'
 endif
 
 " --> provide some beautiful colorschemes for the editor
+"  Run :PlugInstall after adding a plugin to install
 Plug 'dracula/vim'
 Plug 'morhetz/gruvbox'
 Plug 'trevordmiller/nova-vim'
 Plug '29decibel/codeschool-vim-theme'
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
 Plug 'altercation/vim-colors-solarized'
+Plug 'yuezk/vim-js'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'scrooloose/nerdtree'
+Plug 'ryanoasis/vim-devicons'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
 
 " }}}
 
 call plug#end()
 colorscheme Tomorrow-Night-Eighties
 let g:airline_theme='nova'
+
+" Coc config
+let g:coc_global_extensions = ['coc-emmet', 'coc-eslint', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver']
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
+" NERDTree config
+let g:NERDTreeShowHidden = 1
+let g:NERDTreeMinimalUI = 1
+let g:NERDTreeIgnore = []
+let g:NERDTreeStatusline = ''
+" Automaticaly close nvim if NERDTree is only thing left open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" Toggle
+nnoremap <silent> <C-b> :NERDTreeToggle<CR>
+
+" Fuzzy finder
+nnoremap <C-p> :FZF<CR>
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-s': 'split',
+  \ 'ctrl-v': 'vsplit'
+  \}
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+
+" Pane switching
+" use alt+hjkl to move between split/vsplit panels
+tnoremap <A-h> <C-\><C-n><C-w>h
+tnoremap <A-j> <C-\><C-n><C-w>j
+tnoremap <A-k> <C-\><C-n><C-w>k
+tnoremap <A-l> <C-\><C-n><C-w>l
+nnoremap <A-h> <C-w>h
+nnoremap <A-j> <C-w>j
+nnoremap <A-k> <C-w>k
+nnoremap <A-l> <C-w>l
+
 " --> Personalize: allows customizations via a local configuration
 if filereadable(expand("~/.vimrc.local")) | source ~/.vimrc.local | endif
-

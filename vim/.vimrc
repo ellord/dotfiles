@@ -94,7 +94,7 @@ Plug 'flazz/vim-colorschemes'
 " Plug 'wombat256.vim'
 " Plug 'cstrahan/grb256'
 " Plug 'chriskempson/base16-vim'
-" Plug 'chriskempson/vim-tomorrow-theme'
+Plug 'chriskempson/vim-tomorrow-theme'
 " Plug 'daylerees/colour-schemes', { 'rtp': 'vim-themes/' }
 
 " }}}
@@ -196,6 +196,11 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
+if has('nvim') || has('patch-8.0.902')
+  Plug 'mhinz/vim-signify'
+else
+  Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
+endif
 
 " }}}
 

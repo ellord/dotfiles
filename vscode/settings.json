@@ -1,14 +1,31 @@
 {
-    "workbench.colorTheme": "Themer Dark",
-    "workbench.iconTheme": "eq-material-theme-icons-darker",
-    "editor.fontSize": 14,
-    "editor.fontLigatures": true,
-    "editor.tabSize": 2,
-    "editor.lineHeight": 28,
-    "editor.minimap.enabled": false,
-    "editor.lineNumbers": "relative",
-    "workbench.activityBar.visible": true,
-    "editor.fontFamily": "'JetBrains Mono', 'Dank Mono', Menlo, Monaco, 'Courier New', monospace",
-    "go.formatTool": "goimports",
-    "workbench.startupEditor": "newUntitledFile"
+  "workbench.colorTheme": "Themer Dark",
+  "workbench.iconTheme": "eq-material-theme-icons-darker",
+  "editor.fontSize": 14,
+  "editor.fontLigatures": true,
+  "editor.tabSize": 2,
+  "editor.lineHeight": 28,
+  "editor.minimap.enabled": false,
+  "editor.lineNumbers": "relative",
+  "workbench.activityBar.visible": true,
+  "editor.fontFamily": "'JetBrains Mono', 'Dank Mono', Menlo, Monaco, 'Courier New', monospace",
+  "go.formatTool": "goimports",
+  "workbench.startupEditor": "newUntitledFile",
+  "go.useLanguageServer": true,
+  "editor.formatOnSave": false,
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true
+  },
+  "eslint.validate": ["javascript", "typescript", "typescriptreact"],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "workbench.statusBar.visible": false
 }

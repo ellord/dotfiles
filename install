@@ -50,7 +50,6 @@ else
   code --install-extension Equinusocio.vsc-material-theme
   code --install-extension equinusocio.vsc-material-theme-icons
   code --install-extension esbenp.prettier-vscode
-  code --install-extension extr0py.vscode-relative-line-numbers
   code --install-extension golang.go
   code --install-extension ms-azuretools.vscode-docker
   code --install-extension ms-vscode-remote.remote-containers

@@ -1,0 +1,26 @@
+{
+	"console.log": {
+		"scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "prefix": ["cl"],
+    "body": ["console.log($0)"],
+    "description": "Simple console.log"
+  },
+	"console.log template literal": {
+		"scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "prefix": ["cll"],
+    "body": ["console.log(`$0`)"],
+    "description": "console.log with template literal"
+  },
+  "console.log variable with label": {
+		"scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "prefix": ["cla"],
+    "body": ["console.log('$0', $0)"],
+    "description": "console.log variable with label"
+  },
+  "console.log variable with label on newline": {
+		"scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "prefix": ["cln"],
+    "body": ["console.log('$0');","console.log($0);"],
+    "description": "console.log variable with label on newline"
+  }
+}

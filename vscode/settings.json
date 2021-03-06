@@ -16,6 +16,9 @@
   "[javascript]": {
     "editor.formatOnSave": true
   },
+  "[javascriptreact]": {
+    "editor.formatOnSave": true
+  },
   "[json]": {
     "editor.formatOnSave": true
   },
@@ -25,7 +28,12 @@
   "[typescriptreact]": {
     "editor.formatOnSave": true
   },
-  "eslint.validate": ["javascript", "typescript", "typescriptreact"],
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "workbench.statusBar.visible": false,
   "terminal.integrated.fontSize": 14,

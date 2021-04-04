@@ -66,6 +66,8 @@ set softtabstop=2               " when <BS>, pretend tab is removed, even if spa
 set expandtab                   " expand tabs, by default
 set nojoinspaces                " prevents two spaces after punctuation on join
 
+autocmd Filetype go setlocal tabstop=2
+
 " --> provide movement around surroundings of text object
 Plug 'tpope/vim-surround'
 

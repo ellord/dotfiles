@@ -63,6 +63,7 @@ call plug#begin(expand("~/.vim/bundle"))
 " --> use soft tabs (with spaces) over hard tabs
 set tabstop=2                   " a tab is two spaces
 set softtabstop=2               " when <BS>, pretend tab is removed, even if spaces
+set shiftwidth=2
 set expandtab                   " expand tabs, by default
 set nojoinspaces                " prevents two spaces after punctuation on join
 

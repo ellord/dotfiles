@@ -15,5 +15,12 @@
     "typescript",
     "typescriptreact"
   ],
+  "languageserver": {
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"]
+    }
+  },
   "npm.binPath": "/usr/local/n/versions/node/14.9.0/bin/npm"
 }

@@ -183,19 +183,22 @@ if &term =~# '^screen'
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 endif
 
-" --> provide some beautiful colorschemes for the editor
 "  Run :PlugInstall after adding a plugin to install
+" --> provide some beautiful colorschemes for the editor
 Plug 'dracula/vim'
 Plug 'morhetz/gruvbox'
 Plug 'trevordmiller/nova-vim'
 Plug '29decibel/codeschool-vim-theme'
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
 Plug 'altercation/vim-colors-solarized'
+
+" Syntax highlighting
 Plug 'yuezk/vim-js'
-Plug 'HerringtonDarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'HerringtonDarkholme/yats.vim'
+
 Plug 'scrooloose/nerdtree'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -230,6 +233,9 @@ function! s:check_back_space() abort
 endfunction
 
 let g:coc_snippet_next = '<tab>'
+
+" Disable vim-go mapping gd
+let g:go_def_mapping_enabled = 0
 
 " NERDTree config
 let g:NERDTreeShowHidden = 1

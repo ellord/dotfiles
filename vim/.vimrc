@@ -66,6 +66,7 @@ set softtabstop=2               " when <BS>, pretend tab is removed, even if spa
 set shiftwidth=2
 set expandtab                   " expand tabs, by default
 set nojoinspaces                " prevents two spaces after punctuation on join
+set foldmethod=syntax
 
 autocmd Filetype go setlocal tabstop=2
 autocmd Filetype go setlocal shiftwidth=2

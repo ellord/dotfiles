@@ -196,6 +196,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'HerringtonDarkholme/yats.vim'
+Plug 'jparise/vim-graphql'
 
 Plug 'scrooloose/nerdtree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -217,7 +218,7 @@ colorscheme Tomorrow-Night-Eighties
 let g:airline_theme='nova'
 
 " Coc config
-let g:coc_global_extensions = ['coc-snippets', 'coc-emmet', 'coc-eslint', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver']
+let g:coc_global_extensions = ['coc-snippets', 'coc-emmet', 'coc-eslint', 'coc-css', 'coc-graphql', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver']
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 " For coc-snippets

@@ -52,8 +52,10 @@ else
   code --install-extension equinusocio.vsc-material-theme-icons
   code --install-extension esbenp.prettier-vscode
   code --install-extension golang.go
+  code --install-extension GraphQL.vscode-graphql
   code --install-extension ms-azuretools.vscode-docker
   code --install-extension ms-vscode-remote.remote-containers
+  code --install-extension ms-vsliveshare.vsliveshare
   code --install-extension ronnidc.nunjucks
   code --install-extension rust-lang.rust
   code --install-extension sleistner.vscode-fileutils

@@ -40,5 +40,6 @@
   "vim.smartRelativeLine": true,
   "cSpell.userWords": [
     "Anki"
-  ]
+  ],
+  "go.toolsManagement.autoUpdate": true
 }

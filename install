@@ -14,6 +14,12 @@ if [ ! -f $home_dir/.vimrc ] || [ ! -f $home_dir/.vimrc.local ] || [ ! -d $home_
 	stow vim
 fi
 
+if [ ! -d $home_dir/powerlevel10k ]; then
+  echo "Installing p10k"
+  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $home_dir/powerlevel10k
+  echo "source $home_dir/powerlevel10k/powerlevel10k.zsh-theme"
+fi
+
 if [ ! -f $home_dir/.zshrc ]; then
   echo "Linking zshrc"
   stow zsh

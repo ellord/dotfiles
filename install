@@ -9,14 +9,14 @@ dotfiles_dir="$home_dir/dotfiles"
 
 cd $dotfiles_dir
 
-if [ -d $home_dir/.oh-my-zsh/themes ]; then
-  rm -rf $home_dir/.oh-my-zsh/themes
-  ln -s $dotfiles_dir/zsh/themes $home_dir/.oh-my-zsh/themes
-fi
-
 if [ ! -f $home_dir/.vimrc ] || [ ! -f $home_dir/.vimrc.local ] || [ ! -d $home_dir/.vim/colors ]; then
 	echo "Linking vim"
 	stow vim
+fi
+
+if [ ! -f $home_dir/.zshrc ]; then
+  echo "Linking zshrc"
+  stow zsh
 fi
 
 if [ ! -d $home_dir/.config/nvim ]; then

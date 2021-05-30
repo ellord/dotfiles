@@ -19,6 +19,9 @@ fi
 # Autojump (j search)
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
+# Secret envs
+[ -f $HOME/.secrets ] && source $HOME/.secrets
+
 # Go
 export PATH=$PATH:$(go env GOPATH)/bin
 export GOPATH=$(go env GOPATH)

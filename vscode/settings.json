@@ -12,7 +12,7 @@
   "go.formatTool": "goimports",
   "workbench.startupEditor": "newUntitledFile",
   "go.useLanguageServer": true,
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
   "[javascript]": {
     "editor.formatOnSave": true
   },
@@ -38,8 +38,7 @@
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.lineHeight": 1.2,
   "vim.smartRelativeLine": true,
-  "cSpell.userWords": [
-    "Anki"
-  ],
-  "go.toolsManagement.autoUpdate": true
+  "cSpell.userWords": ["Anki"],
+  "go.toolsManagement.autoUpdate": true,
+  "settingsSync.ignoredExtensions": []
 }

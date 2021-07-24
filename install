@@ -53,6 +53,7 @@ else
   code --install-extension dbaeumer.vscode-eslint
   code --install-extension eamodio.gitlens
   code --install-extension ehaynes99.vscode-select-same-text
+  code --install-extension enkia.tokyo-night
   code --install-extension Equinusocio.vsc-community-material-theme
   code --install-extension Equinusocio.vsc-material-theme
   code --install-extension equinusocio.vsc-material-theme-icons

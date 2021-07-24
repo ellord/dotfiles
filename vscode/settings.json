@@ -1,5 +1,5 @@
 {
-  "workbench.colorTheme": "Themer Dark",
+  "workbench.colorTheme": "Tokyo Night",
   "workbench.iconTheme": "eq-material-theme-icons-darker",
   "editor.fontSize": 14,
   "editor.fontLigatures": true,
@@ -40,5 +40,6 @@
   "vim.smartRelativeLine": true,
   "cSpell.userWords": ["Anki"],
   "go.toolsManagement.autoUpdate": true,
-  "settingsSync.ignoredExtensions": []
+  "settingsSync.ignoredExtensions": [],
+  "window.zoomLevel": 1,
 }

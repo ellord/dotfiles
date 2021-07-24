@@ -194,6 +194,7 @@ Plug 'trevordmiller/nova-vim'
 Plug '29decibel/codeschool-vim-theme'
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
 Plug 'altercation/vim-colors-solarized'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 " Syntax highlighting
 Plug 'yuezk/vim-js'

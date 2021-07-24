@@ -58,8 +58,10 @@ else
   code --install-extension Equinusocio.vsc-material-theme
   code --install-extension equinusocio.vsc-material-theme-icons
   code --install-extension esbenp.prettier-vscode
+  code --install-extension GitHub.vscode-pull-request-github
   code --install-extension golang.go
   code --install-extension GraphQL.vscode-graphql
+  code --install-extension mikestead.dotenv
   code --install-extension ms-azuretools.vscode-docker
   code --install-extension ms-vscode-remote.remote-containers
   code --install-extension ms-vsliveshare.vsliveshare

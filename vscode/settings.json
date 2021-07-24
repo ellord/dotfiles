@@ -53,4 +53,5 @@
   "go.toolsManagement.autoUpdate": true,
   "settingsSync.ignoredExtensions": [],
   "window.zoomLevel": 1,
+  "git.autofetch": true
 }

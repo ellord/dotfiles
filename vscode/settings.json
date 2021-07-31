@@ -36,7 +36,6 @@
   ],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "terminal.integrated.fontSize": 14,
-  "terminal.integrated.lineHeight": 1.2,
   "vim.smartRelativeLine": true,
   "cSpell.userWords": [
     "Anki",
@@ -53,5 +52,6 @@
   "go.toolsManagement.autoUpdate": true,
   "settingsSync.ignoredExtensions": [],
   "window.zoomLevel": 1,
-  "git.autofetch": true
+  "git.autofetch": true,
+  "terminal.integrated.fontFamily": "MesloLGS NF"
 }

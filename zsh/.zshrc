@@ -22,6 +22,9 @@ fi
 # Secret envs
 [ -f $HOME/.secrets ] && source $HOME/.secrets
 
+# JetBrains IDE CLIs
+export PATH=$PATH:$HOME/bin
+
 # Go
 export PATH=$PATH:$(go env GOPATH)/bin
 export GOPATH=$(go env GOPATH)

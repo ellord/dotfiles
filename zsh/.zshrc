@@ -42,12 +42,6 @@ eval "$(pyenv init -)"
 # Set Python version for gcloud CLI
 export CLOUDSDK_PYTHON=python3
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
-
 # Fuzzy search
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -56,5 +50,17 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/ellord/code/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ellord/code/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/ellord/code/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ellord/code/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Helm v2
 export PATH="/opt/homebrew/opt/helm@2/bin:$PATH"
+
+# Fix for getopt
 export PATH="/opt/homebrew/opt/gnu-getopt/bin:$PATH"
+
+# For tusd
+export GCS_SERVICE_ACCOUNT_FILE=/Users/ellord/code/genero-dev/genero/packages/genero-lib/src/gcp-storage/keyfile.json

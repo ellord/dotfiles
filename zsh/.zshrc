@@ -17,7 +17,7 @@ if type brew &>/dev/null; then
 fi
 
 # Autojump (j search)
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
 
 # Secret envs
 [ -f $HOME/.secrets ] && source $HOME/.secrets
@@ -55,3 +55,6 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+export PATH="/opt/homebrew/opt/helm@2/bin:$PATH"
+export PATH="/opt/homebrew/opt/gnu-getopt/bin:$PATH"

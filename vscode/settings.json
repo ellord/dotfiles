@@ -1,5 +1,5 @@
 {
-  "workbench.colorTheme": "Tokyo Night",
+  "workbench.colorTheme": "Community Material Theme Darker High Contrast",
   "workbench.iconTheme": "eq-material-theme-icons-darker",
   "editor.fontSize": 14,
   "editor.fontLigatures": true,
@@ -9,6 +9,51 @@
   "editor.lineNumbers": "relative",
   "editor.fontFamily": "'JetBrains Mono', 'Dank Mono', Menlo, Monaco, 'Courier New', monospace",
   "go.formatTool": "goimports",
+  "customizeUI.activityBar": "bottom",
+  "customizeUI.titleBar": "inline",
+  "customizeUI.font.regular": "Menlo",
+  "customizeUI.fontSizeMap": {
+    "13px": "12px",
+    "monospace": "12px"
+  },
+  "customizeUI.stylesheet": {
+    ".tabs-container ": "padding-top:7px; padding-left:2px; padding-bottom:5px",
+    ".tabs-container > .tab": "border-radius: 7px 7px 7px 7px; height: 20px; margin-left: 5px; padding-right:4px",
+    ".monaco-editor .suggest-widget": "border-radius: 10px 10px 10px 10px; overflow:hidden;"
+  },
+  "workbench.colorCustomizations": {
+    "list.activeSelectionBackground": "#191919",
+    "list.hoverBackground": "#191919",
+    "editorWidget.background": "#191919",
+    "panel.background": "#191919",
+    "titleBar.activeBackground": "#191919",
+    "breadcrumbPicker.background": "#191919",
+    "settings.dropdownBackground": "#191919",
+    "settings.numberInputBackground": "#191919",
+    "settings.textInputBackground": "#191919",
+    "settings.checkboxBackground": "#191919",
+    "editor.background": "#1a1a1a",
+    "tab.activeBackground": "#0f0f0f",
+    "tab.inactiveBackground": "#1a1a1a",
+    "sideBar.background": "#0f0f0f",
+    "sideBarSectionHeader.background": "#0f0f0f",
+    "activityBar.background": "#0f0f0f",
+    "statusBar.background": "#0f0f0f",
+    "scrollbarSlider.activeBackground": "#0f0f0f",
+    "tab.activeBorder": "#1a1a1a00",
+    "editorGroupHeader.tabsBackground": "#1a1a1a",
+    "statusBar.noFolderBackground": "#1a1a1a",
+    "tab.border": "#1a1a1a",
+    "editorHoverWidget.background": "#1a1a1a",
+    "menu.background": "#1a1a1a",
+    "debugToolBar.background": "#1a1a1a",
+    "editorBracketMatch.background": "#1a1a1a",
+    "quickInput.background": "#1a1a1a",
+    "editorOverviewRuler.border": "#1a1a1a",
+    "notifications.background": "#1a1a1a",
+    "breadcrumb.background": "#1a1a1a"
+  },
+  "workbench.list.smoothScrolling": true,
   "workbench.startupEditor": "newUntitledFile",
   "go.useLanguageServer": true,
   "[javascript]": {
@@ -52,5 +97,8 @@
   "window.zoomLevel": 1,
   "git.autofetch": true,
   "terminal.integrated.fontFamily": "MesloLGS NF",
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "workbench.productIconTheme": "icons-carbon",
+  "window.titleBarStyle": "native",
+  "editor.smoothScrolling": true
 }

@@ -4,14 +4,14 @@
   "editor.fontSize": 14,
   "editor.fontLigatures": true,
   "editor.tabSize": 2,
-  "editor.lineHeight": 28,
+  "editor.lineHeight": 33,
   "editor.minimap.enabled": false,
   "editor.lineNumbers": "relative",
-  "editor.fontFamily": "'JetBrains Mono', 'Dank Mono', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "'MesloLGS NF', 'JetBrains Mono', 'Dank Mono', Monaco, 'Courier New', monospace",
   "go.formatTool": "goimports",
   "customizeUI.activityBar": "bottom",
   "customizeUI.titleBar": "inline",
-  "customizeUI.font.regular": "Menlo",
+  "customizeUI.font.regular": "MesloLGS NF",
   "customizeUI.fontSizeMap": {
     "13px": "12px",
     "monospace": "12px"
@@ -94,11 +94,11 @@
   ],
   "go.toolsManagement.autoUpdate": true,
   "settingsSync.ignoredExtensions": [],
-  "window.zoomLevel": 1,
   "git.autofetch": true,
   "terminal.integrated.fontFamily": "MesloLGS NF",
   "editor.formatOnSave": true,
   "workbench.productIconTheme": "icons-carbon",
   "window.titleBarStyle": "native",
-  "editor.smoothScrolling": true
+  "editor.smoothScrolling": true,
+  "remoteHub.uncommittedChangesOnEntry": "none"
 }

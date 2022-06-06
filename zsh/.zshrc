@@ -64,3 +64,7 @@ export PATH="/opt/homebrew/opt/gnu-getopt/bin:$PATH"
 
 # For tusd
 export GCS_SERVICE_ACCOUNT_FILE=/Users/ellord/code/genero-dev/genero/packages/genero-lib/src/gcp-storage/keyfile.json
+
+export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools

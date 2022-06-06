@@ -82,13 +82,15 @@
   "vim.smartRelativeLine": true,
   "cSpell.userWords": [
     "Anki",
-    "Cloudbuilds",
+    "Backoff",
     "behaviour",
     "cloudbuild",
+    "Cloudbuilds",
     "dataloaders",
     "genero",
     "highcpu",
     "mixins",
+    "Sequelize",
     "uppy",
     "upsert"
   ],
@@ -101,4 +103,5 @@
   "window.titleBarStyle": "native",
   "editor.smoothScrolling": true,
   "remoteHub.uncommittedChangesOnEntry": "none"
+  "cSpell.language": "en,en-GB",
 }

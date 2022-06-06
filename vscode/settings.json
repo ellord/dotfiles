@@ -102,7 +102,8 @@
   "workbench.productIconTheme": "icons-carbon",
   "window.titleBarStyle": "native",
   "editor.smoothScrolling": true,
-  "remoteHub.uncommittedChangesOnEntry": "none"
+  "remoteHub.uncommittedChangesOnEntry": "none",
+  "explorer.confirmDelete": false,
   "cSpell.language": "en,en-GB",
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.patterns": {
@@ -114,4 +115,5 @@
     "package.json": "package-lock.json, yarn.lock"
   },
   "explorer.fileNesting.expand": false,
+  "editor.inlineSuggest.enabled": true
 }

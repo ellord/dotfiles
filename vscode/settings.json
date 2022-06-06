@@ -104,4 +104,14 @@
   "editor.smoothScrolling": true,
   "remoteHub.uncommittedChangesOnEntry": "none"
   "cSpell.language": "en,en-GB",
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js, ${capture}.*",
+    "*.tsx": "${capture}.ts, ${capture}.types.ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock"
+  },
+  "explorer.fileNesting.expand": false,
 }

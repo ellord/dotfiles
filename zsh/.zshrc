@@ -69,6 +69,13 @@ export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 
+# bun completions
+[ -s "/Users/ellord/.bun/_bun" ] && source "/Users/ellord/.bun/_bun"
+
+# bun
+export BUN_INSTALL="/Users/ellord/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
 # iTerm2
 export ITERM_ENABLE_SHELL_INTEGRATION_WITH_TMUX=YES
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

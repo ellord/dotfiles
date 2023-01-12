@@ -115,5 +115,16 @@
     "package.json": "package-lock.json, yarn.lock"
   },
   "explorer.fileNesting.expand": false,
-  "editor.inlineSuggest.enabled": true
+  "editor.inlineSuggest.enabled": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "githubPullRequests.pullBranch": "never",
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": true,
+    "markdown": false
+  },
+  "remoteHub.commitDirectlyWarning": "off",
+  "totalTypeScript.hideAllTips": false,
+  "totalTypeScript.hideBasicTips": true
 }

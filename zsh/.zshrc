@@ -1,8 +1,8 @@
 ## Interactive shell configuration
 
 # Completion configuration
-if [[ ":$FPATH:" != *":/Users/ellord/.zsh/completions:"* ]]; then 
-    export FPATH="/Users/ellord/.zsh/completions:$FPATH"
+if [[ ":$FPATH:" != *":$HOME/.zsh/completions:"* ]]; then 
+    export FPATH="$HOME/.zsh/completions:$FPATH"
 fi
 autoload -U edit-command-line
 zle -N edit-command-line
@@ -39,11 +39,11 @@ eval "$(starship init zsh)"
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Google Cloud SDK
-if [ -f '/Users/ellord/code/google-cloud-sdk/path.zsh.inc' ]; then 
-    . '/Users/ellord/code/google-cloud-sdk/path.zsh.inc'
+if [ -f "$HOME/code/google-cloud-sdk/path.zsh.inc" ]; then 
+    . "$HOME/code/google-cloud-sdk/path.zsh.inc"
 fi
-if [ -f '/Users/ellord/code/google-cloud-sdk/completion.zsh.inc' ]; then 
-    . '/Users/ellord/code/google-cloud-sdk/completion.zsh.inc'
+if [ -f "$HOME/code/google-cloud-sdk/completion.zsh.inc" ]; then 
+    . "$HOME/code/google-cloud-sdk/completion.zsh.inc"
 fi
 
 # tmux-manager autocomplete
@@ -55,10 +55,10 @@ _tm() {
 compdef _tm tm
 
 # Additional completions
-[ -s "/Users/ellord/.bun/_bun" ] && source "/Users/ellord/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # GitHub copilot
 eval "$(gh copilot alias -- zsh)"
 
 # Deno
-. "/Users/ellord/.deno/env"
+. "$HOME/.deno/env"

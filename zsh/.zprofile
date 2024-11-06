@@ -9,7 +9,7 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 export CLOUDSDK_PYTHON=python3
-export PATH="$PATH:/Users/ellord/.local/bin"
+export PATH="$PATH:$HOME/.local/bin"
 export PATH="$HOME/Library/Python/2.7/bin:$PATH"
 
 # Homebrew
@@ -30,9 +30,9 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 
 # Package managers
-export BUN_INSTALL="/Users/ellord/.bun"
+export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-export PNPM_HOME="/Users/ellord/Library/pnpm"
+export PNPM_HOME="$HOME/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;

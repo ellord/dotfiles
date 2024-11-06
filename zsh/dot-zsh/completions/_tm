@@ -1,0 +1,7 @@
+# tmux-manager completion
+_tm() {
+    local -a sessions
+    sessions=(${(f)"$(tmux list-sessions -F '#S' 2>/dev/null)"})
+    _describe 'tmux sessions' sessions
+}
+compdef _tm tm

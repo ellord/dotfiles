@@ -1,64 +1,45 @@
-## Interactive shell configuration
+# Interactive shell configuration
+
+# Load modular configuration files
+for config_file ($ZSH_CONFIG_DIR/.zsh/*.zsh(N)); do
+    source $config_file
+done
 
 # Completion configuration
-if [[ ":$FPATH:" != *":$HOME/.zsh/completions:"* ]]; then 
-    export FPATH="$HOME/.zsh/completions:$FPATH"
-fi
+fpath_append() {
+    if [ -d "$1" ] && [[ ":$FPATH:" != *":$1:"* ]]; then
+        export FPATH="$1:$FPATH"
+    fi
+}
+
+fpath_append "$ZSH_CONFIG_DIR/.zsh/completions"
 autoload -U edit-command-line
 zle -N edit-command-line
 
 # Key bindings
-bindkey '^X^E' edit-command-line
-bindkey '^[^[[D' backward-word    # Option + Left Arrow
-bindkey '^[^[[C' forward-word     # Option + Right Arrow
-bindkey '^[[1;3D' backward-word   # Alt + Left Arrow
-bindkey '^[[1;3C' forward-word    # Alt + Right Arrow
-bindkey '^[^?' backward-delete-word    # Option + Backspace
-bindkey '^[[3;3~' delete-word          # Option + Fn + Backspace
-bindkey '^W' backward-kill-word        # Ctrl + W
-bindkey '^[d' kill-word                # Option + D
-bindkey '^y' autosuggest-accept
+source "$ZSH_CONFIG_DIR/.zsh/keybindings.zsh"
 
 # Aliases
-alias ll="eza -al"
-alias lg="lazygit"
-alias tx="tmuxinator"
-alias vim="nvim"
-alias vi="nvim"
+source "$ZSH_CONFIG_DIR/.zsh/aliases.zsh"
 
 # Theme and colors
-export LS_COLORS="$(vivid generate catppuccin-mocha)"
-export EZA_COLORS="$(vivid generate catppuccin-mocha)"
+if command -v vivid >/dev/null; then
+    export LS_COLORS="$(vivid generate catppuccin-mocha)"
+    export EZA_COLORS="$LS_COLORS"
+fi
 
 # Tool initialization for interactive use
-[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-[ -f $HOME/.secrets ] && source $HOME/.secrets
-eval "$(pyenv init -)"
-eval "$(starship init zsh)"
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && source /opt/homebrew/etc/profile.d/autojump.sh
+[ -f "$HOME/.fzf.zsh" ] && source "$HOME/.fzf.zsh"
+[ -f "$HOME/.secrets" ] && source "$HOME/.secrets"
 
-# Google Cloud SDK
-if [ -f "$HOME/code/google-cloud-sdk/path.zsh.inc" ]; then 
-    . "$HOME/code/google-cloud-sdk/path.zsh.inc"
+# Initialize tools if they exist
+command -v pyenv >/dev/null && eval "$(pyenv init -)"
+command -v starship >/dev/null && eval "$(starship init zsh)"
+command -v gh >/dev/null && eval "$(gh copilot alias -- zsh)"
+
+# Tool-specific configurations
+if [ -d "$HOME/code/google-cloud-sdk" ]; then
+    source "$HOME/code/google-cloud-sdk/path.zsh.inc"
+    source "$HOME/code/google-cloud-sdk/completion.zsh.inc"
 fi
-if [ -f "$HOME/code/google-cloud-sdk/completion.zsh.inc" ]; then 
-    . "$HOME/code/google-cloud-sdk/completion.zsh.inc"
-fi
-
-# tmux-manager autocomplete
-_tm() {
-    local -a sessions
-    sessions=(${(f)"$(tmux list-sessions -F '#S' 2>/dev/null)"})
-    _describe 'tmux sessions' sessions
-}
-compdef _tm tm
-
-# Additional completions
-[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
-
-# GitHub copilot
-eval "$(gh copilot alias -- zsh)"
-
-# Deno
-. "$HOME/.deno/env"

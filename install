@@ -14,10 +14,10 @@ if [ ! -f $home_dir/.vimrc ] || [ ! -f $home_dir/.vimrc.local ] || [ ! -d $home_
 	stow vim
 fi
 
-if [ ! -f $home_dir/.zshrc ]; then
+# if [ ! -f $home_dir/.zshrc ]; then
   echo "Linking zshrc"
-  stow zsh
-fi
+  stow --dotfiles zsh
+# fi
 
 if [ ! -d $home_dir/.config/nvim ]; then
    ln -s $dotfiles_dir/nvim $home_dir/.config/nvim

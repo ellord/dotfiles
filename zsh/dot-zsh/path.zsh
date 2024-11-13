@@ -19,6 +19,7 @@ path_prepend "$HOME/.cargo/bin"
 path_prepend "$GOBIN"
 path_prepend "$BUN_INSTALL/bin"
 path_prepend "$PNPM_HOME"
+path_prepend "/opt/homebrew/opt/gnu-getopt/bin"
 
 # Android SDK
 path_append "$ANDROID_SDK_ROOT/emulator"
@@ -31,6 +32,5 @@ path_append "$HOME/.luarocks/bin"
 
 # Homebrew optional packages
 path_append "/opt/homebrew/opt/helm@2/bin"
-path_append "/opt/homebrew/opt/gnu-getopt/bin"
 
 export PATH

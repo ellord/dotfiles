@@ -20,7 +20,7 @@ fi
 # fi
 
 if [ ! -d $home_dir/.config/nvim ]; then
-   ln -s $dotfiles_dir/nvim $home_dir/.config/nvim
+   ln -s $dotfiles_dir/nvim-config $home_dir/.config/nvim
 fi
 
 if [ ! -d $home_dir/.config/wezterm ]; then

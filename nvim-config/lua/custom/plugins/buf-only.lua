@@ -1,0 +1,3 @@
+return {
+  'numToStr/BufOnly.nvim',
+}

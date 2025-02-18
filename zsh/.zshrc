@@ -1,3 +1,5 @@
+# Add deno completions to search path
+if [[ ":$FPATH:" != *":/Users/ellord/.zsh/completions:"* ]]; then export FPATH="/Users/ellord/.zsh/completions:$FPATH"; fi
 # Interactive shell configuration
 
 # Load modular configuration files
@@ -34,6 +36,7 @@ fi
 [ -f "$HOME/.secrets" ] && source "$HOME/.secrets"
 
 # Initialize tools if they exist
+command -v zoxide >/dev/null && eval "$(zoxide init zsh)"
 command -v pyenv >/dev/null && eval "$(pyenv init -)"
 command -v starship >/dev/null && eval "$(starship init zsh)"
 command -v gh >/dev/null && eval "$(gh copilot alias -- zsh)"
@@ -43,3 +46,13 @@ if [ -d "$HOME/code/google-cloud-sdk" ]; then
     source "$HOME/code/google-cloud-sdk/path.zsh.inc"
     source "$HOME/code/google-cloud-sdk/completion.zsh.inc"
 fi
+
+. "$HOME/.local/share/../bin/env"
+. "/Users/ellord/.deno/env"
+# pnpm
+export PNPM_HOME="/Users/ellord/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

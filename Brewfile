@@ -41,6 +41,7 @@ brew "vivid"
 brew "wget"
 brew "yarn"
 brew "youtube-dl"
+brew "zoxide"
 brew "zsh"
 brew "zsh-completions"
 

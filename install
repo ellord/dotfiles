@@ -23,6 +23,10 @@ if [ ! -d $home_dir/.config/nvim ]; then
    ln -s $dotfiles_dir/nvim $home_dir/.config/nvim
 fi
 
+if [ ! -d $home_dir/.config/wezterm ]; then
+   ln -s $dotfiles_dir/wezterm $home_dir/.config/wezterm
+fi
+
 if [ ! -f $home_dir/.tmux.conf ]; then
 	echo "Linking tmux"
 	stow tmux

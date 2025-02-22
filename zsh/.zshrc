@@ -47,8 +47,6 @@ if [ -d "$HOME/code/google-cloud-sdk" ]; then
     source "$HOME/code/google-cloud-sdk/completion.zsh.inc"
 fi
 
-. "$HOME/.local/share/../bin/env"
-. "/Users/ellord/.deno/env"
 # pnpm
 export PNPM_HOME="/Users/ellord/Library/pnpm"
 case ":$PATH:" in

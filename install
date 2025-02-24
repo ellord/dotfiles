@@ -20,11 +20,18 @@ fi
 # fi
 
 if [ ! -d $home_dir/.config/nvim ]; then
+   echo "Linking nvim"
    ln -s $dotfiles_dir/nvim-config $home_dir/.config/nvim
 fi
 
 if [ ! -d $home_dir/.config/wezterm ]; then
+   echo "Linking wezterm"
    ln -s $dotfiles_dir/wezterm $home_dir/.config/wezterm
+fi
+
+if [ ! -f $home_dir/Library/Application\ Support/com.mitchellh.ghostty/config ]; then
+   echo "Linking ghostty"
+   ln -s $dotfiles_dir/ghostty/config $home_dir/Library/Application\ Support/com.mitchellh.ghostty/config
 fi
 
 if [ ! -f $home_dir/.tmux.conf ]; then

@@ -161,6 +161,8 @@ return {
         single_file_support = false,
       },
 
+      emmet_ls = {},
+
       lua_ls = {
         -- cmd = {...},
         -- filetypes { ...},

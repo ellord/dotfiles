@@ -8,7 +8,7 @@ return {
       --   flavour = 'mocha', -- latte, frappe, macchiato, mocha
       -- }
       -- Load the colorscheme here
-      vim.cmd 'colorscheme catppuccin-mocha'
+      vim.cmd 'colorscheme nightfox'
 
       -- You can configure highlights by doing something like
       vim.cmd.hi 'Comment gui=none'
@@ -19,7 +19,7 @@ return {
       --   flavour = 'latte', -- latte, frappe, macchiato, mocha
       -- }
       -- Load the colorscheme here
-      vim.cmd 'colorscheme catppuccin-latte'
+      vim.cmd 'colorscheme dawnfox'
 
       -- You can configure highlights by doing something like
       vim.cmd.hi 'Comment gui=none'

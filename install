@@ -39,6 +39,22 @@ if [ ! -f $home_dir/.tmux.conf ]; then
 	stow tmux
 fi
 
+# Install TPM if not already installed
+if [ ! -d $home_dir/.tmux/plugins/tpm ]; then
+	echo "Installing tmux plugin manager"
+	mkdir -p $home_dir/.tmux/plugins
+	git clone https://github.com/tmux-plugins/tpm $home_dir/.tmux/plugins/tpm
+fi
+
+# Install tmux-dark-notify if not already installed
+if [ ! -d $home_dir/.tmux/plugins/tmux-dark-notify ]; then
+	echo "Installing tmux-dark-notify plugin"
+	git clone https://github.com/erikw/tmux-dark-notify $home_dir/.tmux/plugins/tmux-dark-notify
+fi
+
+# Make theme files executable
+chmod +x $home_dir/.tmux/themes/*.tmux 2>/dev/null
+
 if [ ! -f $home_dir/.gitconfig ]; then
 	echo "Copying gitconfig"
  	cp $dotfiles_dir/git/.gitconfig ~/

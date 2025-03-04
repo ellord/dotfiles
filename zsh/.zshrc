@@ -26,14 +26,28 @@ source "$ZSH_CONFIG_DIR/.zsh/aliases.zsh"
 
 # Theme and colors
 if command -v vivid >/dev/null; then
-    export LS_COLORS="$(vivid generate catppuccin-mocha)"
-    export EZA_COLORS="$LS_COLORS"
+    # Check if system is in dark mode (only works on macOS)
+    if [[ "$(defaults read -g AppleInterfaceStyle 2>/dev/null)" == "Dark" ]]; then
+        export LS_COLORS="$(vivid generate nightfox)"
+        export EZA_COLORS="$LS_COLORS"
+    else
+        export LS_COLORS="$(vivid generate dawnfox)"
+        export EZA_COLORS="$LS_COLORS"
+    fi
 fi
 
 # Tool initialization for interactive use
 [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && source /opt/homebrew/etc/profile.d/autojump.sh
 [ -f "$HOME/.fzf.zsh" ] && source "$HOME/.fzf.zsh"
 [ -f "$HOME/.secrets" ] && source "$HOME/.secrets"
+
+# Auto theme switching based on system appearance
+if command -v dark-notify >/dev/null; then
+  # Start dark-notify if not already running
+  if ! pgrep -x "dark-notify" >/dev/null; then
+    dark-notify -c "source ~/.zshrc; update_theme" >/dev/null 2>&1 &
+  fi
+fi
 
 # Initialize tools if they exist
 command -v zoxide >/dev/null && eval "$(zoxide init zsh)"

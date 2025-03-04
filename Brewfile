@@ -1,5 +1,6 @@
 brew "autojump"
 brew "coreutils"
+brew "dark-notify"
 brew "deno"
 brew "exercism"
 brew "exiftool"

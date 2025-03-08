@@ -29,6 +29,7 @@ path_append "$ANDROID_SDK_ROOT/platform-tools"
 path_append "$HOME/.local/bin"
 path_append "$HOME/bin"
 path_append "$HOME/.luarocks/bin"
+path_append "$HOME/.npm-global/bin"
 
 # Homebrew optional packages
 path_append "/opt/homebrew/opt/helm@2/bin"

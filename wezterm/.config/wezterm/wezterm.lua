@@ -20,6 +20,7 @@ config = {
 	font = wezterm.font("CommitMono"),
 	font_size = 16.0,
 	line_height = 1.3,
+	send_composed_key_when_left_alt_is_pressed = false,
 	window_close_confirmation = "NeverPrompt",
 	window_decorations = "RESIZE",
 }

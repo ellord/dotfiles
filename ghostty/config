@@ -3,3 +3,12 @@ font-family = CommitMono
 font-size = 16
 mouse-hide-while-typing = true
 theme = light:dayfox,dark:nightfox
+keybind = shift+enter=text:\n
+macos-option-as-alt = true
+window-decoration = none
+
+# Window padding
+window-padding-x = 8
+window-padding-y = 8
+window-padding-balance = true
+window-padding-color = background

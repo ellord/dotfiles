@@ -47,6 +47,11 @@ if command -v dark-notify >/dev/null; then
   if ! pgrep -x "dark-notify" >/dev/null; then
     dark-notify -c "source ~/.zshrc; update_theme" >/dev/null 2>&1 &
   fi
+  
+  # Start dark-notify for Claude Code theme switching
+  if ! pgrep -f "dark-notify.*claude" >/dev/null; then
+    dark-notify -c "$HOME/dotfiles/claude/.claude/dark-notify-claude.sh" >/dev/null 2>&1 &
+  fi
 fi
 
 # Initialize tools if they exist

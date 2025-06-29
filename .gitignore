@@ -3,3 +3,7 @@
 sublime/Packages/User/Package Control.cache
 vim/.vim/bundle
 vim/.vim/autoload
+
+# Claude
+CLAUDE.local.md
+.claude/settings.local.json

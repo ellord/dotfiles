@@ -30,6 +30,7 @@ path_append "$HOME/.local/bin"
 path_append "$HOME/bin"
 path_append "$HOME/.luarocks/bin"
 path_append "$HOME/.npm-global/bin"
+path_append "$HOME/.config/claude/local/claude"
 
 # Homebrew optional packages
 path_append "/opt/homebrew/opt/helm@2/bin"

@@ -52,3 +52,17 @@ brew bundle    # Install all dependencies from Brewfile
 ### Git Configuration
 - Git configuration template at `git/.gitconfig` (copied, not symlinked)
 - Current modifications tracked by git show uncommitted changes to ghostty, nvim plugins, wezterm, and zsh configurations
+
+## Neovim Troubleshooting
+
+### Snippet/Completion Issues
+- **Custom snippets**: Defined in `nvim-config/lua/custom/plugins/nvim-cmp.lua`
+- **Completion sources order matters**: LuaSnip should come before nvim_lsp to prioritize custom snippets
+- **TypeScript/JSX files**: Use `typescript-tools.nvim` (not tsserver) with snippet completions disabled
+- **HTML/Emmet completion**: `emmet_ls` restricted to HTML/CSS files only to avoid JSX conflicts
+- **Snippet conflicts**: Use high priority values (e.g. 1000) and exclude unwanted sources from friendly-snippets
+
+### Key Plugin Interactions
+- **Completion**: nvim-cmp + LuaSnip + typescript-tools + friendly-snippets
+- **LSP**: nvim-lspconfig handles most servers, typescript-tools handles TS/JS
+- **Emmet**: Both nvim-emmet (manual) and emmet_ls (auto) are configured

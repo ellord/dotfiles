@@ -66,7 +66,7 @@ return {
         i(1),
         t "');",
       }),
-      s('cla', {
+      s({trig = 'cla', priority = 1000}, {
         t "console.log('",
         i(1, 'label'),
         t "', ",
@@ -131,8 +131,8 @@ return {
       },
       sources = {
         { name = 'copilot', group_index = 2 },
-        { name = 'nvim_lsp' },
         { name = 'luasnip' },
+        { name = 'nvim_lsp' },
         { name = 'path' },
       },
     }

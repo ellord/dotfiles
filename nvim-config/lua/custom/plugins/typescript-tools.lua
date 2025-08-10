@@ -4,5 +4,19 @@ return {
   opts = {
     root_dir = require('lspconfig').util.root_pattern('package.json', 'tsconfig.json'),
     single_file_support = false,
+    settings = {
+      typescript = {
+        completion = {
+          includeCompletionsForModuleExports = true,
+          includeCompletionsWithSnippetText = false,
+        },
+      },
+      javascript = {
+        completion = {
+          includeCompletionsForModuleExports = true,
+          includeCompletionsWithSnippetText = false,
+        },
+      },
+    },
   },
 }

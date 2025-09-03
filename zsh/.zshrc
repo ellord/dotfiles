@@ -52,6 +52,11 @@ if command -v dark-notify >/dev/null; then
   if ! pgrep -f "dark-notify.*claude" >/dev/null; then
     dark-notify -c "$HOME/dotfiles/claude/.claude/dark-notify-claude.sh" >/dev/null 2>&1 &
   fi
+
+  # Start dark-notify for k9s theme switching
+  if ! pgrep -f "dark-notify.*k9s" >/dev/null; then
+    dark-notify -c "$HOME/dotfiles/k9s/dark-notify-k9s.sh" >/dev/null 2>&1 &
+  fi
 fi
 
 # Initialize tools if they exist

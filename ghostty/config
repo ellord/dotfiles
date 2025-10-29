@@ -4,6 +4,7 @@ font-size = 16
 mouse-hide-while-typing = true
 theme = light:dayfox,dark:nightfox
 keybind = shift+enter=text:\n
+keybind = global:cmd+shift+backquote=toggle_quick_terminal
 macos-option-as-alt = true
 window-decoration = none
 

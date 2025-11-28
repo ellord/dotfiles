@@ -19,6 +19,23 @@ return {
         vim.keymap.set(mode, l, r, opts)
       end
 
+      -- Navigation between hunks
+      map('n', ']c', function()
+        if vim.wo.diff then
+          vim.cmd.normal { ']c', bang = true }
+        else
+          gitsigns.nav_hunk 'next'
+        end
+      end, { desc = 'Jump to next git change' })
+
+      map('n', '[c', function()
+        if vim.wo.diff then
+          vim.cmd.normal { '[c', bang = true }
+        else
+          gitsigns.nav_hunk 'prev'
+        end
+      end, { desc = 'Jump to previous git change' })
+
       -- Toggle buffer-wide blame view
       map('n', '<leader>gb', function()
         gitsigns.blame_line { full = true }
@@ -28,8 +45,6 @@ return {
       map('n', '<leader>gB', gitsigns.toggle_current_line_blame)
 
       map('n', '<leader>gg', ':Gitsigns blame<CR>')
-
-      -- Add more keymaps here as needed
     end,
   },
 }

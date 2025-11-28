@@ -1,6 +1,7 @@
 adjust-cell-height = 10
 font-family = CommitMono
 font-size = 16
+font-thicken = true
 mouse-hide-while-typing = true
 theme = light:Catppuccin Latte,dark:Nord Wave
 keybind = shift+enter=text:\n

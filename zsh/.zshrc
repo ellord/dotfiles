@@ -28,10 +28,10 @@ source "$ZSH_CONFIG_DIR/.zsh/aliases.zsh"
 if command -v vivid >/dev/null; then
     # Check if system is in dark mode (only works on macOS)
     if [[ "$(defaults read -g AppleInterfaceStyle 2>/dev/null)" == "Dark" ]]; then
-        export LS_COLORS="$(vivid generate nightfox)"
+        export LS_COLORS="$(vivid generate catppuccin-mocha)"
         export EZA_COLORS="$LS_COLORS"
     else
-        export LS_COLORS="$(vivid generate dawnfox)"
+        export LS_COLORS="$(vivid generate catppuccin-latte)"
         export EZA_COLORS="$LS_COLORS"
     fi
 fi

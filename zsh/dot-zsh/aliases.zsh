@@ -11,9 +11,9 @@ alias vi="nvim"
 update_theme() {
   if command -v vivid >/dev/null; then
     if [[ "$(defaults read -g AppleInterfaceStyle 2>/dev/null)" == "Dark" ]]; then
-      export LS_COLORS="$(vivid generate nightfox)"
+      export LS_COLORS="$(vivid generate catppuccin-mocha)"
     else
-      export LS_COLORS="$(vivid generate dawnfox)"
+      export LS_COLORS="$(vivid generate catppuccin-latte)"
     fi
     export EZA_COLORS="$LS_COLORS"
   fi

@@ -10,3 +10,4 @@ bindkey '^[[3;3~' delete-word          # Option + Fn + Backspace
 bindkey '^W' backward-kill-word        # Ctrl + W
 bindkey '^[d' kill-word                # Option + D
 bindkey '^y' autosuggest-accept
+bindkey "^R" history-incremental-search-backward

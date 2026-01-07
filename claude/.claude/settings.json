@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Ls:*"
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline.sh"
+  },
+  "alwaysThinkingEnabled": true,
+  "feedbackSurveyState": {
+    "lastShownTime": 1753954534522
+  }
+}

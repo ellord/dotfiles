@@ -63,7 +63,6 @@ fi
 command -v zoxide >/dev/null && eval "$(zoxide init zsh)"
 command -v pyenv >/dev/null && eval "$(pyenv init -)"
 command -v starship >/dev/null && eval "$(starship init zsh)"
-command -v gh >/dev/null && eval "$(gh copilot alias -- zsh)"
 
 # Tool-specific configurations
 if [ -d "$HOME/code/google-cloud-sdk" ]; then

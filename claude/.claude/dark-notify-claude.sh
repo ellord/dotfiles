@@ -15,12 +15,17 @@ EOF
 
 claude_set_theme() {
     local mode="$1"
-    
-    # Update Claude Code theme configuration
-    # Using the claude CLI config command to set the theme
-    claude config set -g theme "$mode"
-    
-    echo "Claude Code theme switched to $mode mode"
+    local config_file="$HOME/.claude.json"
+
+    if [[ -f "$config_file" ]]; then
+        local tmp
+        tmp=$(jq --arg theme "$mode" '.theme = $theme' "$config_file")
+        printf '%s\n' "$tmp" > "$config_file"
+        echo "Claude Code theme switched to $mode mode"
+    else
+        echo "Claude config file not found at $config_file" >&2
+        exit 3
+    fi
 }
 
 # Parse arguments

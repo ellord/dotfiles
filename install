@@ -49,6 +49,11 @@ if [ ! -f $home_dir/.claude/statusline.sh ]; then
    ln -s $dotfiles_dir/claude/.claude/statusline.sh $home_dir/.claude/statusline.sh
 fi
 
+if [ ! -f $home_dir/.claude/dark-notify-claude.sh ]; then
+   echo "Linking Claude Code dark-notify script"
+   ln -s $dotfiles_dir/claude/.claude/dark-notify-claude.sh $home_dir/.claude/dark-notify-claude.sh
+fi
+
 # Install TPM if not already installed
 if [ ! -d $home_dir/.tmux/plugins/tpm ]; then
 	echo "Installing tmux plugin manager"

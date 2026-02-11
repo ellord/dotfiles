@@ -54,6 +54,17 @@ if [ ! -f $home_dir/.claude/dark-notify-claude.sh ]; then
    ln -s $dotfiles_dir/claude/.claude/dark-notify-claude.sh $home_dir/.claude/dark-notify-claude.sh
 fi
 
+# Set up lazygit theme symlink based on current system appearance
+if [ ! -L $home_dir/.config/lazygit/theme.yml ]; then
+   echo "Setting up lazygit theme"
+   mkdir -p $home_dir/.config/lazygit
+   if [[ "$(defaults read -g AppleInterfaceStyle 2>/dev/null)" == "Dark" ]]; then
+      ln -s $dotfiles_dir/lazygit/theme-dark.yml $home_dir/.config/lazygit/theme.yml
+   else
+      ln -s $dotfiles_dir/lazygit/theme-light.yml $home_dir/.config/lazygit/theme.yml
+   fi
+fi
+
 # Install TPM if not already installed
 if [ ! -d $home_dir/.tmux/plugins/tpm ]; then
 	echo "Installing tmux plugin manager"

@@ -15,6 +15,9 @@ export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
 export BUN_INSTALL="$HOME/.bun"
 export PNPM_HOME="$HOME/Library/pnpm"
 
+# Lazygit config: base config + theme symlink (swapped by dark-notify)
+export LG_CONFIG_FILE="$HOME/dotfiles/lazygit/config.yml,$HOME/.config/lazygit/theme.yml"
+
 # Editor
 export EDITOR="$(command -v nvim || command -v vim)"
 export VISUAL="$EDITOR"

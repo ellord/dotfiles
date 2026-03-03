@@ -21,3 +21,10 @@ update_theme() {
 
 # Alias to manually update theme
 alias update-theme="update_theme"
+
+# Remote servers typically don't have terminfo for custom terminal emulators.
+# Fall back to xterm-256color for SSH to ensure colors and keybindings work.
+if [[ "$TERM" == "xterm-ghostty" || "$TERM" == "wezterm" ]]; then
+    alias ssh='TERM=xterm-256color ssh'
+    alias gcloud='TERM=xterm-256color gcloud'
+fi

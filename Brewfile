@@ -1,7 +1,6 @@
 brew "autojump"
 brew "coreutils"
 brew "cormacrelf/tap/dark-notify"
-brew "deno"
 brew "exercism"
 brew "exiftool"
 brew "ffmpeg"

@@ -67,6 +67,7 @@ fi
 # Initialize tools if they exist
 command -v zoxide >/dev/null && eval "$(zoxide init zsh)"
 command -v pyenv >/dev/null && eval "$(pyenv init -)"
+command -v mise >/dev/null && eval "$(mise activate zsh)"
 command -v starship >/dev/null && eval "$(starship init zsh)"
 
 # Tool-specific configurations

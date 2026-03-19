@@ -15,6 +15,7 @@ fpath_append() {
 }
 
 fpath_append "$ZSH_CONFIG_DIR/.zsh/completions"
+fpath_append "$HOME/.docker/completions"
 autoload -U edit-command-line
 zle -N edit-command-line
 

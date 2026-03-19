@@ -34,6 +34,7 @@ path_append "$HOME/.config/claude/local/claude"
 
 # Applications
 path_append "/Applications/Obsidian.app/Contents/MacOS"
+path_append "/Applications/Docker.app/Contents/Resources/bin"
 
 # Homebrew optional packages
 path_append "/opt/homebrew/opt/helm@2/bin"

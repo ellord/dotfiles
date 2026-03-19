@@ -7,7 +7,6 @@ theme = light:Catppuccin Latte,dark:Nord Wave
 keybind = shift+enter=text:\n
 keybind = global:cmd+shift+backquote=toggle_quick_terminal
 macos-option-as-alt = true
-window-decoration = none
 
 # Window padding
 window-padding-x = 8

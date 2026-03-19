@@ -14,7 +14,6 @@ path_append() {
 }
 
 # Development tools
-path_prepend "$PYENV_ROOT/bin"
 path_prepend "$HOME/.cargo/bin"
 path_prepend "$GOBIN"
 path_prepend "$BUN_INSTALL/bin"

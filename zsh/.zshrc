@@ -39,7 +39,7 @@ fi
 
 # Tool initialization for interactive use
 [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && source /opt/homebrew/etc/profile.d/autojump.sh
-[ -f "$HOME/.fzf.zsh" ] && source "$HOME/.fzf.zsh"
+command -v fzf >/dev/null && eval "$(fzf --zsh)"
 [ -f "$HOME/.secrets" ] && source "$HOME/.secrets"
 
 # Auto theme switching based on system appearance
@@ -67,7 +67,6 @@ fi
 
 # Initialize tools if they exist
 command -v zoxide >/dev/null && eval "$(zoxide init zsh)"
-command -v pyenv >/dev/null && eval "$(pyenv init -)"
 command -v mise >/dev/null && eval "$(mise activate zsh)"
 command -v starship >/dev/null && eval "$(starship init zsh)"
 

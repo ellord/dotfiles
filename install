@@ -19,6 +19,11 @@ fi
   stow --dotfiles zsh
 # fi
 
+if [ ! -d $home_dir/.config/mise ]; then
+   echo "Linking mise"
+   ln -s $dotfiles_dir/mise $home_dir/.config/mise
+fi
+
 if [ ! -d $home_dir/.config/nvim ]; then
    echo "Linking nvim"
    ln -s $dotfiles_dir/nvim-config $home_dir/.config/nvim

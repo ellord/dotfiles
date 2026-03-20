@@ -1,5 +1,5 @@
 # Add deno completions to search path
-if [[ ":$FPATH:" != *":/Users/ellord/.zsh/completions:"* ]]; then export FPATH="/Users/ellord/.zsh/completions:$FPATH"; fi
+if [[ ":$FPATH:" != *":$HOME/.zsh/completions:"* ]]; then export FPATH="$HOME/.zsh/completions:$FPATH"; fi
 # Interactive shell configuration
 
 # Load modular configuration files
@@ -47,26 +47,10 @@ fi
 command -v fzf >/dev/null && eval "$(fzf --zsh)"
 [ -f "$HOME/.secrets" ] && source "$HOME/.secrets"
 
-# Auto theme switching based on system appearance
+# Auto theme switching based on system appearance (single dispatcher)
 if command -v dark-notify >/dev/null; then
-  # Start dark-notify if not already running
   if ! pgrep -x "dark-notify" >/dev/null; then
-    dark-notify -c "source ~/.zshrc; update_theme" >/dev/null 2>&1 &!
-  fi
-  
-  # Start dark-notify for Claude Code theme switching
-  if ! pgrep -f "dark-notify.*claude" >/dev/null; then
-    dark-notify -c "$HOME/dotfiles/claude/.claude/dark-notify-claude.sh" >/dev/null 2>&1 &!
-  fi
-
-  # Start dark-notify for k9s theme switching
-  if ! pgrep -f "dark-notify.*k9s" >/dev/null; then
-    dark-notify -c "$HOME/dotfiles/k9s/dark-notify-k9s.sh" >/dev/null 2>&1 &!
-  fi
-
-  # Start dark-notify for lazygit theme switching
-  if ! pgrep -f "dark-notify.*lazygit" >/dev/null; then
-    dark-notify -c "$HOME/dotfiles/lazygit/dark-notify-lazygit.sh" >/dev/null 2>&1 &!
+    dark-notify -c "$HOME/dotfiles/dark-notify-all.sh" >/dev/null 2>&1 &!
   fi
 fi
 
@@ -75,10 +59,3 @@ command -v zoxide >/dev/null && eval "$(zoxide init zsh)"
 command -v mise >/dev/null && eval "$(mise activate zsh)"
 command -v starship >/dev/null && eval "$(starship init zsh)"
 
-# pnpm
-export PNPM_HOME="/Users/ellord/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end

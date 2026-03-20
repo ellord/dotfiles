@@ -10,7 +10,8 @@ This is a personal dotfiles repository that manages configuration files for vari
 
 ### Installation
 ```bash
-./install  # Main installation script that uses stow to symlink configurations
+./install    # Set up all symlinks, stow packages, tmux plugins, and git config
+./uninstall  # Remove all symlinks created by install
 ```
 
 ### Stow Management
@@ -18,6 +19,8 @@ This is a personal dotfiles repository that manages configuration files for vari
 stow vim       # Link vim configuration
 stow zsh       # Link zsh configuration (uses --dotfiles flag)
 stow tmux      # Link tmux configuration
+stow mise      # Link mise configuration
+stow wezterm   # Link wezterm configuration
 ```
 
 ### Homebrew Dependencies
@@ -28,9 +31,10 @@ brew bundle    # Install all dependencies from Brewfile
 ## Architecture & Structure
 
 ### Configuration Management
-- Uses GNU Stow for symlink management
-- Special configurations are manually symlinked (nvim, wezterm, ghostty)
+- Uses GNU Stow for symlink management (vim, zsh, tmux, mise, wezterm)
+- Manual symlinks for tools that don't fit stow's directory model (nvim, ghostty, Claude Code)
 - The `install` script handles all setup including git cloning of tmux plugins
+- Dark mode switching across all tools via a single `dark-notify-all.sh` dispatcher
 
 ### Key Directories
 - `nvim-config/`: Neovim configuration based on kickstart.nvim
@@ -39,19 +43,27 @@ brew bundle    # Install all dependencies from Brewfile
 - `zsh/`: Shell configuration with modular setup
   - `dot-zsh/`: Contains aliases, completions, keybindings, and path configurations
 - `tmux/`: Tmux configuration with plugin support (TPM)
-- `wezterm/`: Terminal emulator configuration
+- `wezterm/`: Terminal emulator configuration (stow package with `.config/` structure)
 - `ghostty/`: Ghostty terminal configuration
+- `mise/`: Version manager configuration (stow package with `.config/` structure)
+  - Environment-specific configs: `mise.personal.toml`, `mise.work.toml`
+- `env/`: Environment-specific overrides (work/personal)
 
 ### Notable Tools Configured
-- Package managers: Homebrew, npm (via n), pyenv, pipx
+- Package managers: Homebrew, mise (manages node, python, go, rust, etc.)
 - Development tools: neovim, git (with delta), gh, lazygit
 - Search/navigation: fzf, ripgrep, zoxide
 - Container tools: k9s, kubectx
 - Language support: go, deno, luajit/luarocks
 
 ### Git Configuration
-- Git configuration template at `git/.gitconfig` (copied, not symlinked)
-- Current modifications tracked by git show uncommitted changes to ghostty, nvim plugins, wezterm, and zsh configurations
+- Shared config at `git/.gitconfig` (included via `[include]` from `~/.gitconfig`)
+- Personal details (name, email) go in `~/.gitconfig.local` (not tracked)
+- Machine-specific overrides (conditional includes for work repos) also in `~/.gitconfig.local`
+
+### Shell Scripts
+- Shell scripts follow the bash-script conventions: `set -euo pipefail`, coloured output, idempotent step functions
+- Validate with `shellcheck` and `shfmt -i 4` before committing
 
 ## Neovim Troubleshooting
 

@@ -1,115 +1,149 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
+set -euo pipefail
 
-cd ~
-home_dir=`pwd`
-cd -
-echo "Using $home_dir as home directory"
+cd "$(dirname "${BASH_SOURCE[0]}")" || exit
 
-dotfiles_dir="$home_dir/dotfiles"
+HOME_DIR="$HOME"
+DOTFILES_DIR="$HOME_DIR/dotfiles"
+ENV_FILE="$HOME_DIR/.dotfiles-env"
 
-# Environment detection
-env_file="$home_dir/.dotfiles-env"
-if [ ! -f "$env_file" ]; then
-    echo "Which environment is this?"
-    echo "  1) work"
-    echo "  2) personal"
-    read "choice?Select [1/2]: "
-    case "$choice" in
-        1) echo "work" > "$env_file" ;;
-        *) echo "personal" > "$env_file" ;;
-    esac
-fi
-export DOTFILES_ENV=$(cat "$env_file")
-echo "Environment: $DOTFILES_ENV"
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+ORANGE='\033[0;33m'
+NC='\033[0m'
 
-# Clone private work config if needed
-if [ "$DOTFILES_ENV" = "work" ] && [ ! -d "$dotfiles_dir/env/work" ]; then
-    echo "Cloning work environment config..."
-    git clone git@github.com:ellord/work-private-dotfiles.git "$dotfiles_dir/env/work"
-fi
+green() { echo -e "${GREEN}$*${NC}"; }
+yellow() { echo -e "${YELLOW}$*${NC}"; }
+orange() { echo -e "${ORANGE}$*${NC}"; }
 
-cd $dotfiles_dir
+stow_pkg() {
+    local flags=("$@")
+    stow -R --adopt -d "$DOTFILES_DIR" -t "$HOME_DIR" "${flags[@]}"
+}
 
-if [ ! -f $home_dir/.vimrc ] || [ ! -f $home_dir/.vimrc.local ] || [ ! -d $home_dir/.vim/colors ]; then
-	echo "Linking vim"
-	stow vim
-fi
+link_file() {
+    local src="$1" dest="$2"
+    if [[ -e "$dest" || -L "$dest" ]]; then
+        green "  ✔ $(basename "$dest") already linked"
+        return
+    fi
+    ln -s "$src" "$dest"
+    green "  🔗 Linked $(basename "$dest")"
+}
 
-# if [ ! -f $home_dir/.zshrc ]; then
-  echo "Linking zshrc"
-  stow --dotfiles zsh
-# fi
+detect_environment() {
+    if [[ -f "$ENV_FILE" ]]; then
+        green "✔ Environment already set: $(cat "$ENV_FILE")"
+    else
+        echo "Which environment is this?"
+        echo "  1) work"
+        echo "  2) personal"
+        read -rp "Select [1/2]: " choice
+        case "$choice" in
+        1) echo "work" >"$ENV_FILE" ;;
+        *) echo "personal" >"$ENV_FILE" ;;
+        esac
+    fi
+    DOTFILES_ENV="$(cat "$ENV_FILE")"
+    export DOTFILES_ENV
+}
 
-if [ ! -d $home_dir/.config/mise ]; then
-   echo "Linking mise"
-   ln -s $dotfiles_dir/mise $home_dir/.config/mise
-fi
+clone_work_config() {
+    if [[ "$DOTFILES_ENV" != "work" ]]; then
+        return
+    fi
+    if [[ -d "$DOTFILES_DIR/env/work" ]]; then
+        green "✔ Work config already cloned"
+        return
+    fi
+    green "📦 Cloning work environment config..."
+    git clone git@github.com:ellord/work-private-dotfiles.git "$DOTFILES_DIR/env/work"
+}
 
-if [ ! -d $home_dir/.config/nvim ]; then
-   echo "Linking nvim"
-   ln -s $dotfiles_dir/nvim-config $home_dir/.config/nvim
-fi
+link_stow_packages() {
+    green "🔧 Linking stow packages..."
+    stow_pkg vim
+    stow_pkg --dotfiles zsh
+    stow_pkg tmux
+    stow_pkg mise
+    stow_pkg wezterm
+}
 
-if [ ! -d $home_dir/.config/wezterm ]; then
-   echo "Linking wezterm"
-   ln -s $dotfiles_dir/wezterm $home_dir/.config/wezterm
-fi
+link_manual_packages() {
+    green "🔧 Linking manual packages..."
+    link_file "$DOTFILES_DIR/nvim-config" "$HOME_DIR/.config/nvim"
+    link_file "$DOTFILES_DIR/ghostty/config" "$HOME_DIR/Library/Application Support/com.mitchellh.ghostty/config"
+    link_file "$DOTFILES_DIR/claude/.claude/settings.json" "$HOME_DIR/.claude/settings.json"
+    link_file "$DOTFILES_DIR/claude/.claude/statusline.sh" "$HOME_DIR/.claude/statusline.sh"
+    link_file "$DOTFILES_DIR/claude/.claude/dark-notify-claude.sh" "$HOME_DIR/.claude/dark-notify-claude.sh"
+}
 
-if [ ! -f $home_dir/Library/Application\ Support/com.mitchellh.ghostty/config ]; then
-   echo "Linking ghostty"
-   ln -s $dotfiles_dir/ghostty/config $home_dir/Library/Application\ Support/com.mitchellh.ghostty/config
-fi
+link_lazygit_theme() {
+    if [[ -L "$HOME_DIR/.config/lazygit/theme.yml" ]]; then
+        green "  ✔ lazygit theme already linked"
+        return
+    fi
+    mkdir -p "$HOME_DIR/.config/lazygit"
+    if [[ "$(defaults read -g AppleInterfaceStyle 2>/dev/null)" == "Dark" ]]; then
+        ln -s "$DOTFILES_DIR/lazygit/theme-dark.yml" "$HOME_DIR/.config/lazygit/theme.yml"
+    else
+        ln -s "$DOTFILES_DIR/lazygit/theme-light.yml" "$HOME_DIR/.config/lazygit/theme.yml"
+    fi
+    green "  🔗 Linked lazygit theme"
+}
 
-if [ ! -f $home_dir/.tmux.conf ]; then
-	echo "Linking tmux"
-	stow tmux
-fi
+install_tmux_plugins() {
+    if [[ -d "$HOME_DIR/.tmux/plugins/tpm" ]]; then
+        green "✔ TPM already installed"
+    else
+        green "📦 Installing tmux plugin manager..."
+        mkdir -p "$HOME_DIR/.tmux/plugins"
+        git clone https://github.com/tmux-plugins/tpm "$HOME_DIR/.tmux/plugins/tpm"
+    fi
 
-if [ ! -f $home_dir/.claude/settings.json ]; then
-   echo "Linking Claude Code settings"
-   ln -s $dotfiles_dir/claude/.claude/settings.json $home_dir/.claude/settings.json
-fi
+    if [[ -d "$HOME_DIR/.tmux/plugins/tmux-dark-notify" ]]; then
+        green "✔ tmux-dark-notify already installed"
+    else
+        green "📦 Installing tmux-dark-notify..."
+        git clone https://github.com/erikw/tmux-dark-notify "$HOME_DIR/.tmux/plugins/tmux-dark-notify"
+    fi
 
-if [ ! -f $home_dir/.claude/statusline.sh ]; then
-   echo "Linking Claude Code statusline config"
-   ln -s $dotfiles_dir/claude/.claude/statusline.sh $home_dir/.claude/statusline.sh
-fi
+    chmod +x "$HOME_DIR/.tmux/themes/"*.tmux 2>/dev/null || true
+}
 
-if [ ! -f $home_dir/.claude/dark-notify-claude.sh ]; then
-   echo "Linking Claude Code dark-notify script"
-   ln -s $dotfiles_dir/claude/.claude/dark-notify-claude.sh $home_dir/.claude/dark-notify-claude.sh
-fi
+setup_gitconfig() {
+    if [[ -f "$HOME_DIR/.gitconfig" ]]; then
+        green "✔ gitconfig already exists"
+        return
+    fi
 
-# Set up lazygit theme symlink based on current system appearance
-if [ ! -L $home_dir/.config/lazygit/theme.yml ]; then
-   echo "Setting up lazygit theme"
-   mkdir -p $home_dir/.config/lazygit
-   if [[ "$(defaults read -g AppleInterfaceStyle 2>/dev/null)" == "Dark" ]]; then
-      ln -s $dotfiles_dir/lazygit/theme-dark.yml $home_dir/.config/lazygit/theme.yml
-   else
-      ln -s $dotfiles_dir/lazygit/theme-light.yml $home_dir/.config/lazygit/theme.yml
-   fi
-fi
+    green "🔧 Setting up gitconfig..."
+    cat >"$HOME_DIR/.gitconfig" <<'GITCONF'
+[include]
+    path = ~/dotfiles/git/.gitconfig
 
-# Install TPM if not already installed
-if [ ! -d $home_dir/.tmux/plugins/tpm ]; then
-	echo "Installing tmux plugin manager"
-	mkdir -p $home_dir/.tmux/plugins
-	git clone https://github.com/tmux-plugins/tpm $home_dir/.tmux/plugins/tpm
-fi
+[include]
+    path = ~/.gitconfig.local
+GITCONF
 
-# Install tmux-dark-notify if not already installed
-if [ ! -d $home_dir/.tmux/plugins/tmux-dark-notify ]; then
-	echo "Installing tmux-dark-notify plugin"
-	git clone https://github.com/erikw/tmux-dark-notify $home_dir/.tmux/plugins/tmux-dark-notify
-fi
+    if [[ ! -f "$HOME_DIR/.gitconfig.local" ]]; then
+        echo ""
+        yellow "⚠️  Create ~/.gitconfig.local with your [user] name and email:"
+        orange '  git config --file ~/.gitconfig.local user.name "Your Name"'
+        orange '  git config --file ~/.gitconfig.local user.email "you@example.com"'
+    fi
+}
 
-# Make theme files executable
-chmod +x $home_dir/.tmux/themes/*.tmux 2>/dev/null
+green "🚀 Installing dotfiles..."
+echo ""
 
-if [ ! -f $home_dir/.gitconfig ]; then
-	echo "Copying gitconfig"
- 	cp $dotfiles_dir/git/.gitconfig ~/
-fi
+detect_environment
+clone_work_config
+link_stow_packages
+link_manual_packages
+link_lazygit_theme
+install_tmux_plugins
+setup_gitconfig
 
-cd ~
+echo ""
+green "✅ Install complete!"

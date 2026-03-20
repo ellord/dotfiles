@@ -7,6 +7,27 @@ echo "Using $home_dir as home directory"
 
 dotfiles_dir="$home_dir/dotfiles"
 
+# Environment detection
+env_file="$home_dir/.dotfiles-env"
+if [ ! -f "$env_file" ]; then
+    echo "Which environment is this?"
+    echo "  1) work"
+    echo "  2) personal"
+    read "choice?Select [1/2]: "
+    case "$choice" in
+        1) echo "work" > "$env_file" ;;
+        *) echo "personal" > "$env_file" ;;
+    esac
+fi
+export DOTFILES_ENV=$(cat "$env_file")
+echo "Environment: $DOTFILES_ENV"
+
+# Clone private work config if needed
+if [ "$DOTFILES_ENV" = "work" ] && [ ! -d "$dotfiles_dir/env/work" ]; then
+    echo "Cloning work environment config..."
+    git clone git@github.com:ellord/work-private-dotfiles.git "$dotfiles_dir/env/work"
+fi
+
 cd $dotfiles_dir
 
 if [ ! -f $home_dir/.vimrc ] || [ ! -f $home_dir/.vimrc.local ] || [ ! -d $home_dir/.vim/colors ]; then

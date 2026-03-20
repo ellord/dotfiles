@@ -7,6 +7,10 @@ export XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"
 export XDG_CACHE_HOME="${XDG_CACHE_HOME:-$HOME/.cache}"
 export ZSH_CONFIG_DIR="${ZDOTDIR:-$HOME}"
 
+# Environment detection (work/personal)
+export DOTFILES_ENV="${DOTFILES_ENV:-$(cat ~/.dotfiles-env 2>/dev/null || echo personal)}"
+export MISE_ENV="$DOTFILES_ENV"
+
 # Tool-specific paths
 export PYENV_ROOT="$HOME/.pyenv"
 export GOPATH=$(go env GOPATH 2>/dev/null || echo "$HOME/go")

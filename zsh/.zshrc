@@ -7,6 +7,11 @@ for config_file ($ZSH_CONFIG_DIR/.zsh/*.zsh(N)); do
     source $config_file
 done
 
+# Load environment-specific config files
+for config_file ($HOME/dotfiles/env/$DOTFILES_ENV/zsh/dot-zsh/*.zsh(N)); do
+    source $config_file
+done
+
 # Completion configuration
 fpath_append() {
     if [ -d "$1" ] && [[ ":$FPATH:" != *":$1:"* ]]; then
@@ -69,12 +74,6 @@ fi
 command -v zoxide >/dev/null && eval "$(zoxide init zsh)"
 command -v mise >/dev/null && eval "$(mise activate zsh)"
 command -v starship >/dev/null && eval "$(starship init zsh)"
-
-# Tool-specific configurations
-if [ -d "$HOME/code/google-cloud-sdk" ]; then
-    source "$HOME/code/google-cloud-sdk/path.zsh.inc"
-    source "$HOME/code/google-cloud-sdk/completion.zsh.inc"
-fi
 
 # pnpm
 export PNPM_HOME="/Users/ellord/Library/pnpm"

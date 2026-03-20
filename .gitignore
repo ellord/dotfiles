@@ -4,6 +4,9 @@ sublime/Packages/User/Package Control.cache
 vim/.vim/bundle
 vim/.vim/autoload
 
+# Work environment (cloned separately)
+env/work/
+
 # Claude
 CLAUDE.local.md
 .claude/settings.local.json

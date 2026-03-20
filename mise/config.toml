@@ -13,9 +13,6 @@ eza = 'latest'
 fzf = 'latest'
 gh = 'latest'
 jq = 'latest'
-k9s = 'latest'
-kubectl = 'latest'
-kubectx = 'latest'
 lazygit = 'latest'
 luajit = 'latest'
 neovim = 'latest'
@@ -41,3 +38,4 @@ not_found_auto_install = true
 
 [env]
 EDITOR = 'nvim'
+LUAROCKS_VERSION = '3.12.2'

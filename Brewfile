@@ -36,7 +36,6 @@ brew "zsh-completions"
 
 cask "android-platform-tools"
 cask "anki"
-cask "calibre"
 cask "claude"
 cask "claude-code"
 cask "dropbox"
@@ -54,3 +53,7 @@ cask "visual-studio-code"
 cask "vlc"
 cask "wezterm"
 cask "zed"
+
+# Environment-specific packages
+env_brewfile = File.join(__dir__, "env", ENV.fetch("DOTFILES_ENV", "personal"), "Brewfile")
+instance_eval(File.read(env_brewfile)) if File.exist?(env_brewfile)

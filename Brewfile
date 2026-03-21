@@ -36,8 +36,6 @@ brew "zsh-completions"
 
 cask "android-platform-tools"
 cask "anki"
-cask "claude"
-cask "claude-code"
 cask "dropbox"
 cask "figma"
 cask "firefox"

@@ -5,6 +5,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")" || exit
 
 HOME_DIR="$HOME"
 DOTFILES_DIR="$HOME_DIR/dotfiles"
+PLATFORM="$(uname -s)"
 
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
@@ -34,13 +35,19 @@ unlink_stow_packages() {
     unstow_pkg --dotfiles zsh
     unstow_pkg tmux
     unstow_pkg mise
-    unstow_pkg wezterm
+    if [[ "$PLATFORM" == "Darwin" ]]; then
+        unstow_pkg wezterm
+    fi
 }
 
 unlink_manual_packages() {
     green "🧹 Removing manual symlinks..."
     remove_link "$HOME_DIR/.config/nvim"
-    remove_link "$HOME_DIR/Library/Application Support/com.mitchellh.ghostty/config"
+    if [[ "$PLATFORM" == "Darwin" ]]; then
+        remove_link "$HOME_DIR/Library/Application Support/com.mitchellh.ghostty/config"
+    else
+        remove_link "$HOME_DIR/.config/ghostty/config"
+    fi
     remove_link "$HOME_DIR/.claude/settings.json"
     remove_link "$HOME_DIR/.claude/statusline.sh"
     remove_link "$HOME_DIR/.claude/dark-notify-claude.sh"

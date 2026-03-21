@@ -2,15 +2,23 @@
 
 alias ll="eza -al"
 alias lg="lazygit"
-alias nv="neovide --frame=none . >/dev/null 2>&1 &"
 alias tx="tmuxinator"
 alias vim="nvim"
 alias vi="nvim"
 
+# macOS-only aliases
+if [[ "$(uname -s)" == "Darwin" ]]; then
+    alias nv="neovide --frame=none . >/dev/null 2>&1 &"
+fi
+
 # Function to update theme based on system appearance
 update_theme() {
   if command -v vivid >/dev/null; then
-    if [[ "$(defaults read -g AppleInterfaceStyle 2>/dev/null)" == "Dark" ]]; then
+    local _use_dark=true
+    if [[ "$(uname -s)" == "Darwin" ]] && [[ "$(defaults read -g AppleInterfaceStyle 2>/dev/null)" != "Dark" ]]; then
+      _use_dark=false
+    fi
+    if $_use_dark; then
       export LS_COLORS="$(vivid generate catppuccin-mocha)"
     else
       export LS_COLORS="$(vivid generate catppuccin-latte)"

@@ -32,23 +32,27 @@ source "$ZSH_CONFIG_DIR/.zsh/aliases.zsh"
 
 # Theme and colors
 if command -v vivid >/dev/null; then
-    # Check if system is in dark mode (only works on macOS)
-    if [[ "$(defaults read -g AppleInterfaceStyle 2>/dev/null)" == "Dark" ]]; then
-        export LS_COLORS="$(vivid generate catppuccin-mocha)"
-        export EZA_COLORS="$LS_COLORS"
-    else
-        export LS_COLORS="$(vivid generate catppuccin-latte)"
-        export EZA_COLORS="$LS_COLORS"
+    # On macOS, follow system appearance; elsewhere default to dark
+    _vivid_theme="catppuccin-mocha"
+    if [[ "$(uname -s)" == "Darwin" ]] && [[ "$(defaults read -g AppleInterfaceStyle 2>/dev/null)" != "Dark" ]]; then
+        _vivid_theme="catppuccin-latte"
     fi
+    export LS_COLORS="$(vivid generate "$_vivid_theme")"
+    export EZA_COLORS="$LS_COLORS"
+    unset _vivid_theme
 fi
 
 # Tool initialization for interactive use
-[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && source /opt/homebrew/etc/profile.d/autojump.sh
+if [ -f /opt/homebrew/etc/profile.d/autojump.sh ]; then
+    source /opt/homebrew/etc/profile.d/autojump.sh
+elif [ -f /usr/share/autojump/autojump.sh ]; then
+    source /usr/share/autojump/autojump.sh
+fi
 command -v fzf >/dev/null && eval "$(fzf --zsh)"
 [ -f "$HOME/.secrets" ] && source "$HOME/.secrets"
 
-# Auto theme switching based on system appearance (single dispatcher)
-if command -v dark-notify >/dev/null; then
+# Auto theme switching based on system appearance (macOS only)
+if [[ "$(uname -s)" == "Darwin" ]] && command -v dark-notify >/dev/null; then
   if ! pgrep -x "dark-notify" >/dev/null; then
     dark-notify -c "$HOME/dotfiles/dark-notify-all.sh" >/dev/null 2>&1 &!
   fi

@@ -15,9 +15,16 @@ export MISE_ENV="$DOTFILES_ENV"
 export PYENV_ROOT="$HOME/.pyenv"
 export GOPATH=$(go env GOPATH 2>/dev/null || echo "$HOME/go")
 export GOBIN="$GOPATH/bin"
-export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
 export BUN_INSTALL="$HOME/.bun"
-export PNPM_HOME="$HOME/Library/pnpm"
+
+# Platform-specific paths
+if [[ "$(uname -s)" == "Darwin" ]]; then
+    export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
+    export PNPM_HOME="$HOME/Library/pnpm"
+else
+    export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
+    export PNPM_HOME="$HOME/.local/share/pnpm"
+fi
 
 # Lazygit config: base config + theme symlink (swapped by dark-notify)
 export LG_CONFIG_FILE="$HOME/dotfiles/lazygit/config.yml,$HOME/.config/lazygit/theme.yml"

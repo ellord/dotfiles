@@ -27,13 +27,18 @@ k9s_set_theme() {
     
     # Update k9s config file
     if [[ -f "$config_file" ]]; then
+        # macOS sed requires -i '', GNU sed uses -i (no argument)
+        local sed_inplace=(-i)
+        if [[ "$(uname -s)" == "Darwin" ]]; then
+            sed_inplace=(-i '')
+        fi
         # Use sed to update the skin line
         if grep -q "skin:" "$config_file"; then
             # Replace existing skin line
-            sed -i '' "s/skin: .*/skin: $theme/" "$config_file"
+            sed "${sed_inplace[@]}" "s/skin: .*/skin: $theme/" "$config_file"
         else
             # Add skin line to ui section
-            sed -i '' "/ui:/,/^[^ ]/ s/\(^    defaultsToFullScreen: false\)/\1\n    skin: $theme/" "$config_file"
+            sed "${sed_inplace[@]}" "/ui:/,/^[^ ]/ s/\(^    defaultsToFullScreen: false\)/\1\n    skin: $theme/" "$config_file"
         fi
         echo "k9s theme switched to $theme ($mode mode)"
     else

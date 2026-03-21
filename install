@@ -6,6 +6,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")" || exit
 HOME_DIR="$HOME"
 DOTFILES_DIR="$HOME_DIR/dotfiles"
 ENV_FILE="$HOME_DIR/.dotfiles-env"
+PLATFORM="$(uname -s)"
 
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
@@ -66,13 +67,19 @@ link_stow_packages() {
     stow_pkg --dotfiles zsh
     stow_pkg tmux
     stow_pkg mise
-    stow_pkg wezterm
+    if [[ "$PLATFORM" == "Darwin" ]]; then
+        stow_pkg wezterm
+    fi
 }
 
 link_manual_packages() {
     green "🔧 Linking manual packages..."
     link_file "$DOTFILES_DIR/nvim-config" "$HOME_DIR/.config/nvim"
-    link_file "$DOTFILES_DIR/ghostty/config" "$HOME_DIR/Library/Application Support/com.mitchellh.ghostty/config"
+    if [[ "$PLATFORM" == "Darwin" ]]; then
+        link_file "$DOTFILES_DIR/ghostty/config" "$HOME_DIR/Library/Application Support/com.mitchellh.ghostty/config"
+    else
+        link_file "$DOTFILES_DIR/ghostty/config" "$HOME_DIR/.config/ghostty/config"
+    fi
     link_file "$DOTFILES_DIR/claude/.claude/settings.json" "$HOME_DIR/.claude/settings.json"
     link_file "$DOTFILES_DIR/claude/.claude/statusline.sh" "$HOME_DIR/.claude/statusline.sh"
     link_file "$DOTFILES_DIR/claude/.claude/dark-notify-claude.sh" "$HOME_DIR/.claude/dark-notify-claude.sh"
@@ -84,7 +91,11 @@ link_lazygit_theme() {
         return
     fi
     mkdir -p "$HOME_DIR/.config/lazygit"
-    if [[ "$(defaults read -g AppleInterfaceStyle 2>/dev/null)" == "Dark" ]]; then
+    local use_dark=true
+    if [[ "$PLATFORM" == "Darwin" ]] && [[ "$(defaults read -g AppleInterfaceStyle 2>/dev/null)" != "Dark" ]]; then
+        use_dark=false
+    fi
+    if $use_dark; then
         ln -s "$DOTFILES_DIR/lazygit/theme-dark.yml" "$HOME_DIR/.config/lazygit/theme.yml"
     else
         ln -s "$DOTFILES_DIR/lazygit/theme-light.yml" "$HOME_DIR/.config/lazygit/theme.yml"
@@ -101,11 +112,13 @@ install_tmux_plugins() {
         git clone https://github.com/tmux-plugins/tpm "$HOME_DIR/.tmux/plugins/tpm"
     fi
 
-    if [[ -d "$HOME_DIR/.tmux/plugins/tmux-dark-notify" ]]; then
-        green "✔ tmux-dark-notify already installed"
-    else
-        green "📦 Installing tmux-dark-notify..."
-        git clone https://github.com/erikw/tmux-dark-notify "$HOME_DIR/.tmux/plugins/tmux-dark-notify"
+    if [[ "$PLATFORM" == "Darwin" ]]; then
+        if [[ -d "$HOME_DIR/.tmux/plugins/tmux-dark-notify" ]]; then
+            green "✔ tmux-dark-notify already installed"
+        else
+            green "📦 Installing tmux-dark-notify..."
+            git clone https://github.com/erikw/tmux-dark-notify "$HOME_DIR/.tmux/plugins/tmux-dark-notify"
+        fi
     fi
 
     chmod +x "$HOME_DIR/.tmux/themes/"*.tmux 2>/dev/null || true

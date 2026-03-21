@@ -18,7 +18,6 @@ path_prepend "$HOME/.cargo/bin"
 path_prepend "$GOBIN"
 path_prepend "$BUN_INSTALL/bin"
 path_prepend "$PNPM_HOME"
-path_prepend "/opt/homebrew/opt/gnu-getopt/bin"
 
 # Android SDK
 path_append "$ANDROID_SDK_ROOT/emulator"
@@ -31,11 +30,12 @@ path_append "$HOME/.luarocks/bin"
 path_append "$HOME/.npm-global/bin"
 path_append "$HOME/.config/claude/local/claude"
 
-# Applications
-path_append "/Applications/Obsidian.app/Contents/MacOS"
-path_append "/Applications/Docker.app/Contents/Resources/bin"
-
-# Homebrew optional packages
-path_append "/opt/homebrew/opt/helm@2/bin"
+# macOS-specific paths
+if [[ "$(uname -s)" == "Darwin" ]]; then
+    path_prepend "/opt/homebrew/opt/gnu-getopt/bin"
+    path_append "/Applications/Obsidian.app/Contents/MacOS"
+    path_append "/Applications/Docker.app/Contents/Resources/bin"
+    path_append "/opt/homebrew/opt/helm@2/bin"
+fi
 
 export PATH

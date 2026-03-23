@@ -20,10 +20,53 @@ return {
       pattern = 'markdown',
       callback = function()
         vim.opt_local.conceallevel = 2
+        vim.opt_local.foldmethod = 'expr'
+        vim.opt_local.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+        vim.opt_local.foldlevel = 99 -- start with all folds open
       end,
     })
   end,
   opts = {
+    mappings = {
+      ['gf'] = {
+        action = function()
+          return require('obsidian').util.gf_passthrough()
+        end,
+        opts = { noremap = false, expr = true, buffer = true },
+      },
+      ['<leader>ch'] = {
+        action = function()
+          return require('obsidian').util.toggle_checkbox()
+        end,
+        opts = { buffer = true },
+      },
+      ['<cr>'] = {
+        action = function()
+          local util = require('obsidian').util
+
+          -- Follow link if cursor is on one
+          if util.cursor_on_markdown_link(nil, nil, true) then
+            return '<cmd>ObsidianFollowLink<CR>'
+          end
+
+          -- Search tag if cursor is on one
+          local tag = util.cursor_tag()
+          if tag then
+            return '<cmd>ObsidianTags ' .. tag .. '<CR>'
+          end
+
+          -- Toggle fold if cursor is on a heading
+          local line = vim.api.nvim_get_current_line()
+          if line:match '^#+ ' then
+            return 'za'
+          end
+
+          -- Default: toggle checkbox
+          return '<cmd>ObsidianToggleCheckbox<CR>'
+        end,
+        opts = { noremap = false, expr = true, buffer = true, desc = 'Obsidian smart action' },
+      },
+    },
     workspaces = {
       {
         name = vim.fn.fnamemodify(vault_path, ':t'),

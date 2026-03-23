@@ -1,9 +1,6 @@
 return {
   'jinh0/eyeliner.nvim',
   config = function()
-    vim.api.nvim_set_hl(0, 'EyelinerPrimary', { fg = '#000000', underline = true, bold = true })
-    vim.api.nvim_set_hl(0, 'EyelinerSecondary', { fg = '#6a6a6a', underline = false, bold = false })
-
     require('eyeliner').setup {
       -- show highlights only after keypress
       highlight_on_key = false,

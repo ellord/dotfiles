@@ -133,6 +133,8 @@ return {
         { name = 'copilot', group_index = 2 },
         { name = 'luasnip' },
         { name = 'nvim_lsp' },
+        { name = 'obsidian' },
+        { name = 'obsidian_new' },
         { name = 'path' },
       },
     }

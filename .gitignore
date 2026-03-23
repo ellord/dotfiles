@@ -7,6 +7,9 @@ vim/.vim/autoload
 # Work environment (cloned separately)
 env/work/
 
+# Mise local config (machine-specific env vars)
+mise/.config/mise/config.local.toml
+
 # Claude
 CLAUDE.local.md
 .claude/settings.local.json

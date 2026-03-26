@@ -13,6 +13,7 @@ return {
       -- Force transparent background
       vim.api.nvim_set_hl(0, 'Normal', { bg = 'NONE' })
       vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'NONE' })
+      vim.api.nvim_set_hl(0, 'MiniStatuslineFilename', { bg = 'NONE' })
 
       -- You can configure highlights by doing something like
       vim.cmd.hi 'Comment gui=none'
@@ -27,6 +28,7 @@ return {
       -- Force transparent background
       vim.api.nvim_set_hl(0, 'Normal', { bg = 'NONE' })
       vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'NONE' })
+      vim.api.nvim_set_hl(0, 'MiniStatuslineFilename', { bg = 'NONE' })
 
       -- You can configure highlights by doing something like
       vim.cmd.hi 'Comment gui=none'

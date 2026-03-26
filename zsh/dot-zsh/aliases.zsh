@@ -9,6 +9,7 @@ alias vi="nvim"
 # macOS-only aliases
 if [[ "$(uname -s)" == "Darwin" ]]; then
     alias nv="neovide --frame=none . >/dev/null 2>&1 &"
+    alias pwdcp='pwd | tee /dev/stderr | tr -d "\n" | pbcopy'
 fi
 
 # Function to update theme based on system appearance

@@ -37,5 +37,5 @@ dispatch_tool_scripts() {
     "$DOTFILES_DIR/lazygit/dark-notify-lazygit.sh" "$mode" || true
 }
 
-update_shell_colors
+update_shell_colors || true
 dispatch_tool_scripts

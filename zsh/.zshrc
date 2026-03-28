@@ -30,9 +30,11 @@ source "$ZSH_CONFIG_DIR/.zsh/keybindings.zsh"
 # Aliases
 source "$ZSH_CONFIG_DIR/.zsh/aliases.zsh"
 
-# Theme and colors
-if command -v vivid >/dev/null; then
-    # On macOS, follow system appearance; elsewhere default to dark
+# Theme and colors — prefer cached file written by dark-notify-all.sh,
+# fall back to generating inline on first run or non-macOS.
+if [[ -f "$HOME/.local/state/shell-theme-colors" ]]; then
+    source "$HOME/.local/state/shell-theme-colors"
+elif command -v vivid >/dev/null; then
     _vivid_theme="catppuccin-mocha"
     if [[ "$(uname -s)" == "Darwin" ]] && [[ "$(defaults read -g AppleInterfaceStyle 2>/dev/null)" != "Dark" ]]; then
         _vivid_theme="catppuccin-latte"

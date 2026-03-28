@@ -27,8 +27,10 @@ update_shell_colors() {
     else
         colors="$(vivid generate catppuccin-latte)"
     fi
-    export LS_COLORS="$colors"
-    export EZA_COLORS="$colors"
+    local state_dir="$HOME/.local/state"
+    mkdir -p "$state_dir"
+    printf 'export LS_COLORS=%q\nexport EZA_COLORS=%q\n' "$colors" "$colors" \
+        > "$state_dir/shell-theme-colors"
 }
 
 dispatch_tool_scripts() {

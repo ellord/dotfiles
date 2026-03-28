@@ -14,7 +14,9 @@ fi
 
 # Function to update theme based on system appearance
 update_theme() {
-  if command -v vivid >/dev/null; then
+  if [[ -f "$HOME/.local/state/shell-theme-colors" ]]; then
+    source "$HOME/.local/state/shell-theme-colors"
+  elif command -v vivid >/dev/null; then
     local _use_dark=true
     if [[ "$(uname -s)" == "Darwin" ]] && [[ "$(defaults read -g AppleInterfaceStyle 2>/dev/null)" != "Dark" ]]; then
       _use_dark=false

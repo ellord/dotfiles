@@ -21,3 +21,18 @@ gui:
       - '#df8e1d'
     authorColors:
       '*': '#7287fd'
+
+git:
+  pagers:
+    - pager: >-
+        delta --light --paging=never
+        --syntax-theme='Catppuccin Latte'
+        --minus-style='syntax "#f5e0e3"'
+        --minus-emph-style='syntax "#ecc0c8"'
+        --plus-style='syntax "#e0f0dd"'
+        --plus-emph-style='syntax "#c0e5b8"'
+        --file-style='#4c4f69 bold'
+        --file-decoration-style='#8c8fa1 underline'
+        --line-numbers-minus-style='#b5123a'
+        --line-numbers-plus-style='#2d8a1e'
+        --whitespace-error-style='#d0e8ca'

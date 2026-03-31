@@ -56,7 +56,7 @@ command -v fzf >/dev/null && eval "$(fzf --zsh)"
 # Auto theme switching based on system appearance (macOS only)
 if [[ "$(uname -s)" == "Darwin" ]] && command -v dark-notify >/dev/null; then
   if ! pgrep -x "dark-notify" >/dev/null; then
-    dark-notify -c "$HOME/dotfiles/dark-notify-all.sh" >/dev/null 2>&1 &!
+    dark-notify -c "$HOME/dotfiles/dark-notify-all.sh" </dev/null >/dev/null 2>&1 &!
   fi
 fi
 

@@ -32,6 +32,7 @@ remove_link() {
 unlink_stow_packages() {
     green "🧹 Removing stow packages..."
     unstow_pkg vim
+    unstow_pkg opencode
     unstow_pkg --dotfiles zsh
     unstow_pkg tmux
     unstow_pkg mise

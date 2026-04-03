@@ -64,6 +64,7 @@ clone_work_config() {
 link_stow_packages() {
     green "🔧 Linking stow packages..."
     stow_pkg vim
+    stow_pkg opencode
     stow_pkg --dotfiles zsh
     stow_pkg tmux
     stow_pkg mise

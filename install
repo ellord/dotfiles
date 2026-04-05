@@ -19,7 +19,8 @@ orange() { echo -e "${ORANGE}$*${NC}"; }
 
 stow_pkg() {
     local flags=("$@")
-    stow -R --adopt -d "$DOTFILES_DIR" -t "$HOME_DIR" "${flags[@]}"
+    stow -D -d "$DOTFILES_DIR" -t "$HOME_DIR" "${flags[@]}" 2>/dev/null || true
+    stow -S --adopt -d "$DOTFILES_DIR" -t "$HOME_DIR" "${flags[@]}"
 }
 
 link_file() {
@@ -65,7 +66,9 @@ link_stow_packages() {
     green "🔧 Linking stow packages..."
     stow_pkg vim
     stow_pkg opencode
+    stow_pkg shell
     stow_pkg --dotfiles zsh
+    stow_pkg bash
     stow_pkg tmux
     stow_pkg mise
     if [[ "$PLATFORM" == "Darwin" ]]; then
@@ -78,8 +81,6 @@ link_manual_packages() {
     link_file "$DOTFILES_DIR/nvim-config" "$HOME_DIR/.config/nvim"
     if [[ "$PLATFORM" == "Darwin" ]]; then
         link_file "$DOTFILES_DIR/ghostty/config" "$HOME_DIR/Library/Application Support/com.mitchellh.ghostty/config"
-    else
-        link_file "$DOTFILES_DIR/ghostty/config" "$HOME_DIR/.config/ghostty/config"
     fi
     link_file "$DOTFILES_DIR/claude/.claude/settings.json" "$HOME_DIR/.claude/settings.json"
     link_file "$DOTFILES_DIR/claude/.claude/statusline.sh" "$HOME_DIR/.claude/statusline.sh"

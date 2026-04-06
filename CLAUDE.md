@@ -28,6 +28,18 @@ stow wezterm   # Link wezterm configuration
 brew bundle    # Install all dependencies from Brewfile
 ```
 
+### Mise Maintenance
+- When bumping a tool version in mise config, old versions remain installed on disk
+- `mise prune` does not reliably catch orphaned versions (known limitation with some backends)
+- Use `mise ls` to find versions without a Source — those are orphans safe to remove
+- Uninstall using the short tool name from `mise ls`, not the full backend name:
+  ```bash
+  # Correct:
+  mise uninstall claude-code@2.1.81
+  # Wrong (will say "not installed"):
+  mise uninstall npm:@anthropic-ai/claude-code@2.1.81
+  ```
+
 ## Architecture & Structure
 
 ### Configuration Management

@@ -148,6 +148,9 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+-- Add rounded borders to all floating windows (hover, diagnostics, etc.)
+vim.o.winborder = 'rounded'
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
@@ -347,3 +350,4 @@ vim.filetype.add { extension = { templ = 'templ' } }
 -- Use terminal background
 vim.api.nvim_set_hl(0, 'Normal', { bg = 'NONE' })
 vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'NONE' })
+vim.api.nvim_set_hl(0, 'FloatBorder', { bg = 'NONE', fg = '#6c7086' })

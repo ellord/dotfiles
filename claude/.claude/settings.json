@@ -3,7 +3,8 @@
     "allow": [
       "Ls:*",
       "Bash(printf *)"
-    ]
+    ],
+    "defaultMode": "auto"
   },
   "statusLine": {
     "type": "command",
@@ -36,5 +37,6 @@
   "skipDangerousModePermissionPrompt": true,
   "feedbackSurveyState": {
     "lastShownTime": 1753954534522
-  }
+  },
+  "skipAutoPermissionPrompt": true
 }

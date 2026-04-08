@@ -13,8 +13,14 @@ return {
       ensure_installed = { 'bash', 'c', 'html', 'lua', 'markdown', 'markdown_inline', 'vim', 'vimdoc' },
       -- Autoinstall languages that are not installed
       auto_install = true,
-      highlight = { enable = true },
-      indent = { enable = true },
+      highlight = {
+        enable = true,
+        disable = { 'markdown' },
+      },
+      indent = {
+        enable = true,
+        disable = { 'markdown' },
+      },
     }
 
     require('nvim-treesitter-textobjects').setup {

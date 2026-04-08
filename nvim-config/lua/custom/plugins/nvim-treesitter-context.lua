@@ -2,7 +2,14 @@ return {
   'nvim-treesitter/nvim-treesitter-context',
   event = { 'BufReadPost', 'BufNewFile', 'BufWritePre' },
   enabled = true,
-  opts = { mode = 'cursor', max_lines = 3, separator = nil },
+  opts = {
+    mode = 'cursor',
+    max_lines = 3,
+    separator = nil,
+    on_attach = function(bufnr)
+      return vim.bo[bufnr].filetype ~= 'markdown'
+    end,
+  },
   keys = {
     {
       '<leader>ut',
@@ -20,6 +27,15 @@ return {
     },
   },
   config = function()
+    require('treesitter-context').setup {
+      mode = 'cursor',
+      max_lines = 3,
+      separator = nil,
+      on_attach = function(bufnr)
+        return vim.bo[bufnr].filetype ~= 'markdown'
+      end,
+    }
+
     vim.cmd [[hi TreesitterContextBottom gui=NONE]]
   end,
 }

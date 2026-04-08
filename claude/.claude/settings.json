@@ -15,7 +15,8 @@
     "gopls-lsp@claude-plugins-official": true,
     "plannotator@plannotator": true,
     "skill-creator@claude-plugins-official": true,
-    "codex@openai-codex": true
+    "codex@openai-codex": true,
+    "chrome-devtools-mcp@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "plannotator": {
@@ -29,14 +30,20 @@
         "source": "github",
         "repo": "openai/codex-plugin-cc"
       }
+    },
+    "chrome-devtools-plugins": {
+      "source": {
+        "source": "github",
+        "repo": "ChromeDevTools/chrome-devtools-mcp"
+      }
     }
   },
   "alwaysThinkingEnabled": true,
   "effortLevel": "high",
   "voiceEnabled": true,
   "skipDangerousModePermissionPrompt": true,
+  "skipAutoPermissionPrompt": true,
   "feedbackSurveyState": {
     "lastShownTime": 1753954534522
-  },
-  "skipAutoPermissionPrompt": true
+  }
 }

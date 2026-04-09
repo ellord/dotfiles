@@ -28,10 +28,18 @@ stow wezterm   # Link wezterm configuration
 brew bundle    # Install all dependencies from Brewfile
 ```
 
+### Mise Updates
+```bash
+./update-mise-tools                     # Update pinned Claude Code and latest CLI tools
+./update-mise-tools --dry-run           # Preview the planned updates
+./update-mise-tools --include-runtimes  # Also upgrade language runtimes within their ranges
+```
+
 ### Mise Maintenance
 - When bumping a tool version in mise config, old versions remain installed on disk
 - `mise prune` does not reliably catch orphaned versions (known limitation with some backends)
 - Use `mise ls` to find versions without a Source — those are orphans safe to remove
+- `./update-mise-tools` reads the CLI sections from `mise/.config/mise/config.toml`, keeps `claude-code` pinned, and upgrades the non-pinned tools one at a time so a single backend failure does not stop the rest
 - Uninstall using the short tool name from `mise ls`, not the full backend name:
   ```bash
   # Correct:

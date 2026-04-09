@@ -8,7 +8,7 @@ rust = 'latest'
 
 # CLI tools
 bun = 'latest'
-claude-code = '2.1.94'
+claude-code = '2.1.97'
 codex = 'latest'
 delta = 'latest'
 eza = 'latest'
@@ -25,7 +25,8 @@ ripgrep = 'latest'
 shellcheck = 'latest'
 starship = 'latest'
 tmux = 'latest'
-vivid = 'latest'
+# vivid 0.11.0 is advertised upstream, but the aqua backend has no usable macOS asset yet.
+vivid = '0.10.1'
 yt-dlp = 'latest'
 zoxide = 'latest'
 

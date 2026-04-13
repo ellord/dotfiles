@@ -35,6 +35,7 @@ update_shell_colors() {
 
 dispatch_tool_scripts() {
     "$DOTFILES_DIR/claude/.claude/dark-notify-claude.sh" "$mode" || true
+    "$DOTFILES_DIR/git/dark-notify-delta.sh" "$mode" || true
     "$DOTFILES_DIR/k9s/dark-notify-k9s.sh" "$mode" || true
     "$DOTFILES_DIR/lazygit/dark-notify-lazygit.sh" "$mode" || true
 }

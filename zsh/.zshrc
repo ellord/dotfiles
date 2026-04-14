@@ -21,6 +21,7 @@ fpath_append() {
 
 fpath_append "$ZSH_CONFIG_DIR/.zsh/completions"
 fpath_append "$HOME/.docker/completions"
+fpath_append "$HOME/.local/share/zsh/site-functions"
 autoload -U edit-command-line
 zle -N edit-command-line
 
@@ -64,4 +65,3 @@ fi
 command -v zoxide >/dev/null && eval "$(zoxide init zsh)"
 command -v mise >/dev/null && eval "$(mise activate zsh)"
 command -v starship >/dev/null && eval "$(starship init zsh)"
-

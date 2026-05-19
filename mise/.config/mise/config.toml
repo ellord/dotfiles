@@ -16,7 +16,10 @@ fzf = 'latest'
 gh = 'latest'
 jq = 'latest'
 lazygit = 'latest'
-luajit = 'latest'
+# 'latest' resolves to a date-stamped pseudo-version (e.g. 2.1.1744318430)
+# that has no matching git tag, so the asdf plugin's clone fails. Pin to the
+# rolling release tag that upstream actually publishes.
+luajit = '2.1.ROLLING'
 neovim = 'latest'
 ollama = 'latest'
 opencode = 'latest'

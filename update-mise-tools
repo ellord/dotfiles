@@ -107,6 +107,26 @@ append_section_tools() {
     done < <(list_tools_in_section "$section")
 }
 
+self_update_mise() {
+    local current_version
+    current_version="$(mise --version 2>/dev/null | awk '{print $1}')"
+
+    if ! mise --version 2>&1 | grep -qE 'mise version .* available'; then
+        green "mise is up to date (${current_version})"
+        return
+    fi
+
+    if $DRY_RUN; then
+        yellow "Would self-update mise (currently ${current_version})"
+        return
+    fi
+
+    yellow "Self-updating mise from ${current_version}"
+    if ! mise self-update -y; then
+        yellow "mise self-update failed — if installed via brew, run 'brew upgrade mise'"
+    fi
+}
+
 while [[ $# -gt 0 ]]; do
     case "$1" in
     --dry-run)
@@ -139,6 +159,8 @@ done
 
 require_command mise
 require_command perl
+
+self_update_mise
 
 if $COMMIT; then
     require_command git

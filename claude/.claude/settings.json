@@ -41,11 +41,12 @@
   "alwaysThinkingEnabled": true,
   "effortLevel": "high",
   "skipDangerousModePermissionPrompt": true,
+  "theme": "auto",
+  "preferredNotifChannel": "ghostty",
+  "autoCompactEnabled": false,
   "skipAutoPermissionPrompt": true,
   "voiceEnabled": true,
   "feedbackSurveyState": {
     "lastShownTime": 1753954534522
-  },
-  "preferredNotifChannel": "ghostty",
-  "autoCompactEnabled": false
+  }
 }

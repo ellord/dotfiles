@@ -122,8 +122,14 @@ self_update_mise() {
     fi
 
     yellow "Self-updating mise from ${current_version}"
-    if ! mise self-update -y; then
-        yellow "mise self-update failed — if installed via brew, run 'brew upgrade mise'"
+    local mise_bin
+    mise_bin="$(command -v mise 2>/dev/null || true)"
+    if [[ "$mise_bin" == */homebrew/* ]] || [[ "$mise_bin" == */Homebrew/* ]]; then
+        brew upgrade mise
+    else
+        if ! mise self-update -y; then
+            yellow "mise self-update failed — if installed via brew, run 'brew upgrade mise'"
+        fi
     fi
 }
 

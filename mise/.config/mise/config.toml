@@ -44,6 +44,7 @@ zoxide = 'latest'
 idiomatic_version_file = true
 not_found_auto_install = true
 python = { compile = true }
+experimental = true
 
 [env]
 EDITOR = 'nvim'

@@ -62,6 +62,47 @@ clone_work_config() {
     git clone git@github.com:ellord/work-private-dotfiles.git "$DOTFILES_DIR/env/work"
 }
 
+link_claude_hooks() {
+    if [[ "$DOTFILES_ENV" != "work" ]]; then
+        return
+    fi
+    local src="$DOTFILES_DIR/env/work/claude/hooks"
+    local dest="$HOME_DIR/.claude/hooks"
+    if [[ ! -d "$src" ]]; then
+        return
+    fi
+    green "🔧 Linking work Claude hooks..."
+    # Remove a pre-existing empty dir so we can symlink the whole hooks dir in.
+    if [[ -d "$dest" && ! -L "$dest" ]]; then
+        rmdir "$dest" 2>/dev/null || true
+    fi
+    link_file "$src" "$dest"
+}
+
+# Register the work-only Claude hooks via the managed-settings file so they stay
+# out of the public (symlinked) ~/.claude/settings.json. macOS + work only.
+link_claude_managed_settings() {
+    if [[ "$DOTFILES_ENV" != "work" || "$PLATFORM" != "Darwin" ]]; then
+        return
+    fi
+    local src="$DOTFILES_DIR/env/work/claude/managed-settings.json"
+    local dest_dir="/Library/Application Support/ClaudeCode"
+    local dest="$dest_dir/managed-settings.json"
+    if [[ ! -f "$src" ]]; then
+        return
+    fi
+    if [[ -L "$dest" && "$(readlink "$dest")" == "$src" ]]; then
+        green "  ✔ Claude managed settings already linked"
+        return
+    fi
+    green "🔧 Linking Claude managed settings (needs sudo)..."
+    if sudo mkdir -p "$dest_dir" && sudo ln -sfn "$src" "$dest"; then
+        green "  🔗 Linked managed-settings.json"
+    else
+        yellow "  ⚠️  Could not link managed settings (sudo failed); work hooks inactive"
+    fi
+}
+
 link_stow_packages() {
     green "🔧 Linking stow packages..."
     stow_pkg vim
@@ -154,6 +195,8 @@ echo ""
 
 detect_environment
 clone_work_config
+link_claude_hooks
+link_claude_managed_settings
 link_stow_packages
 link_manual_packages
 link_lazygit_theme

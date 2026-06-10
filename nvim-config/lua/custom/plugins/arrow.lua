@@ -3,7 +3,7 @@ return {
   opts = {
     show_icons = true,
     separate_by_branch = true,
-    leader_key = ';', -- Recommended to be a single key
+    leader_key = "'", -- `;` is reserved for repeating motions (see nvim-treesitter.lua)
     buffer_leader_key = 'm', -- Per Buffer Mappings
   },
   config = function(_, opts)

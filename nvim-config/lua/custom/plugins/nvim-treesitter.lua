@@ -41,6 +41,20 @@ return {
       move.goto_previous_end('@function.outer')
     end, { desc = 'Previous method/function end' })
 
+    -- `;`/`,` repeat the last registered move: the treesitter motions above
+    -- (registered automatically), git hunk jumps (gitsigns.lua), and
+    -- diagnostic jumps (init.lua)
+    local repeat_move = require 'nvim-treesitter-textobjects.repeatable_move'
+    vim.keymap.set({ 'n', 'x', 'o' }, ';', repeat_move.repeat_last_move_next, { desc = 'Repeat last move forward' })
+    vim.keymap.set({ 'n', 'x', 'o' }, ',', repeat_move.repeat_last_move_previous, { desc = 'Repeat last move backward' })
+
+    -- f/F/t/T must go through the same registry, otherwise `;`/`,` lose
+    -- their native char-repeat behaviour
+    vim.keymap.set({ 'n', 'x', 'o' }, 'f', repeat_move.builtin_f_expr, { expr = true })
+    vim.keymap.set({ 'n', 'x', 'o' }, 'F', repeat_move.builtin_F_expr, { expr = true })
+    vim.keymap.set({ 'n', 'x', 'o' }, 't', repeat_move.builtin_t_expr, { expr = true })
+    vim.keymap.set({ 'n', 'x', 'o' }, 'T', repeat_move.builtin_T_expr, { expr = true })
+
     -- There are additional nvim-treesitter modules that you can use to interact
     -- with nvim-treesitter. You should go explore a few and see what interests you:
     --

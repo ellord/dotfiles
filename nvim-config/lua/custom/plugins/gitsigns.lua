@@ -1,6 +1,10 @@
 -- Adds git related signs to the gutter, as well as utilities for managing changes
 return {
   'lewis6991/gitsigns.nvim',
+  dependencies = {
+    -- for repeatable_move, so `;`/`,` can repeat hunk jumps
+    'nvim-treesitter/nvim-treesitter-textobjects',
+  },
   opts = {
     signs = {
       add = { text = '+' },
@@ -19,21 +23,21 @@ return {
         vim.keymap.set(mode, l, r, opts)
       end
 
-      -- Navigation between hunks
-      map('n', ']c', function()
+      -- Navigation between hunks, repeatable with `;`/`,` (mapped in nvim-treesitter.lua)
+      local hunk_move = require('nvim-treesitter-textobjects.repeatable_move').make_repeatable_move(function(opts)
         if vim.wo.diff then
-          vim.cmd.normal { ']c', bang = true }
+          vim.cmd.normal { opts.forward and ']c' or '[c', bang = true }
         else
-          gitsigns.nav_hunk 'next'
+          gitsigns.nav_hunk(opts.forward and 'next' or 'prev')
         end
+      end)
+
+      map('n', ']c', function()
+        hunk_move { forward = true }
       end, { desc = 'Jump to next git change' })
 
       map('n', '[c', function()
-        if vim.wo.diff then
-          vim.cmd.normal { '[c', bang = true }
-        else
-          gitsigns.nav_hunk 'prev'
-        end
+        hunk_move { forward = false }
       end, { desc = 'Jump to previous git change' })
 
       -- Toggle buffer-wide blame view

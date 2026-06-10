@@ -31,9 +31,19 @@ vim.o.winborder = 'rounded'
 vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
--- Diagnostics
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
+-- Diagnostics, repeatable with `;`/`,` (mapped in nvim-treesitter.lua);
+-- the require must stay inside the callback because plugins aren't loaded yet
+local function diagnostic_move(opts)
+  vim.diagnostic.jump { count = opts.forward and 1 or -1, float = true }
+end
+local function diagnostic_jump(forward)
+  return function()
+    local repeat_move = require 'nvim-treesitter-textobjects.repeatable_move'
+    repeat_move.make_repeatable_move(diagnostic_move) { forward = forward }
+  end
+end
+vim.keymap.set('n', '[d', diagnostic_jump(false), { desc = 'Go to previous [D]iagnostic message' })
+vim.keymap.set('n', ']d', diagnostic_jump(true), { desc = 'Go to next [D]iagnostic message' })
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 

@@ -107,11 +107,38 @@ append_section_tools() {
     done < <(list_tools_in_section "$section")
 }
 
-self_update_mise() {
-    local current_version
-    current_version="$(mise --version 2>/dev/null | awk '{print $1}')"
+ensure_github_token() {
+    # mise hits the GitHub API to resolve aqua/github-backed tools. Unauthenticated
+    # requests are capped at 60/hour, which trips 403s. Pull a token from gh's
+    # keychain-backed store just-in-time so nothing secret is persisted on disk.
+    if [[ -n "${GITHUB_TOKEN:-}" || -n "${GITHUB_API_TOKEN:-}" || -n "${MISE_GITHUB_TOKEN:-}" ]]; then
+        return
+    fi
 
-    if ! mise --version 2>&1 | grep -qE 'mise version .* available'; then
+    local gh_bin token
+    gh_bin="$(command -v gh 2>/dev/null || mise which gh 2>/dev/null || true)"
+    if [[ -z "$gh_bin" ]]; then
+        yellow "gh not found — proceeding unauthenticated (may hit GitHub API rate limits)"
+        return
+    fi
+
+    if token="$("$gh_bin" auth token 2>/dev/null)" && [[ -n "$token" ]]; then
+        export GITHUB_TOKEN="$token"
+        green "Using GitHub token from gh keychain for API auth"
+    else
+        yellow "gh has no token (run 'gh auth login') — proceeding unauthenticated (may hit rate limits)"
+    fi
+}
+
+self_update_mise() {
+    # Capture once and match in-shell. Piping `mise --version` into `grep -q`
+    # lets grep close the pipe early; mise then aborts on EPIPE (SIGABRT), and
+    # with `pipefail` that abort inverts the check so a real update is skipped.
+    local version_output current_version
+    version_output="$(mise --version 2>&1)"
+    current_version="${version_output%% *}"
+
+    if [[ "$version_output" != *"mise version "*" available"* ]]; then
         green "mise is up to date (${current_version})"
         return
     fi
@@ -165,6 +192,8 @@ done
 
 require_command mise
 require_command perl
+
+ensure_github_token
 
 self_update_mise
 

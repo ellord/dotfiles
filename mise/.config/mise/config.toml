@@ -35,6 +35,7 @@ zoxide = 'latest'
 
 # Backend-specific tools
 "github:backnotprop/plannotator" = 'latest'
+"npm:hunkdiff" = 'latest'  # review-first terminal diff viewer; provides `hunk`
 "npm:pnpm" = 'latest'
 "npm:yarn" = 'latest'
 'gem:tmuxinator' = 'latest'

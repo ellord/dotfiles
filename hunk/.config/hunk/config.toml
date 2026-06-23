@@ -1,0 +1,4 @@
+# Detect the terminal background at startup and pick github-light-default or
+# github-dark-default to match. Since wezterm/ghostty switch their background
+# with macOS dark mode, this makes hunk follow the OS theme automatically.
+theme = "auto"

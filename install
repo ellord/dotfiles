@@ -112,6 +112,7 @@ link_stow_packages() {
     stow_pkg bash
     stow_pkg tmux
     stow_pkg mise
+    stow_pkg hunk
     if [[ "$PLATFORM" == "Darwin" ]]; then
         stow_pkg wezterm
     fi

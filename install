@@ -103,6 +103,25 @@ link_claude_managed_settings() {
     fi
 }
 
+install_linux_deps() {
+    [[ "$PLATFORM" == "Linux" ]] || return 0
+
+    local missing=()
+    command -v zsh >/dev/null 2>&1 || missing+=(zsh)
+
+    if [[ ${#missing[@]} -eq 0 ]]; then
+        green "✔ Linux dependencies already installed"
+        return
+    fi
+
+    green "📦 Installing Linux dependencies: ${missing[*]}"
+    if command -v apt-get >/dev/null 2>&1; then
+        sudo apt-get install -y "${missing[@]}"
+    else
+        yellow "⚠️  apt-get not found — install manually: ${missing[*]}"
+    fi
+}
+
 link_stow_packages() {
     green "🔧 Linking stow packages..."
     stow_pkg vim
@@ -198,6 +217,7 @@ detect_environment
 clone_work_config
 link_claude_hooks
 link_claude_managed_settings
+install_linux_deps
 link_stow_packages
 link_manual_packages
 link_lazygit_theme

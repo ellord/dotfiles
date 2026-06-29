@@ -40,6 +40,7 @@
   },
   "alwaysThinkingEnabled": true,
   "effortLevel": "high",
+  "tui": "fullscreen",
   "skipDangerousModePermissionPrompt": true,
   "theme": "auto",
   "preferredNotifChannel": "ghostty",
@@ -48,6 +49,5 @@
   "voiceEnabled": true,
   "feedbackSurveyState": {
     "lastShownTime": 1753954534522
-  },
-  "tui": "fullscreen"
+  }
 }

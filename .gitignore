@@ -4,6 +4,9 @@ sublime/Packages/User/Package Control.cache
 vim/.vim/bundle
 vim/.vim/autoload
 
+# TPM-managed plugins (installed by tpm, not tracked)
+tmux/.tmux/plugins/
+
 # Work environment (cloned separately)
 env/work/
 

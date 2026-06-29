@@ -85,6 +85,41 @@ brew bundle    # Install all dependencies from Brewfile
 - Shell scripts follow the bash-script conventions: `set -euo pipefail`, coloured output, idempotent step functions
 - Validate with `shellcheck` and `shfmt -i 4` before committing
 
+## Zsh Startup Performance
+
+The startup path (`.zshenv` → `.zprofile` → `.zshrc`) is tuned for fast
+time-to-first-prompt (~170 ms median on Apple Silicon, down from ~490 ms; target
+< 200 ms). Re-measure with `scripts/zsh-startup/measure-ttfp.sh` before and after any
+change to the startup files — it wraps the real rc files in a throwaway `ZDOTDIR` and
+reports a per-phase breakdown. `trace-startup.sh` and `bench-components.sh` in the same
+dir help diagnose *what* is slow. Numbers vary with system load — take medians.
+
+### Design decisions — do NOT naively revert
+- **`pyenv init --path` is intentionally absent** from `.zprofile` (~190 ms). Python is
+  provided by mise, whose shims are prepended later and shadow pyenv's regardless, so
+  the init was dead weight. The `pyenv` command itself stays on PATH. Only re-add a
+  per-shell pyenv init if mise genuinely stops covering Python.
+- **`_evalcache` (defined in `.zshenv`) caches static `eval "$(tool init)"` output**
+  (brew/fzf/zoxide/starship) under `$XDG_CACHE_HOME/zsh/evalcache/`, regenerating when
+  the tool binary is newer than the cache. Do NOT wrap its `source` in
+  `emulate -L zsh` / `LOCAL_OPTIONS` — cached inits mutate global options (e.g.
+  starship needs `setopt promptsubst`), which a local scope would revert.
+- **mise is deliberately NOT cached** — `mise activate` bakes in a live `$PATH`
+  snapshot (including ephemeral dirs), so it must run on every shell.
+- **`compinit` is owned explicitly** in `.zshrc` with a cached dump (`-C`, full audit at
+  most once a day) *before* the env-specific configs, so any completion include they
+  source finds `compdef` already defined and skips a second, slower `compinit`.
+- **autojump was replaced by zoxide** (`j`/`ji` aliased to `z`/`zi`).
+- **dark-notify** is guarded by a pidfile + `kill -0` instead of `pgrep` (process-table
+  scan); **`GOPATH` is static** in `.zshenv` instead of forking `go env`.
+
+### Maintenance notes
+- After upgrading a cached tool, `_evalcache` auto-regenerates when the binary mtime is
+  newer. If a cached init ever looks stale, clear it: `rm -rf $XDG_CACHE_HOME/zsh/evalcache`.
+- Base aliases/keybindings load once, before env-specific configs (they used to also
+  re-load after). If an env config needs to override a base alias, it must do so after
+  the modular-config loop — re-check this if adding such an override.
+
 ## Neovim Troubleshooting
 
 ### Snippet/Completion Issues

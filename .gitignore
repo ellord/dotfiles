@@ -7,6 +7,9 @@ vim/.vim/autoload
 # Work environment (cloned separately)
 env/work/
 
+# Local planning / research notes (kept out of the repo)
+plans/
+
 # Mise local config (machine-specific env vars)
 mise/.config/mise/config.local.toml
 

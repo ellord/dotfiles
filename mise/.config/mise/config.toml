@@ -14,6 +14,7 @@ delta = 'latest'
 eza = 'latest'
 fzf = 'latest'
 gh = 'latest'
+herdr = 'latest'
 jq = 'latest'
 lazygit = 'latest'
 # 'latest' resolves to a date-stamped pseudo-version (e.g. 2.1.1744318430)

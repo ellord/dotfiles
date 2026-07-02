@@ -54,6 +54,14 @@ _evalcache() {
     [[ -n $bin && -x $bin ]] || return 0
     local cache=${XDG_CACHE_HOME:-$HOME/.cache}/zsh/evalcache/$name.zsh
     if [[ ! -s $cache || $bin -nt $cache ]]; then
+        _evalcache__regenerate=1
+    elif [[ $bin == */mise/shims/* ]]; then
+        local mise_bin=${bin/shims/installs}
+        mise_bin=${mise_bin}/latest/${mise_bin:t}
+        [[ -x $mise_bin && $mise_bin -nt $cache ]] && _evalcache__regenerate=1
+    fi
+    if [[ -n $_evalcache__regenerate ]]; then
+        unset _evalcache__regenerate
         [[ -d ${cache:h} ]] || mkdir -p ${cache:h}
         local out; out=$("$@" 2>/dev/null)
         [[ -n $out ]] || return 0

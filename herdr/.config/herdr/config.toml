@@ -3,7 +3,7 @@ onboarding = false
 [theme]
 # Built-in themes: catppuccin, terminal, tokyo-night, dracula, nord,
 #                  gruvbox, one-dark, solarized, kanagawa, rose-pine, vesper
-name = "catppuccin"
+name = "one-dark"
 
 # Follow the host terminal's light/dark appearance and swap the Herdr UI theme
 # to match. On macOS the terminal (ghostty/wezterm) already tracks the system
@@ -11,5 +11,5 @@ name = "catppuccin"
 # no separate dark-notify hook needed. Change dark_name/light_name to switch the
 # pair (e.g. one-dark/one-light) without touching auto_switch.
 auto_switch = true
-dark_name = "catppuccin"
+dark_name = "one-dark"
 light_name = "catppuccin-latte"

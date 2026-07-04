@@ -75,10 +75,11 @@ if [[ "$OSTYPE" == darwin* ]] && (( $+commands[dark-notify] )); then
 fi
 
 # Initialize tools if they exist.
-# zoxide/starship init output is static, so cache it. mise is NOT cached: its
-# `activate` output bakes in a live $PATH snapshot, so it must run every shell.
-_evalcache zoxide zoxide init zsh
+# mise is NOT cached: its `activate` output bakes in a live $PATH snapshot, so it
+# must run every shell. zoxide/starship init output is static, so cache it — but
+# both must run AFTER mise activate since they may be managed by mise.
 command -v mise >/dev/null && eval "$(mise activate zsh)"
+_evalcache zoxide zoxide init zsh
 _evalcache starship starship init zsh
 
 # zoxide replaces autojump: keep the `j`/`ji` muscle memory.

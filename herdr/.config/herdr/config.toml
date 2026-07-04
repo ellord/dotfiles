@@ -1,0 +1,15 @@
+onboarding = false
+
+[theme]
+# Built-in themes: catppuccin, terminal, tokyo-night, dracula, nord,
+#                  gruvbox, one-dark, solarized, kanagawa, rose-pine, vesper
+name = "catppuccin"
+
+# Follow the host terminal's light/dark appearance and swap the Herdr UI theme
+# to match. On macOS the terminal (ghostty/wezterm) already tracks the system
+# appearance via dark-notify, so this makes Herdr respect the OS theme too —
+# no separate dark-notify hook needed. Change dark_name/light_name to switch the
+# pair (e.g. one-dark/one-light) without touching auto_switch.
+auto_switch = true
+dark_name = "catppuccin"
+light_name = "catppuccin-latte"

@@ -43,9 +43,18 @@ for config_file ($HOME/dotfiles/env/$DOTFILES_ENV/zsh/dot-zsh/*.zsh(N)); do
     source $config_file
 done
 
-# Theme and colors — prefer cached file written by dark-notify-all.sh,
-# fall back to generating inline on first run or non-macOS.
-if [[ -f "$HOME/.local/state/shell-theme-colors" ]]; then
+# Theme and colors.
+# Priority: forwarded $THEME_MODE (SSH) > cached file (macOS dark-notify) > inline.
+if [[ -n "$THEME_MODE" ]] && command -v vivid >/dev/null; then
+    case "$THEME_MODE" in
+        dark)  _vivid_theme="catppuccin-mocha" ;;
+        light) _vivid_theme="catppuccin-latte" ;;
+        *)     _vivid_theme="catppuccin-mocha" ;;
+    esac
+    export LS_COLORS="$(vivid generate "$_vivid_theme")"
+    export EZA_COLORS="$LS_COLORS"
+    unset _vivid_theme
+elif [[ -f "$HOME/.local/state/shell-theme-colors" ]]; then
     source "$HOME/.local/state/shell-theme-colors"
 elif command -v vivid >/dev/null; then
     _vivid_theme="catppuccin-mocha"

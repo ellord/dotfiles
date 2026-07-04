@@ -80,6 +80,25 @@ brew bundle    # Install all dependencies from Brewfile
 - Shared config at `git/.gitconfig` (included via `[include]` from `~/.gitconfig`)
 - Personal details (name, email) go in `~/.gitconfig.local` (not tracked)
 - Machine-specific overrides (conditional includes for work repos) also in `~/.gitconfig.local`
+- **The `[include]` is NOT self-healing.** `install`'s `setup_gitconfig()` only writes
+  `~/.gitconfig` (with the two `[include]` lines) when the file does not already exist.
+  On any machine that already had a hand-written `~/.gitconfig`, install silently skips
+  it, so the entire dotfiles git config — delta pager, aliases, delta theming — stays
+  inactive until you manually append the includes:
+  ```gitconfig
+  [include]
+  	path = ~/dotfiles/git/.gitconfig
+  [include]
+  	path = ~/.gitconfig.local
+  ```
+  Tell-tale symptom: `git config --get core.pager` comes back empty.
+- **Delta theme selection (later wins):** base default `delta.features = catppuccin-mocha`
+  in `git/.gitconfig` ← overridden by `delta.features` in `~/.gitconfig.local` (written by
+  `dark-notify-delta.sh` on macOS) ← overridden by the `DELTA_FEATURES` env var (set from
+  the SSH-forwarded `$THEME_MODE` in `.zshenv`, so remote diffs match the client's
+  appearance). The catppuccin feature blocks live in `git/catppuccin.gitconfig` (from
+  catppuccin/delta) and are included by `git/.gitconfig`; without that include,
+  `dark-notify-delta.sh` setting `delta.features` is a no-op (the feature is undefined).
 
 ### Shell Scripts
 - Shell scripts follow the bash-script conventions: `set -euo pipefail`, coloured output, idempotent step functions

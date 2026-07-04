@@ -15,9 +15,12 @@ fi
 
 GITCONFIG_LOCAL="$HOME/.gitconfig.local"
 
+# Create the file if missing. It's included from ~/.gitconfig (see CLAUDE.md), so
+# git silently ignores a missing include and `git config --file` would create it
+# anyway — bailing here just leaves delta.features unset (falls back to the base
+# catppuccin-mocha default, i.e. stuck dark even in light mode).
 if [[ ! -f "$GITCONFIG_LOCAL" ]]; then
-    echo "gitconfig.local not found at $GITCONFIG_LOCAL" >&2
-    exit 3
+    touch "$GITCONFIG_LOCAL"
 fi
 
 if [[ "$mode" == "light" ]]; then

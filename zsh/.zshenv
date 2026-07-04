@@ -39,6 +39,14 @@ esac
 export LG_CONFIG_FILE="$HOME/dotfiles/lazygit/config.yml,$_lg_theme"
 unset _lg_theme
 
+# Delta (git pager) theme. Locally this comes from git config (dark-notify writes
+# delta.features to ~/.gitconfig.local); over SSH, select it per-session from the
+# forwarded $THEME_MODE via DELTA_FEATURES (leave unset otherwise so git wins).
+case "$THEME_MODE" in
+    light) export DELTA_FEATURES="catppuccin-latte" ;;
+    dark)  export DELTA_FEATURES="catppuccin-mocha" ;;
+esac
+
 # Editor
 export EDITOR="$(command -v nvim || command -v vim)"
 export VISUAL="$EDITOR"

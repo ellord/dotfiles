@@ -4,8 +4,13 @@
 	pager = delta
 [interactive]
 	diffFilter = delta --color-only
+[include]
+	path = catppuccin.gitconfig
 [delta]
 	navigate = true
+	; Default theme. Overridden by delta.features in ~/.gitconfig.local
+	; (macOS dark-notify) and by the DELTA_FEATURES env var (SSH THEME_MODE).
+	features = catppuccin-mocha
 [merge]
 	conflictstyle = diff3
 [diff]

@@ -28,8 +28,16 @@ else
     export PNPM_HOME="$HOME/.local/share/pnpm"
 fi
 
-# Lazygit config: base config + theme symlink (swapped by dark-notify)
-export LG_CONFIG_FILE="$HOME/dotfiles/lazygit/config.yml,$HOME/.config/lazygit/theme.yml"
+# Lazygit config: base config + theme. Normally the theme.yml symlink, which
+# dark-notify swaps on macOS. When $THEME_MODE is forwarded over SSH, pick the
+# theme file directly (per-session, no shared symlink to race over).
+case "$THEME_MODE" in
+    light) _lg_theme="$HOME/dotfiles/lazygit/theme-light.yml" ;;
+    dark)  _lg_theme="$HOME/dotfiles/lazygit/theme-dark.yml" ;;
+    *)     _lg_theme="$HOME/.config/lazygit/theme.yml" ;;
+esac
+export LG_CONFIG_FILE="$HOME/dotfiles/lazygit/config.yml,$_lg_theme"
+unset _lg_theme
 
 # Editor
 export EDITOR="$(command -v nvim || command -v vim)"

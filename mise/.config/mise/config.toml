@@ -42,6 +42,7 @@ zoxide = 'latest'
 'gem:tmuxinator' = 'latest'
 'go:golang.org/x/tools/gopls' = 'latest'
 'pipx:sqlit-tui' = 'latest'
+"github:sharkdp/vivid" = "latest"
 
 [settings]
 idiomatic_version_file = true

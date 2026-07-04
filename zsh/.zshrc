@@ -43,29 +43,6 @@ for config_file ($HOME/dotfiles/env/$DOTFILES_ENV/zsh/dot-zsh/*.zsh(N)); do
     source $config_file
 done
 
-# Theme and colors.
-# Priority: forwarded $THEME_MODE (SSH) > cached file (macOS dark-notify) > inline.
-if [[ -n "$THEME_MODE" ]] && command -v vivid >/dev/null; then
-    case "$THEME_MODE" in
-        dark)  _vivid_theme="catppuccin-mocha" ;;
-        light) _vivid_theme="catppuccin-latte" ;;
-        *)     _vivid_theme="catppuccin-mocha" ;;
-    esac
-    export LS_COLORS="$(vivid generate "$_vivid_theme")"
-    export EZA_COLORS="$LS_COLORS"
-    unset _vivid_theme
-elif [[ -f "$HOME/.local/state/shell-theme-colors" ]]; then
-    source "$HOME/.local/state/shell-theme-colors"
-elif command -v vivid >/dev/null; then
-    _vivid_theme="catppuccin-mocha"
-    if [[ "$(uname -s)" == "Darwin" ]] && [[ "$(defaults read -g AppleInterfaceStyle 2>/dev/null)" != "Dark" ]]; then
-        _vivid_theme="catppuccin-latte"
-    fi
-    export LS_COLORS="$(vivid generate "$_vivid_theme")"
-    export EZA_COLORS="$LS_COLORS"
-    unset _vivid_theme
-fi
-
 # Tool initialization for interactive use
 _evalcache fzf fzf --zsh
 [ -f "$HOME/.secrets" ] && source "$HOME/.secrets"
@@ -90,6 +67,31 @@ fi
 command -v mise >/dev/null && eval "$(mise activate zsh)"
 _evalcache zoxide zoxide init zsh
 _evalcache starship starship init zsh
+
+# Theme and colors. Must run AFTER `mise activate` — on Linux vivid is a
+# mise-managed tool, so its shim isn't on $PATH until activation (on macOS vivid
+# comes from Homebrew and is available earlier, so this ordering is harmless there).
+# Priority: forwarded $THEME_MODE (SSH) > cached file (macOS dark-notify) > inline.
+if [[ -n "$THEME_MODE" ]] && command -v vivid >/dev/null; then
+    case "$THEME_MODE" in
+        dark)  _vivid_theme="catppuccin-mocha" ;;
+        light) _vivid_theme="catppuccin-latte" ;;
+        *)     _vivid_theme="catppuccin-mocha" ;;
+    esac
+    export LS_COLORS="$(vivid generate "$_vivid_theme")"
+    export EZA_COLORS="$LS_COLORS"
+    unset _vivid_theme
+elif [[ -f "$HOME/.local/state/shell-theme-colors" ]]; then
+    source "$HOME/.local/state/shell-theme-colors"
+elif command -v vivid >/dev/null; then
+    _vivid_theme="catppuccin-mocha"
+    if [[ "$(uname -s)" == "Darwin" ]] && [[ "$(defaults read -g AppleInterfaceStyle 2>/dev/null)" != "Dark" ]]; then
+        _vivid_theme="catppuccin-latte"
+    fi
+    export LS_COLORS="$(vivid generate "$_vivid_theme")"
+    export EZA_COLORS="$LS_COLORS"
+    unset _vivid_theme
+fi
 
 # zoxide replaces autojump: keep the `j`/`ji` muscle memory.
 (( $+functions[__zoxide_z] )) && { alias j=z; alias ji=zi; }

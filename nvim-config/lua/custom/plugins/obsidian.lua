@@ -36,7 +36,8 @@ return {
       },
       ['<leader>ch'] = {
         action = function()
-          return require('obsidian').util.toggle_checkbox()
+          -- Only cycle blank <-> done; other states (>, ~, !) render but are set manually
+          return require('obsidian').util.toggle_checkbox { ' ', 'x' }
         end,
         opts = { buffer = true },
       },
@@ -61,8 +62,8 @@ return {
             return 'za'
           end
 
-          -- Default: toggle checkbox
-          return '<cmd>ObsidianToggleCheckbox<CR>'
+          -- Default: toggle checkbox (only blank <-> done)
+          return [[<cmd>lua require('obsidian').util.toggle_checkbox { ' ', 'x' }<CR>]]
         end,
         opts = { noremap = false, expr = true, buffer = true, desc = 'Obsidian smart action' },
       },
@@ -81,6 +82,15 @@ return {
 
     ui = {
       enable = true,
+      -- Render all states, but toggle only cycles blank <-> x (see mappings above).
+      -- Others are set manually: > forwarded/deferred, ~ cancelled, ! important.
+      checkboxes = {
+        [' '] = { char = '\u{f0131}', hl_group = 'ObsidianTodo' },
+        ['x'] = { char = '\u{f00c}', hl_group = 'ObsidianDone' },
+        ['>'] = { char = '\u{f061}', hl_group = 'ObsidianRightArrow' },
+        ['~'] = { char = '\u{f0c31}', hl_group = 'ObsidianTilde' },
+        ['!'] = { char = '\u{f12a}', hl_group = 'ObsidianImportant' },
+      },
     },
 
     completion = {

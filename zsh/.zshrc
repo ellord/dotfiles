@@ -48,16 +48,23 @@ _evalcache fzf fzf --zsh
 [ -f "$HOME/.secrets" ] && source "$HOME/.secrets"
 
 # Auto theme switching based on system appearance (macOS only).
-# Guard with a pidfile + `kill -0` (zsh builtin) instead of `pgrep`, which scans
-# the whole process table (~25ms) on every interactive shell.
+# Guard with a pidfile instead of `pgrep`, which scans the whole process table
+# (~25ms) on every interactive shell. A bare `kill -0` is NOT enough: PIDs are
+# recycled across reboots, so a stale pidfile can point at an unrelated live
+# process (e.g. mediaremoteagent) and fool the guard into never relaunching —
+# leaving theme switching silently dead. Also confirm the pid is actually
+# dark-notify with a cheap single-process `ps -p` (not a full-table scan).
 if [[ "$OSTYPE" == darwin* ]] && (( $+commands[dark-notify] )); then
   _dn_pidfile="${XDG_STATE_HOME:-$HOME/.local/state}/dark-notify.pid"
-  if ! { [[ -f $_dn_pidfile ]] && kill -0 "$(<$_dn_pidfile)" 2>/dev/null; }; then
+  _dn_pid=""
+  [[ -f $_dn_pidfile ]] && _dn_pid=$(<$_dn_pidfile)
+  if ! { [[ -n $_dn_pid ]] && kill -0 $_dn_pid 2>/dev/null \
+         && [[ $(ps -p $_dn_pid -o comm= 2>/dev/null) == *dark-notify ]]; }; then
     dark-notify -c "$HOME/dotfiles/dark-notify-all.sh" </dev/null >/dev/null 2>&1 &!
     [[ -d ${_dn_pidfile:h} ]] || mkdir -p ${_dn_pidfile:h}
     print -r -- $! >| "$_dn_pidfile"
   fi
-  unset _dn_pidfile
+  unset _dn_pidfile _dn_pid
 fi
 
 # Initialize tools if they exist.

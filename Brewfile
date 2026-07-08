@@ -35,6 +35,7 @@ brew "zsh"
 brew "zsh-completions"
 
 cask "android-platform-tools"
+cask "android-studio"
 cask "anki"
 cask "dropbox"
 cask "figma"

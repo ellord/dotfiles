@@ -10,7 +10,6 @@ rust = 'latest'
 bun = 'latest'
 claude-code = '2.1.207'
 delta = 'latest'
-eza = 'latest'
 fzf = 'latest'
 gh = 'latest'
 herdr = 'latest'
@@ -21,7 +20,6 @@ lazygit = 'latest'
 # rolling release tag that upstream actually publishes.
 luajit = '2.1.ROLLING'
 neovim = 'latest'
-ollama = 'latest'
 opencode = 'latest'
 pipx = 'latest'
 ripgrep = 'latest'
@@ -34,8 +32,15 @@ yt-dlp = 'latest'
 zoxide = 'latest'
 
 # Backend-specific tools
+# eza ships no macOS release binaries, so the asdf plugin pulls from
+# cargo-quickinstall, which 404s whenever a tag has no prebuilt macOS asset yet.
+# Build from source via cargo instead — reliable, and tracks the crates.io release.
+"cargo:eza" = 'latest'
 "github:backnotprop/plannotator" = 'latest'
 "npm:@openai/codex" = 'latest'  # OpenAI Codex CLI
+# aqua's ollama-darwin.tgz trips mise's tar reader ("malformed pax extension"),
+# so use the asdf plugin, which extracts the same upstream tarball cleanly.
+"asdf:virtualstaticvoid/asdf-ollama" = 'latest'
 "npm:hunkdiff" = 'latest'  # review-first terminal diff viewer; provides `hunk`
 "npm:pnpm" = 'latest'
 "npm:yarn" = 'latest'

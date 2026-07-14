@@ -130,7 +130,7 @@ link_stow_packages() {
     stow_pkg --dotfiles zsh
     stow_pkg bash
     stow_pkg tmux
-    stow_pkg mise
+    stow_pkg --no-folding mise
     stow_pkg hunk
     stow_pkg herdr
     if [[ "$PLATFORM" == "Darwin" ]]; then

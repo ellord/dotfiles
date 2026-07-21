@@ -42,6 +42,7 @@ zoxide = 'latest'
 # so use the asdf plugin, which extracts the same upstream tarball cleanly.
 "asdf:virtualstaticvoid/asdf-ollama" = 'latest'
 "npm:hunkdiff" = 'latest'  # review-first terminal diff viewer; provides `hunk`
+"github:eduardofuncao/squix" = 'latest'  # SQL query stash TUI; provides `squix`
 "npm:pnpm" = 'latest'
 "npm:yarn" = 'latest'
 'gem:tmuxinator' = 'latest'

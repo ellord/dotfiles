@@ -38,6 +38,7 @@ dispatch_tool_scripts() {
     "$DOTFILES_DIR/git/dark-notify-delta.sh" "$mode" || true
     "$DOTFILES_DIR/k9s/dark-notify-k9s.sh" "$mode" || true
     "$DOTFILES_DIR/lazygit/dark-notify-lazygit.sh" "$mode" || true
+    "$DOTFILES_DIR/squix/dark-notify-squix.sh" "$mode" || true
 }
 
 update_shell_colors || true

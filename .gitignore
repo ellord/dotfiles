@@ -16,6 +16,11 @@ plans/
 # Mise local config (machine-specific env vars)
 mise/.config/mise/config.local.toml
 
+# Herdr runtime artifacts (config.toml is tracked; these are per-machine state)
+herdr/.config/herdr/*.log
+herdr/.config/herdr/session.json
+herdr/.config/herdr/*.sock
+
 # Claude
 CLAUDE.local.md
 .claude/settings.local.json

@@ -7,21 +7,35 @@ return {
   },
   config = function()
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
+    -- nvim-treesitter `main` branch: parsers are installed via `.install`,
+    -- and highlight/indent are enabled per-buffer on FileType. The old
+    -- module-based `highlight`/`indent`/`auto_install` tables are gone.
+    local ts = require 'nvim-treesitter'
 
-    ---@diagnostic disable-next-line: missing-fields
-    require('nvim-treesitter.configs').setup {
-      ensure_installed = { 'bash', 'c', 'html', 'lua', 'markdown', 'markdown_inline', 'vim', 'vimdoc' },
-      -- Autoinstall languages that are not installed
-      auto_install = true,
-      highlight = {
-        enable = true,
-        disable = { 'markdown' },
-      },
-      indent = {
-        enable = true,
-        disable = { 'markdown' },
-      },
-    }
+    ts.install { 'bash', 'c', 'html', 'lua', 'markdown', 'markdown_inline', 'vim', 'vimdoc' }
+
+    vim.api.nvim_create_autocmd('FileType', {
+      desc = 'Enable treesitter highlighting and indentation',
+      callback = function(args)
+        local buf = args.buf
+        local ft = vim.bo[buf].filetype
+        -- Preserve the previous `disable = { 'markdown' }` for both.
+        if ft == 'markdown' then
+          return
+        end
+
+        -- Approximate the old `auto_install = true`: install a missing
+        -- parser in the background when one is available upstream.
+        local lang = vim.treesitter.language.get_lang(ft) or ft
+        if not vim.tbl_contains(ts.get_installed(), lang) and vim.tbl_contains(ts.get_available(), lang) then
+          ts.install(lang)
+        end
+
+        if pcall(vim.treesitter.start, buf) then
+          vim.bo[buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+        end
+      end,
+    })
 
     require('nvim-treesitter-textobjects').setup {
       move = { set_jumps = true },

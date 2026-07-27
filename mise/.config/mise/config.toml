@@ -8,7 +8,7 @@ rust = 'latest'
 
 # CLI tools
 bun = 'latest'
-claude-code = '2.1.218'
+claude-code = '2.1.220'
 delta = 'latest'
 fzf = 'latest'
 gh = 'latest'

@@ -145,8 +145,54 @@ dir help diagnose *what* is slow. Numbers vary with system load — take medians
 - **Custom snippets**: Defined in `nvim-config/lua/custom/plugins/nvim-cmp.lua`
 - **Completion sources order matters**: LuaSnip should come before nvim_lsp to prioritize custom snippets
 - **TypeScript/JSX files**: Use `typescript-tools.nvim` (not tsserver) with snippet completions disabled
-- **HTML/Emmet completion**: `emmet_ls` restricted to HTML/CSS files only to avoid JSX conflicts
+- **HTML/Emmet completion**: `emmet_ls` runs with lspconfig's stock filetypes, which include
+  `javascriptreact`/`typescriptreact`. If emmet completions start fighting JSX again, add an
+  explicit `filetypes` list to its entry in the `servers` table
 - **Snippet conflicts**: Use high priority values (e.g. 1000) and exclude unwanted sources from friendly-snippets
+
+### LSP wiring is mason-lspconfig v2
+v2 removed the setup-level `handlers` option that kickstart's config passed to
+`require('mason-lspconfig').setup{}` (unrelated to per-server LSP `handlers`, which are
+still valid config). Server options go through `vim.lsp.config(name, opts)` (plus
+`vim.lsp.config('*', { capabilities })` for the shared cmp capabilities), and
+mason-lspconfig enables servers itself. `automatic_enable` is set to the explicit key list
+of the `servers` table in `nvim-config/lua/custom/plugins/nvim-lspconfig.lua`; leaving it
+at the default `true` starts **every** mason package that maps to a language server —
+including ones only installed as formatters (stylua) or left over from old work (gopls,
+phpactor). Symptoms of the old `handlers` block silently doing nothing: `lua_ls` running
+with empty `settings`, cmp's capability extras missing (`commitCharactersSupport`,
+`preselectSupport`, `insertTextMode`, the extra `resolveSupport.properties`; note
+`snippetSupport` is true natively in 0.11+, so it is not a symptom), and stray servers
+crashing on startup.
+
+`eslint` is in that list with an `eslint/noLibrary` handler that swallows the
+"Unable to find ESLint library" warning, so TS/JS files in projects without a local eslint
+stay quiet. Diagnostics still come through wherever eslint is installed.
+
+### typescript-tools needs a global `typescript@6`
+`Cannot find tsserver executable in local project nor global npm installation` means
+typescript-tools found no `typescript/lib/tsserver.js`. It spawns tsserver's own protocol
+server directly (`node …/lib/tsserver.js --stdio`), so it needs that JS file — a `tsc`
+binary is no use. Lookup order: project `node_modules`, `.yarn/sdks`, `npm root -g`,
+`resolve(exepath tsserver)/../..`, then mason's `typescript-language-server`. Nothing in
+this repo installs any of those, so files outside a project with local typescript need a
+global fallback:
+```bash
+npm i -g typescript@6    # lands in ~/.npm-global (npm prefix), found via `npm root -g`
+```
+- **Pin to `@6`, don't track `latest`.** 6.x is the newest line that still ships
+  `lib/tsserver.js`. `latest` is 7.x, the Go rewrite, which ships only `bin/tsc` (tsgo) —
+  typescript-tools cannot drive it, so tracking `latest` reintroduces the error.
+- Don't read the version off `npm view typescript dist-tags`: `beta` is stale at
+  `6.0.0-beta` and `latest` is 7.x, which makes it look like 6 never shipped. Stable 6.x
+  releases are in the registry (`npm view typescript versions`).
+- **mise can't own this.** typescript-tools checks `npm root -g` and
+  `resolve(exepath 'tsserver')`; a mise shim resolves to the `mise` binary, so both miss.
+  Making it work needs a hardcoded `tsserver_path`, which is checked *first* and would
+  override each project's own typescript version.
+- Project-local typescript still wins where it exists; the global only fills in elsewhere.
+- Homebrew's `typescript` formula is 7.x and depends on the `node` formula — it would plant
+  a second node beside mise's.
 
 ### Key Plugin Interactions
 - **Completion**: nvim-cmp + LuaSnip + typescript-tools + friendly-snippets

@@ -139,6 +139,14 @@ dir help diagnose *what* is slow. Numbers vary with system load — take medians
 - **autojump was replaced by zoxide** (`j`/`ji` aliased to `z`/`zi`).
 - **dark-notify** is guarded by a pidfile + `kill -0` instead of `pgrep` (process-table
   scan); **`GOPATH` is static** in `.zshenv` instead of forking `go env`.
+- **`path_promote` of cmux's bin dir is not a redundant prepend.** It only affects bare
+  `open <url>` in the shell — plannotator goes through `$PLANNOTATOR_BROWSER`, an absolute
+  path, so it does not depend on this. cmux puts
+  `/Applications/cmux.app/Contents/Resources/bin` on PATH itself, but `/etc/zprofile`'s
+  `path_helper` hoists `/usr/bin` above it, so `/usr/bin/open` shadows cmux's `open`
+  wrapper and URLs escape to the system browser. `path_prepend` cannot fix this — it
+  no-ops on dirs already in PATH. Guarded by `$CMUX_SOCKET_PATH` so it only applies
+  inside cmux panes; the dir also holds cmux's own `ghostty`/`grok`/`cmux` builds.
 
 ### Maintenance notes
 - After upgrading a cached tool, `_evalcache` auto-regenerates when the binary mtime is

@@ -55,6 +55,14 @@ brew bundle    # Install all dependencies from Brewfile
 - Manual symlinks for tools that don't fit stow's directory model (nvim, ghostty, Claude Code)
 - The `install` script handles all setup including git cloning of tmux plugins
 - Dark mode switching across all tools via a single `dark-notify-all.sh` dispatcher
+- `bin/cmux-open` sends a URL to cmux's embedded browser (`cmux browser open`), falling
+  back to the system browser outside cmux. Wired up as `$PLANNOTATOR_BROWSER` in
+  `.zshenv`, since plannotator runs `$PLANNOTATOR_BROWSER <url>` when that value looks
+  like an executable path. This deliberately bypasses cmux's own `open` shim, which is
+  additionally gated on the `browser.hostsToOpenInEmbeddedBrowser` allowlist in
+  `~/.config/cmux/cmux.json` — that takes **hosts only**, exact or `*.suffix`. A numeric
+  port in an entry is stripped, so `localhost:3000` matches localhost on every port. A
+  wildcard port is not a thing: `localhost:*` keeps the literal `:*` and matches nothing
 
 ### Key Directories
 - `nvim-config/`: Neovim configuration based on kickstart.nvim

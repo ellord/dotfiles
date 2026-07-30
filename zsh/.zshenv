@@ -51,6 +51,11 @@ esac
 export EDITOR="$(command -v nvim || command -v vim)"
 export VISUAL="$EDITOR"
 
+# Plannotator opens its review UI by running `$PLANNOTATOR_BROWSER <url>`. Point it
+# at the cmux wrapper so plans/diffs land in the terminal's embedded browser; the
+# wrapper falls back to the system browser outside cmux.
+export PLANNOTATOR_BROWSER="$HOME/dotfiles/bin/cmux-open"
+
 # Cache the output of slow `eval "$(tool init)"` initialisers so each new shell
 # sources a small file instead of re-spawning the tool. The cache is regenerated
 # whenever it is missing/empty or the tool binary is newer than the cache.

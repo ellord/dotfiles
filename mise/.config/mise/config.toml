@@ -15,14 +15,15 @@ gh = 'latest'
 herdr = 'latest'
 jq = 'latest'
 lazygit = 'latest'
-# 'latest' resolves to a date-stamped pseudo-version (e.g. 2.1.1744318430)
-# that has no matching git tag, so the asdf plugin's clone fails. Pin to the
-# rolling release tag that upstream actually publishes.
-# Backend MUST be explicit: unprefixed `luajit` resolves to the first registry
-# entry (conda:luajit), whose solver has no `2.1.rolling` candidate and fails on
-# machines where mise's conda backend is reachable. The ROLLING tag only exists
-# for the asdf plugin.
-"asdf:mise-plugins/mise-luaJIT" = '2.1.ROLLING'
+# The asdf plugin (mise-plugins/mise-luaJIT) builds from luajit.org's git repo,
+# which as of 2026-07 no longer publishes any git tags (only branches), so its
+# list-all script fails and `mise install` errors on every version. Use the
+# conda backend instead: it ships a precompiled binary and needs no build step.
+# Backend must stay explicit — unprefixed `luajit` also resolves to conda:luajit
+# (it's first in the registry), but pin the backend anyway so this doesn't
+# silently start resolving to the now-broken asdf plugin if the registry order
+# ever changes.
+"conda:luajit" = 'latest'
 neovim = 'latest'
 opencode = 'latest'
 pipx = 'latest'
@@ -65,4 +66,3 @@ experimental = true
 
 [env]
 EDITOR = 'nvim'
-LUAROCKS_VERSION = '3.12.2'

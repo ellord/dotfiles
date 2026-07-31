@@ -153,6 +153,18 @@ return {
 
       emmet_ls = {},
 
+      eslint = {
+        handlers = {
+          -- The server sends `eslint/noLibrary` for every TS/JS buffer in a project
+          -- that has no local eslint install, and lspconfig's default handler turns
+          -- each one into a warning popup. Diagnostics still work wherever eslint
+          -- *is* installed.
+          ['eslint/noLibrary'] = function()
+            return {}
+          end,
+        },
+      },
+
       lua_ls = {
         -- cmd = {...},
         -- filetypes { ...},
@@ -200,17 +212,17 @@ return {
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
+    -- mason-lspconfig v2 dropped the `handlers` option from its own `setup{}`: server
+    -- configs now go through `vim.lsp.config`, and it enables servers itself.
+    -- `automatic_enable` must be the explicit list below, otherwise every mason package
+    -- that maps to a language server gets started too (gopls, phpactor, stylua, ...).
+    vim.lsp.config('*', { capabilities = capabilities })
+    for server_name, server in pairs(servers) do
+      vim.lsp.config(server_name, server)
+    end
+
     require('mason-lspconfig').setup {
-      handlers = {
-        function(server_name)
-          local server = servers[server_name] or {}
-          -- This handles overriding only values explicitly passed
-          -- by the server configuration above. Useful when disabling
-          -- certain features of an LSP (for example, turning off formatting for tsserver)
-          server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
-          require('lspconfig')[server_name].setup(server)
-        end,
-      },
+      automatic_enable = vim.tbl_keys(servers),
     }
   end,
 }

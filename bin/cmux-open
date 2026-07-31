@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+# Opens URLs in cmux's embedded browser instead of the system default browser.
+#
+# Set as $PLANNOTATOR_BROWSER (see zsh/.zshenv): plannotator shells out to
+# `$PLANNOTATOR_BROWSER <url>` when that value looks like an executable path.
+# Also usable as $BROWSER for other tools that follow that convention.
+#
+# This exists instead of relying on cmux's own `open` shim, which macOS
+# path_helper shadows behind /usr/bin/open and which additionally filters URLs
+# through the browserHostWhitelist setting.
+#
+# `cmux browser open` reuses the workspace's existing browser pane, adding a tab.
+# Outside cmux, or if the CLI call fails, a URL goes back to the OS.
+set -euo pipefail
+
+system_open() {
+    if [[ "$(uname -s)" == "Darwin" ]]; then
+        /usr/bin/open "$1"
+    else
+        xdg-open "$1"
+    fi
+}
+
+cmux_bin="${CMUX_BUNDLED_CLI_PATH:-}"
+if [[ ! -x "$cmux_bin" ]]; then
+    cmux_bin="$(command -v cmux || true)"
+fi
+
+in_cmux=false
+if [[ -n "${CMUX_SOCKET_PATH:-}" && -n "$cmux_bin" ]]; then
+    in_cmux=true
+fi
+
+status=0
+for url in "$@"; do
+    [[ -n "$url" ]] || continue
+    # `browser open` defaults to $CMUX_WORKSPACE_ID, i.e. the workspace we ran from.
+    if [[ "$in_cmux" == true ]] &&
+        "$cmux_bin" browser open "$url" --focus true >/dev/null 2>&1; then
+        continue
+    fi
+    system_open "$url" || status=$?
+done
+
+exit "$status"

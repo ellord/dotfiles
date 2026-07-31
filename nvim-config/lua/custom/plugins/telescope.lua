@@ -2,7 +2,10 @@
 return {
   'nvim-telescope/telescope.nvim',
   event = 'VimEnter',
-  branch = '0.1.x',
+  -- `master`, not the 0.1.x line: 0.1.x's previewer highlights through the old
+  -- nvim-treesitter module API (`parsers.ft_to_lang`), which the main-branch
+  -- rewrite dropped. master highlights via core `vim.treesitter` instead.
+  branch = 'master',
   dependencies = {
     'nvim-lua/plenary.nvim',
     { -- If encountering errors, see telescope-fzf-native README for install instructions

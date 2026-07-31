@@ -1,6 +1,10 @@
 -- Highlight, edit, and navigate code
 return {
   'nvim-treesitter/nvim-treesitter',
+  branch = 'main', -- config below uses the rewritten `main`-branch API (`.install`,
+  -- `.get_installed()`, `.get_available()`); the legacy `master` branch lacks these.
+  -- Pinned explicitly because lazy.nvim won't migrate an existing clone across a
+  -- branch even after the upstream default branch changes.
   build = ':TSUpdate',
   dependencies = {
     'nvim-treesitter/nvim-treesitter-textobjects',

@@ -21,7 +21,6 @@ gui:
       - '#df8e1d'
     authorColors:
       '*': '#7287fd'
-
 git:
-  pagers:
-    - pager: delta --light --paging=never
+  diffRenderers:
+    - command: delta --light --paging=never

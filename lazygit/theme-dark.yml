@@ -21,7 +21,6 @@ gui:
       - '#f9e2af'
     authorColors:
       '*': '#b4befe'
-
 git:
-  pagers:
-    - pager: delta --dark --paging=never --syntax-theme='Catppuccin Mocha'
+  diffRenderers:
+    - command: delta --dark --paging=never --syntax-theme='Catppuccin Mocha'

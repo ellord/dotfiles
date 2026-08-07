@@ -16,7 +16,8 @@
     "plannotator@plannotator": true,
     "skill-creator@claude-plugins-official": true,
     "codex@openai-codex": true,
-    "chrome-devtools-mcp@claude-plugins-official": true
+    "chrome-devtools-mcp@claude-plugins-official": true,
+    "swift-lsp@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "plannotator": {

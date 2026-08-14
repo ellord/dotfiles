@@ -144,7 +144,7 @@ return {
 
     vim.g.neominimap = {
       handlers = { mark_comment_handler },
-      auto_enable = true,
+      auto_enable = false,
       layout = 'float',
       click = {
         enabled = true,

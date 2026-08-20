@@ -79,7 +79,17 @@ _evalcache starship starship init zsh
 # `mise activate` above puts near the front of PATH. The shim execs
 # cmux-claude-wrapper, which injects cmux's agent hooks — without it cmux gets no
 # agent status, so the sidebar and anything reading `cmux list-status` stays empty.
-[[ -n "$CMUX_CLAUDE_WRAPPER_SHIM_ROOT" ]] && path_promote "$CMUX_CLAUDE_WRAPPER_SHIM_ROOT"
+# cmux puts the shim dir on PATH but exports no variable naming it, so match it
+# there. Outside cmux there is no match and path_promote no-ops on the empty arg.
+# Runs on every prompt, not just once: mise's own hooks re-apply their PATH
+# snapshot on `cd`, which puts the shim back behind claude-code.
+_promote_cmux_claude_shim() {
+    [[ $path[1] == */cmux-cli-shims/* ]] && return
+    path_promote "${path[(r)*/cmux-cli-shims/*]}"
+}
+_promote_cmux_claude_shim
+autoload -Uz add-zsh-hook
+add-zsh-hook precmd _promote_cmux_claude_shim
 
 # Theme and colors. Must run AFTER `mise activate` — on Linux vivid is a
 # mise-managed tool, so its shim isn't on $PATH until activation (on macOS vivid
